@@ -6,6 +6,7 @@ import { ProjectCard } from "@/components/project-card";
 import { SectionReveal } from "@/components/section-reveal";
 import { Marquee } from "@/components/marquee";
 import { CountUp } from "@/components/count-up";
+import { DayNightSwitch } from "@/components/day-night-switch";
 import { profile } from "@/data/profile";
 import { credentials } from "@/data/credentials";
 
@@ -36,6 +37,37 @@ export default function Home() {
               </p>
             </SectionReveal>
           ))}
+        </div>
+      </section>
+
+      <section className="border-b border-line">
+        <div className="mx-auto max-w-[1400px] px-6 py-24 md:px-10 md:py-32">
+          <SectionReveal className="text-center">
+            <h2 className="mx-auto max-w-[24ch] font-display text-3xl font-semibold text-ink md:text-5xl">
+              Every facade is designed for day and night.
+            </h2>
+            <p className="mx-auto mt-4 max-w-[50ch] text-sm leading-relaxed text-ink-dim md:text-base">
+              Pull the cord to switch the render. Lighting is part of the design, not an
+              afterthought.
+            </p>
+          </SectionReveal>
+          <SectionReveal delay={0.1} className="mx-auto mt-10 max-w-3xl">
+            <DayNightSwitch
+              day="/images/freelance/classic-villa-day.jpg"
+              night="/images/freelance/classic-villa-night.jpg"
+              alt="Classic villa facade, day and night render"
+              aspectClassName="aspect-[16/10] sm:aspect-video"
+              cordClassName="right-10 sm:right-16"
+            />
+          </SectionReveal>
+          <SectionReveal delay={0.15} className="mt-6 text-center">
+            <Link
+              href="/projects/freelance-visualization"
+              className="inline-block w-fit rounded-full border border-line-strong px-6 py-3 font-mono text-xs uppercase tracking-[0.08em] text-ink transition-colors hover:border-accent hover:text-accent"
+            >
+              Freelance Visualization Work
+            </Link>
+          </SectionReveal>
         </div>
       </section>
 
@@ -125,8 +157,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-line">
-        <div className="mx-auto max-w-[1400px] px-6 py-28 text-center md:px-10 md:py-36">
+      <section className="relative overflow-hidden border-t border-line">
+        <Image
+          src="/images/brand/abstract-3d-hero.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-bg/70" />
+        <div className="relative mx-auto max-w-[1400px] px-6 py-28 text-center md:px-10 md:py-36">
           <SectionReveal>
             <h2 className="font-display text-4xl font-semibold leading-tight text-ink md:text-6xl">
               Coordinating your next landscape or shop-drawing package.

@@ -9,7 +9,7 @@ export const profile = {
   facebook: "https://www.facebook.com/share/19BSmaAFq8/",
   summary:
     "Architect & Landscape Architect with 5+ years of experience specializing in design development and shop drawings for architectural and landscape projects. Strong ability to translate concepts into precise, buildable details and coordinated construction documents. Experienced in BIM, enhancing accuracy, efficiency, and project delivery.",
-  portrait: "/images/about/shaher-waheed-roshdy.jpg",
+  portrait: "/images/about/portrait-v2.jpg",
   education: {
     degree: "Bachelor of Urban and Regional Planning",
     school: "Cairo University",
