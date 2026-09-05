@@ -5,7 +5,7 @@ import { Search } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
 import type { Project } from "@/data/portfolio";
 
-const filters = ["All", "Landscape", "Architecture", "Shop Drawings", "BIM", "Visualization"];
+const filters = ["All", "Landscape", "Architecture", "Shop Drawings", "Technical Office", "BIM", "Visualization"];
 
 export function ProjectsFilter({ projects }: { projects: Project[] }) {
   const [filter, setFilter] = useState("All");
@@ -15,7 +15,7 @@ export function ProjectsFilter({ projects }: { projects: Project[] }) {
     const normalized = query.trim().toLowerCase();
     return projects.filter((project) => {
       const matchesFilter = filter === "All" || project.categories.includes(filter);
-      const searchable = `${project.title} ${project.company} ${project.location} ${project.categories.join(" ")}`.toLowerCase();
+      const searchable = `${project.title} ${project.company} ${project.location} ${project.role} ${project.categories.join(" ")}`.toLowerCase();
       return matchesFilter && (!normalized || searchable.includes(normalized));
     });
   }, [filter, query, projects]);

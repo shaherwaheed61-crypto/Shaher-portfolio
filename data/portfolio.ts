@@ -10,6 +10,8 @@ export type Project = {
   consultant?: string;
   confidential?: boolean;
   confidentialNote?: string;
+  roleSummary?: string;
+  metrics?: { value: string; label: string }[];
   categories: string[];
   featured: boolean;
   image?: string;
@@ -24,8 +26,10 @@ export type Project = {
 export const portfolio = {
   name: "Shaher Waheed Roshdy",
   role: "Architect & Landscape Architect",
+  headline: "Technical Office Architect | Architecture & Landscape",
   location: "Riyadh, Saudi Arabia",
   experience: "5+ years",
+  registration: "SCE Accredited Architect",
   email: "shaherwaheed61@gmail.com",
   phone: "+966 54 304 2167",
   tel: "+966543042167",
@@ -34,9 +38,15 @@ export const portfolio = {
   linkedin: "https://www.linkedin.com/in/shaher-waheed-79598a1a4/",
   behance: "https://www.behance.net/shaherwaheed",
   positioning:
-    "Design development and shop drawings that turn architectural and landscape concepts into clear, buildable construction packages.",
+    "Technical-office delivery across architecture and landscape, from design development and shop drawings to construction-ready details.",
   summary:
-    "Architect and Landscape Architect with more than five years of experience across Saudi Arabia and Egypt. My work sits between design intent and site execution: developing concepts, resolving technical details, and producing precise drawing packages supported by BIM workflows.",
+    "Technical Office Architect with more than five years of experience delivering architectural and landscape packages across buildings, parks, streetscape, and large-scale developments in Saudi Arabia and Egypt. Professionally accredited as an Architect by the Saudi Council of Engineers, with experience in design development, shop drawings, technical detailing, quantity take-offs, material submittals, and consultant approvals.",
+  proofPoints: [
+    { value: "5+", label: "Years of experience" },
+    { value: "5", label: "Current project portfolio" },
+    { value: "1.5M m²", label: "KAIG project scale" },
+    { value: "11 parks", label: "Housing parks scope" },
+  ],
   capabilities: [
     {
       title: "Landscape design development",
@@ -72,21 +82,21 @@ export const portfolio = {
   experienceItems: [
     {
       period: "11/2025 — Present",
-      role: "Architect & Landscape Architect — Technical Office",
+      role: "Architect & Landscape Architect — Technical Office (Head Office)",
       company: "Safwa Riyadh General Contracting Co.",
-      description: "Architectural and landscape shop drawings, design development, technical approvals, and BIM-enabled documentation for projects in Riyadh and AlUla.",
+      description: "Delivering architectural and landscape technical-office packages across five projects, covering design development, shop drawings, quantity take-offs, technical reviews, drawing revisions, material submittals, and consultant approvals.",
     },
     {
       period: "11/2023 — 11/2025",
       role: "Technical Office Landscape Architect",
       company: "Zaid Al-Hussein and Brothers Contracting Group",
-      description: "Landscape shop drawings, grading, sections, technical reports, RFIs, and as-built packages for King Abdullah International Gardens.",
+      description: "Delivered landscape and hardscape shop drawings, grading, levels, sections, technical details, as-built packages, site verification, and buildable revisions for King Abdullah International Gardens.",
     },
     {
       period: "07/2021 — 11/2023",
       role: "Technical Office Architect",
       company: "Zad Engineering Consulting Office",
-      description: "Architecture shop drawings, as-built documentation, quantities, 3D design, and building-permit packages for private projects in Egypt and Saudi Arabia.",
+      description: "Delivered architectural shop, working, as-built, permit, quantity take-off, and 3D visualization packages for residential and commercial projects.",
     },
     {
       period: "04/2019 — Present",
@@ -111,8 +121,13 @@ export const projects: Project[] = [
     categories: ["Landscape", "Shop Drawings", "BIM"],
     featured: true,
     image: "/images/gardens-project/night-masterplan-aerial.jpg",
-    summary: "Landscape construction documentation for a 2.1 million m² botanical and eco-tourism landmark in Riyadh.",
+    summary: "Landscape technical-office delivery for a 1.5 million m² landmark development in Riyadh.",
     overview: "Preparing and reviewing landscape shop drawings and as-built sheets for a large themed-garden complex centered on an aviary dome, faux-rock tunnels, an elevated boardwalk, a water feature, and the Wadi Walk.",
+    roleSummary: "Delivered and reviewed landscape and hardscape shop drawings, construction details, as-built packages, site verification, and buildable revisions responding to consultant feedback and site conditions.",
+    metrics: [
+      { value: "1.5M m²", label: "Project area" },
+      { value: "SAR 3B", label: "Approx. project value" },
+    ],
     responsibilities: [
       "Developed hardscape plans, coordinates, levels, grading, sections, and construction details.",
       "Prepared full technical submittal packages, reports, SCRs, RFIs, and design justifications.",
@@ -139,13 +154,14 @@ export const projects: Project[] = [
     company: "Safwa Riyadh General Contracting Co.",
     location: "Riyadh, Saudi Arabia",
     period: "2025 — Present",
-    role: "BIM Architect / Technical Office Architect",
+    role: "Architect — Technical Office",
     categories: ["Architecture", "Shop Drawings", "BIM"],
     featured: true,
     confidential: true,
     confidentialNote: "Confidential project — selected professional scope only. Project imagery and restricted technical information are intentionally withheld.",
     summary: "Confidential leadership-building project in Riyadh; selected professional scope shown without project imagery or restricted technical information.",
     overview: "Supporting architectural redesign and construction documentation for a confidential government project. This public case study is limited to role, workflow, and non-sensitive deliverables.",
+    roleSummary: "Developed architectural redesign, Revit-based design information, working drawings, shop drawings, technical details, quantity take-offs, and material-review packages within controlled information requirements.",
     responsibilities: [
       "Produced BIM-based architectural shop drawings and model-driven documentation within controlled information requirements.",
       "Developed construction-ready architectural details and technical-office packages from approved design information.",
@@ -154,6 +170,36 @@ export const projects: Project[] = [
     ],
     deliverables: ["Architectural shop drawings", "BIM model", "Material submittals", "RFIs", "Technical proposals", "Approval tracking"],
     tools: ["Revit", "AutoCAD", "Navisworks", "ACC"],
+    gallery: [],
+  },
+  {
+    slug: "housing-projects-parks",
+    code: "HPP",
+    title: "Housing Projects Parks",
+    company: "Safwa Riyadh General Contracting Co.",
+    client: "Ministry of Municipalities and Housing",
+    consultant: "Aldarh Engineering Consulting Co. / Parsons",
+    location: "Saudi Arabia",
+    period: "11/2025 — Present",
+    role: "Technical Office Landscape Architect",
+    categories: ["Landscape", "Shop Drawings", "Technical Office"],
+    featured: true,
+    summary: "Technical-office packages for 11 parks totaling approximately 98,000 m² across three housing-project locations.",
+    overview: "Delivering landscape shop-drawing, technical-detail, and documentation packages for parks in West Airport, Qiran, and Al Uyaynah, adapting design solutions to project and site requirements.",
+    roleSummary: "Prepared landscape shop drawings and technical details, reviewed supplier requirements and materials, and supported compliant consultant-submission packages.",
+    metrics: [
+      { value: "11", label: "Parks" },
+      { value: "98,000 m²", label: "Landscape area" },
+      { value: "3", label: "Project locations" },
+    ],
+    responsibilities: [
+      "Delivered landscape shop-drawing, technical-detail, and documentation packages for 11 parks.",
+      "Adapted design solutions to project requirements and verified site conditions.",
+      "Reviewed supplier requirements, materials, and submittals against project specifications.",
+      "Supported consultant review and approval through clear, consistent technical packages.",
+    ],
+    deliverables: ["Landscape shop drawings", "Construction details", "Material reviews", "Technical submittals", "Drawing revisions"],
+    tools: ["AutoCAD", "Civil 3D", "Revit", "SketchUp", "Lumion"],
     gallery: [],
   },
   {
@@ -171,6 +217,11 @@ export const projects: Project[] = [
     image: "/images/safwa-shopdrawing/al-khuzama-gardens-zone-8.jpg",
     summary: "Landscape shop drawings and design refinement for the Al-Khuzama Gardens zones.",
     overview: "Preparing shop drawings, improving landscape design concepts, and developing 3D outputs for the Al-Khuzama Gardens zones in coordination with NHC and Zuhair Fayez Partnership.",
+    roleSummary: "Developed landscape shop drawings and refined design details for six parks, supported by 3D models and visualizations for technical reviews and client presentations.",
+    metrics: [
+      { value: "6", label: "Landscape parks" },
+      { value: "35,000 m²", label: "Approx. project area" },
+    ],
     responsibilities: [
       "Prepared landscape shop drawings and technical details for multiple garden zones.",
       "Refined design concepts to improve clarity, constructability, and presentation.",
@@ -184,9 +235,34 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "sedayem-jeddah-streetscape",
+    code: "SDM",
+    title: "Sedayem Jeddah — Streetscape",
+    company: "Safwa Riyadh General Contracting Co.",
+    client: "National Housing Company (NHC)",
+    consultant: "Khatib & Alami",
+    location: "Jeddah, Saudi Arabia",
+    period: "11/2025 — Present",
+    role: "Technical Office Landscape Architect",
+    categories: ["Landscape", "Shop Drawings", "Technical Office"],
+    featured: false,
+    summary: "Construction-ready streetscape and landscape documentation for an NHC development in Jeddah.",
+    overview: "Translating streetscape and landscape requirements into clear shop drawings, technical details, and implementation solutions while maintaining consistency across related packages.",
+    roleSummary: "Prepared streetscape shop drawings and details, integrated related-discipline requirements, and supported material-submittal packages through consultant review.",
+    responsibilities: [
+      "Translated landscape and streetscape requirements into construction-ready shop drawings.",
+      "Developed technical details and site implementation solutions.",
+      "Integrated related-discipline requirements into consistent drawing packages.",
+      "Supported material-submittal reviews and consultant submissions.",
+    ],
+    deliverables: ["Streetscape shop drawings", "Technical details", "Implementation solutions", "Material submittals"],
+    tools: ["AutoCAD", "Civil 3D", "Revit"],
+    gallery: [],
+  },
+  {
     slug: "alula-housing",
     code: "ALU",
-    title: "AlUla Housing Landscape",
+    title: "Al Ula Project — Landscape",
     company: "Safwa Riyadh General Contracting Co.",
     client: "Ministry of Municipalities and Housing",
     consultant: "Aldarh Engineering Consulting Co.",
@@ -196,8 +272,12 @@ export const projects: Project[] = [
     categories: ["Landscape", "Shop Drawings", "Visualization"],
     featured: true,
     image: "/images/safwa-shopdrawing/alula-housing-park.jpg",
-    summary: "Landscape design refinement and technical documentation within a heritage-sensitive setting.",
-    overview: "Participating in landscape works for a housing park in the AlUla region, with a focus on shop drawings, design refinement, and visuals that improve design clarity while respecting the setting.",
+    summary: "Landscape shop drawings and technical documentation for an approximately 20,000 m² development in Al Ula.",
+    overview: "Delivering landscape shop drawings, construction details, and technical documentation while adapting solutions to project requirements, site conditions, and the heritage-sensitive setting.",
+    roleSummary: "Delivered technical landscape packages and produced 3D models and presentation visuals supporting design reviews and stakeholder discussions.",
+    metrics: [
+      { value: "20,000 m²", label: "Approx. project area" },
+    ],
     responsibilities: [
       "Developed landscape shop drawings and coordinated technical information for implementation.",
       "Refined the design response around the project's heritage-sensitive context.",
@@ -223,6 +303,7 @@ export const projects: Project[] = [
     image: "/images/zad-design/private-resort-masterplan-taif.jpg",
     summary: "Architectural shop drawings, masterplans, villa design, permits, and visualization for private clients.",
     overview: "Preparing and reviewing architectural shop drawings and as-built sheets, including a private resort masterplan in Taif, a services complex, and private villa designs in Taif and 6th of October City.",
+    roleSummary: "Delivered architectural shop, working, as-built, permit, quantity take-off, and 3D visualization packages for residential and commercial projects.",
     responsibilities: [
       "Prepared architectural shop drawings, as-built packages, and quantity take-offs.",
       "Developed residential and commercial building-permit packages under local codes.",
@@ -251,6 +332,7 @@ export const projects: Project[] = [
     image: "/images/freelance/estate-pool-garden.jpg",
     summary: "Independent exterior, landscape, villa, estate, and mixed-use visualization for private clients.",
     overview: "Independent 3D modeling and visualization carried from initial concepts through final design presentation, spanning villa facades, estate landscapes, courtyards, pools, and mixed-use masterplans.",
+    roleSummary: "Developed architectural and landscape models, day and night studies, and client-ready visuals from early concepts through final presentation.",
     responsibilities: [
       "Developed architectural and landscape models from sketches and drawing references.",
       "Produced day and night studies to evaluate facade lighting and atmosphere.",

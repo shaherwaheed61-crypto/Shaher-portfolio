@@ -14,7 +14,7 @@ export default function Home() {
         <div className="hero-wash" />
         <div className="hero-grid" />
         <div className="hero-content shell">
-          <div className="hero-kicker"><span>Architect / Landscape Architect</span><span>Riyadh, Saudi Arabia</span></div>
+          <div className="hero-kicker"><span>{portfolio.headline}</span><span>{portfolio.location}</span></div>
           <div className="hero-copy">
             <p className="mono-label">Portfolio 2026</p>
             <h1>Shaher Waheed <span>Roshdy</span></h1>
@@ -25,11 +25,18 @@ export default function Home() {
             </div>
           </div>
           <aside className="hero-facts" aria-label="Professional summary">
+            <div><span>Role</span><strong>Technical Office<br />Architect</strong></div>
             <div><span>Experience</span><strong>{portfolio.experience}</strong></div>
-            <div><span>Location</span><strong>{portfolio.location}</strong></div>
-            <div><span>Focus</span><strong>Design development<br />&amp; shop drawings</strong></div>
+            <div><span>Practice</span><strong>Architecture<br />&amp; Landscape</strong></div>
+            <div><span>Registration</span><strong>{portfolio.registration}</strong></div>
           </aside>
           <p className="hero-coordinate mono-label">24.7136° N / 46.6753° E</p>
+        </div>
+      </section>
+
+      <section className="proof-strip section-rule" aria-label="Career highlights">
+        <div className="shell proof-grid">
+          {portfolio.proofPoints.map((point) => <div className="proof-point" key={point.label}><strong>{point.value}</strong><span>{point.label}</span></div>)}
         </div>
       </section>
 
