@@ -32,6 +32,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
               <div><span>Employer</span><strong>{project.company}</strong></div>
               {project.client && <div><span>Client</span><strong>{project.client}</strong></div>}
               {project.consultant && <div><span>Consultant</span><strong>{project.consultant}</strong></div>}
+              {project.officialUrl && <div><span>Source</span><a href={project.officialUrl} target="_blank" rel="noreferrer">Official project page <ArrowUpRight size={13} /></a></div>}
               <div><span>Role</span><strong>{project.role}</strong></div>
               <div><span>Location</span><strong>{project.location}</strong></div>
               <div><span>Period</span><strong>{project.period}</strong></div>

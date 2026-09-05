@@ -8,6 +8,7 @@ export type Project = {
   role: string;
   client?: string;
   consultant?: string;
+  officialUrl?: string;
   confidential?: boolean;
   confidentialNote?: string;
   roleSummary?: string;
@@ -44,7 +45,7 @@ export const portfolio = {
   proofPoints: [
     { value: "5+", label: "Years of experience" },
     { value: "5", label: "Current project portfolio" },
-    { value: "1.5M m²", label: "KAIG project scale" },
+    { value: "2M m²", label: "KAIG overall scale" },
     { value: "11 parks", label: "Housing parks scope" },
   ],
   capabilities: [
@@ -115,17 +116,18 @@ export const projects: Project[] = [
     company: "Zaid Al-Hussein and Brothers Contracting Group",
     client: "Riyadh Municipality",
     consultant: "Dar Al-Handasah",
+    officialUrl: "https://www.alriyadh.gov.sa/ar/initiatives/Kaga",
     location: "Riyadh, Saudi Arabia",
     period: "11/2023 — 11/2025",
     role: "Technical Office Landscape Architect",
     categories: ["Landscape", "Shop Drawings", "BIM"],
     featured: true,
     image: "/images/gardens-project/night-masterplan-aerial.jpg",
-    summary: "Landscape technical-office delivery for a 1.5 million m² landmark development in Riyadh.",
-    overview: "Preparing and reviewing landscape shop drawings and as-built sheets for a large themed-garden complex centered on an aviary dome, faux-rock tunnels, an elevated boardwalk, a water feature, and the Wadi Walk.",
+    summary: "Landscape technical-office delivery within a landmark botanical-garden development covering 2 million m² overall in Riyadh.",
+    overview: "Preparing and reviewing landscape shop drawings and as-built sheets within one of the world's largest covered botanical-garden developments, combining themed gardens, climate-controlled environments, the Wadi Walk, observation towers, educational facilities, and visitor amenities.",
     roleSummary: "Delivered and reviewed landscape and hardscape shop drawings, construction details, as-built packages, site verification, and buildable revisions responding to consultant feedback and site conditions.",
     metrics: [
-      { value: "1.5M m²", label: "Project area" },
+      { value: "2M m²", label: "Overall project area" },
       { value: "SAR 3B", label: "Approx. project value" },
     ],
     responsibilities: [
