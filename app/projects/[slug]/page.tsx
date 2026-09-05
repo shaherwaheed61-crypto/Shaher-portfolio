@@ -22,7 +22,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   return (
     <main>
       <section className="project-hero">
-        {project.image ? <img className="project-hero-image" src={project.image} alt="" /> : <div className="project-art"><strong>{project.code}</strong></div>}
+        {project.image ? <img className="project-hero-image" src={project.image} alt={`${project.title} project hero`} /> : <div className="project-art"><strong>{project.code}</strong></div>}
         <div className="shell project-hero-content">
           <Link className="back-link" href="/projects"><ArrowLeft size={14} /> Project index</Link>
           <h1>{project.title}</h1>
@@ -40,7 +40,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      <section className="section-space section-rule"><div className="shell project-narrative"><p className="mono-label">Scope / Contribution</p><div><div className="project-copy-grid"><div><h2>From design intent to coordinated delivery.</h2><p>{project.overview}</p></div><ul className="bullet-list">{project.responsibilities.map((item) => <li key={item}>{item}</li>)}</ul></div><div className="project-deliverables"><h3>Deliverables</h3><div className="tag-row">{project.deliverables.map((item) => <span key={item}>{item}</span>)}</div><h3 style={{ marginTop: 34 }}>Tools</h3><div className="tag-row">{project.tools.map((item) => <span key={item}>{item}</span>)}</div></div></div></div></section>
+      <section className="section-space section-rule"><div className="shell project-narrative"><p className="mono-label">Scope / Contribution</p><div>{project.confidentialNote && <p className="confidential-note">{project.confidentialNote}</p>}<div className="project-copy-grid"><div><h2>From design intent to construction-ready delivery.</h2><p>{project.overview}</p></div><ul className="bullet-list">{project.responsibilities.map((item) => <li key={item}>{item}</li>)}</ul></div><div className="project-deliverables"><h3>Deliverables</h3><div className="tag-row">{project.deliverables.map((item) => <span key={item}>{item}</span>)}</div><h3 style={{ marginTop: 34 }}>Tools</h3><div className="tag-row">{project.tools.map((item) => <span key={item}>{item}</span>)}</div></div></div></div></section>
 
       {project.gallery.length > 0 && <section className="section-space section-rule"><div className="shell"><div className="section-heading"><div><p className="mono-label">Project gallery / {String(project.gallery.length).padStart(2, "0")}</p><h2>Selected project views.</h2></div></div><div className="gallery">{project.gallery.map((image, index) => <figure key={image.src}><img src={image.src} alt={image.alt} loading={index > 1 ? "lazy" : "eager"} /><figcaption><span>{image.caption}</span><span>{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div></div></section>}
 

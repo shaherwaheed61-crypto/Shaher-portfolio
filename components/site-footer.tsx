@@ -16,6 +16,7 @@ export function SiteFooter() {
             <Link href="/profile">Profile</Link>
             <Link href="/credentials">Credentials</Link>
             <Link href="/contact">Contact</Link>
+            <a href={portfolio.cv} download>Download CV</a>
             <a href={portfolio.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
             <a href={portfolio.behance} target="_blank" rel="noreferrer">Behance</a>
           </nav>

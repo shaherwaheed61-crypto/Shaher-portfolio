@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight, Menu } from "lucide-react";
+import { Download, Menu } from "lucide-react";
+import { portfolio } from "@/data/portfolio";
 
 const navigation = [
   { href: "/projects", label: "Projects" },
@@ -20,14 +21,15 @@ export function SiteHeader() {
           <Link href="/">Home</Link>
           {navigation.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </nav>
-        <Link className="header-contact" href="mailto:shaherwaheed61@gmail.com">
-          Get in touch <ArrowUpRight size={14} />
-        </Link>
+        <a className="header-contact" href={portfolio.cv} download>
+          Download CV <Download size={14} />
+        </a>
         <details className="mobile-nav">
           <summary aria-label="Open navigation"><Menu size={18} /></summary>
           <nav aria-label="Mobile navigation">
             <Link href="/">Home</Link>
             {navigation.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
+            <a href={portfolio.cv} download>Download CV</a>
           </nav>
         </details>
       </div>

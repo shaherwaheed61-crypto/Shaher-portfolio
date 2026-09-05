@@ -8,6 +8,8 @@ export type Project = {
   role: string;
   client?: string;
   consultant?: string;
+  confidential?: boolean;
+  confidentialNote?: string;
   categories: string[];
   featured: boolean;
   image?: string;
@@ -27,10 +29,12 @@ export const portfolio = {
   email: "shaherwaheed61@gmail.com",
   phone: "+966 54 304 2167",
   tel: "+966543042167",
+  whatsapp: "https://wa.me/966543042167",
+  cv: "/Shaher-Waheed-Roshdy-CV.pdf",
   linkedin: "https://www.linkedin.com/in/shaher-waheed-79598a1a4/",
   behance: "https://www.behance.net/shaherwaheed",
   positioning:
-    "Design development and shop drawings that turn architectural and landscape concepts into coordinated, buildable construction packages.",
+    "Design development and shop drawings that turn architectural and landscape concepts into clear, buildable construction packages.",
   summary:
     "Architect and Landscape Architect with more than five years of experience across Saudi Arabia and Egypt. My work sits between design intent and site execution: developing concepts, resolving technical details, and producing precise drawing packages supported by BIM workflows.",
   capabilities: [
@@ -55,8 +59,8 @@ export const portfolio = {
       tools: ["SketchUp", "Lumion", "Revit"],
     },
     {
-      title: "Technical coordination",
-      description: "Resolving architectural interfaces with structural and MEP disciplines before they reach site execution.",
+      title: "Technical detailing & interfaces",
+      description: "Resolving architectural details and interfaces with structural and MEP disciplines before site execution.",
       tools: ["Navisworks", "Revit", "ACC"],
     },
     {
@@ -133,20 +137,20 @@ export const projects: Project[] = [
     code: "SALB",
     title: "Security Aviation Leadership Building",
     company: "Safwa Riyadh General Contracting Co.",
-    client: "Aviation Security",
-    consultant: "El Seif",
     location: "Riyadh, Saudi Arabia",
     period: "2025 — Present",
     role: "BIM Architect / Technical Office Architect",
     categories: ["Architecture", "Shop Drawings", "BIM"],
     featured: true,
-    summary: "Architectural redesign and execution documentation for a leadership building in Riyadh.",
-    overview: "Developing coordinated architectural information for the redesign and execution of a 1,400 m²-per-floor leadership building, translating approved information and tender requirements into construction-ready packages.",
+    confidential: true,
+    confidentialNote: "Confidential project — selected professional scope only. Project imagery and restricted technical information are intentionally withheld.",
+    summary: "Confidential leadership-building project in Riyadh; selected professional scope shown without project imagery or restricted technical information.",
+    overview: "Supporting architectural redesign and construction documentation for a confidential government project. This public case study is limited to role, workflow, and non-sensitive deliverables.",
     responsibilities: [
-      "Developing architectural shop drawings and BIM-based documentation for execution.",
-      "Managing architectural material submittals and mapping proposed systems against BOQ requirements.",
-      "Coordinating curtain walls, gypsum-board ceilings, waterproofing systems, blocks, finishes, and interfaces.",
-      "Preparing technical queries and proposals where site conditions conflict with tender information.",
+      "Produced BIM-based architectural shop drawings and model-driven documentation within controlled information requirements.",
+      "Developed construction-ready architectural details and technical-office packages from approved design information.",
+      "Supported technical queries, review cycles, and material-approval workflows.",
+      "Maintained drawing quality, issue tracking, and cross-discipline interface resolution.",
     ],
     deliverables: ["Architectural shop drawings", "BIM model", "Material submittals", "RFIs", "Technical proposals", "Approval tracking"],
     tools: ["Revit", "AutoCAD", "Navisworks", "ACC"],

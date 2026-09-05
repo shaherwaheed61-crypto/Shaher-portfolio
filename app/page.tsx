@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Download } from "lucide-react";
 import { DayNightShowcase } from "@/components/day-night-showcase";
 import { ProjectCard } from "@/components/project-card";
 import { portfolio, projects } from "@/data/portfolio";
@@ -17,11 +17,11 @@ export default function Home() {
           <div className="hero-kicker"><span>Architect / Landscape Architect</span><span>Riyadh, Saudi Arabia</span></div>
           <div className="hero-copy">
             <p className="mono-label">Portfolio 2026</p>
-            <h1>Shaher Waheed<span>Roshdy</span></h1>
+            <h1>Shaher Waheed <span>Roshdy</span></h1>
             <p className="hero-intro">{portfolio.positioning}</p>
             <div className="hero-actions">
               <Link className="button button-solid" href="/projects">View selected work <ArrowDownRight size={16} /></Link>
-              <Link className="button button-ghost" href="/profile">Profile</Link>
+              <a className="button button-ghost" href={portfolio.cv} download>Download CV <Download size={16} /></a>
             </div>
           </div>
           <aside className="hero-facts" aria-label="Professional summary">
@@ -68,7 +68,7 @@ export default function Home() {
       <section className="closing-cta section-rule">
         <div className="shell closing-grid">
           <p className="mono-label">Available in Riyadh / KSA</p>
-          <h2>Let&apos;s turn the next design into a coordinated package.</h2>
+          <h2>Let&apos;s shape the next design into a clear, buildable package.</h2>
           <Link className="button button-solid" href="/contact">Start a conversation <ArrowUpRight size={16} /></Link>
         </div>
       </section>
