@@ -213,6 +213,11 @@ h1, h2, h3 { font-family: "Space Grotesk", Arial, sans-serif; letter-spacing: -0
 .confidential-workflow-grid li { min-height:150px; display:flex; flex-direction:column; justify-content:space-between; gap:28px; padding:18px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
 .confidential-workflow-grid span { color:var(--accent-light); font-family:"JetBrains Mono",monospace; font-size:.8rem; letter-spacing:.08em; }
 .confidential-workflow-grid strong { font-size:.92rem; font-weight:500; line-height:1.45; }
+.gallery-groups { display:grid; gap:72px; }
+.gallery-group { display:grid; gap:26px; }
+.gallery-group-heading { display:grid; grid-template-columns:64px 1fr auto; align-items:end; gap:22px; padding-bottom:14px; border-bottom:1px solid var(--line); }
+.gallery-group-heading h3 { font-size:clamp(1.35rem,2vw,2rem); font-weight:500; text-transform:capitalize; }
+.gallery-group-heading > span:last-child { color:var(--ink-faint); font-family:"JetBrains Mono",monospace; font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; }
 .gallery { display:grid; grid-template-columns:repeat(12,1fr); gap:22px; }
 .gallery figure { grid-column:span 6; margin:0; }
 .gallery figure:nth-child(3n+1) { grid-column:span 7; }
@@ -329,6 +334,9 @@ h1, h2, h3 { font-family: "Space Grotesk", Arial, sans-serif; letter-spacing: -0
   .confidential-card-flow li { min-height:0; flex-direction:row; align-items:center; }
   .registration-line { align-items:flex-start; flex-direction:column; gap:4px; }
   .gallery figure:nth-child(n) { grid-column:1 / -1; }
+  .gallery-groups { gap:54px; }
+  .gallery-group-heading { grid-template-columns:42px 1fr; gap:14px; }
+  .gallery-group-heading > span:last-child { display:none; }
   .timeline-item { grid-template-columns:1fr; gap:12px; }
   .footer-main { grid-template-columns:1fr; }
   .footer-bottom { flex-direction:column; }

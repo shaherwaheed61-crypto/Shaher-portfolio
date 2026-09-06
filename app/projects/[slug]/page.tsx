@@ -26,6 +26,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const project = getProject(slug);
   if (!project) notFound();
   const nextProject = getNextProject(slug);
+  const galleryGroups = project.gallery.reduce<{ title: string; images: typeof project.gallery }[]>((groups, image) => {
+    const title = image.group ?? "Selected views";
+    const existing = groups.find((group) => group.title === title);
+    if (existing) existing.images.push(image);
+    else groups.push({ title, images: [image] });
+    return groups;
+  }, []);
 
   return (
     <main>
@@ -91,7 +98,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {project.gallery.length > 0 && <section className="section-space section-rule"><div className="shell"><div className="section-heading"><div><p className="mono-label">Public evidence / {String(project.gallery.length).padStart(2, "0")}</p><h2>Selected project views.</h2>{project.galleryNote && <p className="gallery-note">{project.galleryNote}</p>}</div></div><div className="gallery">{project.gallery.map((image, index) => <figure key={image.src}><img src={image.src} alt={image.alt} loading={index > 1 ? "lazy" : "eager"} decoding="async" /><figcaption><span>{image.caption}</span><span>{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div></div></section>}
+      {project.gallery.length > 0 && <section className="section-space section-rule"><div className="shell"><div className="section-heading"><div><p className="mono-label">Public evidence / {String(project.gallery.length).padStart(2, "0")}</p><h2>Selected project views.</h2>{project.galleryNote && <p className="gallery-note">{project.galleryNote}</p>}</div></div><div className="gallery-groups">{galleryGroups.map((group, groupIndex) => <section className="gallery-group" key={group.title} aria-labelledby={`gallery-group-${groupIndex}`}>
+        {galleryGroups.length > 1 && <div className="gallery-group-heading"><span className="mono-label">{String(groupIndex + 1).padStart(2, "0")}</span><h3 id={`gallery-group-${groupIndex}`}>{group.title}</h3><span>{String(group.images.length).padStart(2, "0")} views</span></div>}
+        <div className="gallery">{group.images.map((image, index) => <figure key={image.src}><img src={image.src} alt={image.alt} loading={groupIndex === 0 && index < 2 ? "eager" : "lazy"} decoding="async" /><figcaption><span>{image.caption}</span><span>{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div>
+      </section>)}</div></div></section>}
 
       <section className="section-space section-rule"><div className="shell next-project"><p className="mono-label">Next project</p><h2>{nextProject.title}</h2><Link className="button button-ghost" href={`/projects/${nextProject.slug}`}>View project <ArrowUpRight size={16} /></Link></div></section>
     </main>

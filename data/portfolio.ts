@@ -23,7 +23,7 @@ export type Project = {
   responsibilities: string[];
   deliverables: string[];
   tools: string[];
-  gallery: { src: string; alt: string; caption: string }[];
+  gallery: { src: string; alt: string; caption: string; group?: string }[];
 };
 
 export const portfolio = {
@@ -362,16 +362,20 @@ export const projects: Project[] = [
     tools: ["AutoCAD", "Revit", "SketchUp", "Lumion"],
     galleryNote: "Selected architectural, commercial, and landscape visuals produced during Shaher's work with Zad Engineering Consulting Office.",
     gallery: [
-      { src: "/images/zad-design/private-resort-masterplan-taif.jpg", alt: "Private resort masterplan in Taif", caption: "Private resort masterplan — Taif" },
-      { src: "/images/zad-design/u-zone-design-evolution.jpg", alt: "U-Zone design evolution", caption: "U-Zone design evolution" },
-      { src: "/images/zad-design/services-complex-site-plan.jpg", alt: "Services complex site plan", caption: "Services complex site plan" },
-      { src: "/images/zad-design/private-villa-taif-exterior.jpg", alt: "Private villa exterior in Taif", caption: "Private villa exterior — Taif" },
-      { src: "/images/zad-design/villa-facade-6th-october.jpg", alt: "Villa facade in 6th of October City", caption: "Villa facade — 6th of October City" },
-      { src: "/images/zad-design/residential-facade-perspective.jpg", alt: "Residential facade perspective visualization", caption: "Residential facade — perspective view" },
-      { src: "/images/zad-design/residential-facade-front.jpg", alt: "Residential facade front visualization", caption: "Residential facade — front study" },
-      { src: "/images/zad-design/golden-petrol-station.jpg", alt: "Commercial petrol station forecourt visualization", caption: "Commercial forecourt design" },
-      { src: "/images/zad-design/villa-entrance-landscape-day.jpg", alt: "Villa entrance landscape visualization in daylight", caption: "Villa entrance landscape — daylight" },
-      { src: "/images/zad-design/villa-entrance-landscape-night.jpg", alt: "Villa entrance landscape lighting visualization at night", caption: "Villa entrance landscape — night lighting" },
+      { src: "/images/zad-design/private-resort-masterplan-taif.jpg", alt: "Private resort masterplan in Taif", caption: "Private resort masterplan — Taif", group: "Masterplanning & mixed-use" },
+      { src: "/images/zad-design/services-complex-site-plan.jpg", alt: "Services complex site plan", caption: "Services complex — site plan", group: "Masterplanning & mixed-use" },
+      { src: "/images/zad-design/services-complex-aerial.jpg", alt: "Aerial visualization of a services complex", caption: "Services complex — aerial view", group: "Masterplanning & mixed-use" },
+      { src: "/images/zad-design/u-zone-design-evolution.jpg", alt: "U-Zone design evolution", caption: "U-Zone — design evolution", group: "Masterplanning & mixed-use" },
+      { src: "/images/zad-design/private-villa-taif-exterior.jpg", alt: "Private villa exterior in Taif", caption: "Private villa exterior — Taif", group: "Residential architecture" },
+      { src: "/images/zad-design/villa-facade-6th-october.jpg", alt: "Villa facade in 6th of October City", caption: "Villa facade — 6th of October City", group: "Residential architecture" },
+      { src: "/images/zad-design/residential-facade-perspective.jpg", alt: "Residential facade perspective visualization", caption: "Residential facade — perspective view", group: "Residential architecture" },
+      { src: "/images/zad-design/residential-facade-front.jpg", alt: "Residential facade front visualization", caption: "Residential facade — front study", group: "Residential architecture" },
+      { src: "/images/zad-design/residential-entrance-detail.jpg", alt: "Detailed residential entrance and planting visualization", caption: "Residential entrance — material and planting detail", group: "Residential architecture" },
+      { src: "/images/zad-design/golden-petrol-station.jpg", alt: "Commercial petrol station forecourt visualization", caption: "Commercial forecourt — street view", group: "Commercial architecture" },
+      { src: "/images/zad-design/golden-petrol-station-aerial.jpg", alt: "Aerial visualization of a commercial petrol station forecourt", caption: "Commercial forecourt — aerial view", group: "Commercial architecture" },
+      { src: "/images/zad-design/villa-entrance-landscape-day.jpg", alt: "Villa entrance landscape visualization in daylight", caption: "Villa entrance landscape — daylight", group: "Landscape & entrance studies" },
+      { src: "/images/zad-design/villa-entrance-landscape-night.jpg", alt: "Villa entrance landscape lighting visualization at night", caption: "Villa entrance landscape — night lighting", group: "Landscape & entrance studies" },
+      { src: "/images/zad-design/villa-entrance-water-feature-night.jpg", alt: "Villa entrance water feature and planting visualized at night", caption: "Entrance water feature — night detail", group: "Landscape & entrance studies" },
     ],
   },
   {
