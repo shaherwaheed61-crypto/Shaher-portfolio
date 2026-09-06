@@ -18,6 +18,7 @@ export type Project = {
   featured: boolean;
   image?: string;
   summary: string;
+  caseStudyHeading: string;
   overview: string;
   responsibilities: string[];
   deliverables: string[];
@@ -42,7 +43,7 @@ export const portfolio = {
   positioning:
     "Technical-office delivery across architecture and landscape, from design development and shop drawings to construction-ready details.",
   summary:
-    "Technical Office Architect with more than five years of experience delivering architectural and landscape packages across buildings, parks, streetscape, and large-scale developments in Saudi Arabia and Egypt. Professionally accredited as an Architect by the Saudi Council of Engineers, with experience in design development, shop drawings, technical detailing, quantity take-offs, material submittals, and consultant approvals.",
+    "Technical Office Architect with 5+ years of experience delivering architectural and landscape packages across buildings, parks, streetscape, and large-scale developments in Saudi Arabia and Egypt. SCE-accredited Architect experienced in design development, shop drawings, construction details, quantity take-offs, material submittals, and consultant approvals.",
   proofPoints: [
     { value: "5+", label: "Years of experience" },
     { value: "2M m²", label: "KAIG overall scale" },
@@ -158,6 +159,7 @@ export const projects: Project[] = [
     featured: true,
     image: "/images/gardens-project/night-masterplan-aerial.jpg",
     summary: "Landscape technical-office delivery within a landmark botanical-garden development covering 2 million m² overall in Riyadh.",
+    caseStudyHeading: "Landscape packages resolved across a complex botanical-garden environment.",
     overview: "Preparing and reviewing landscape shop drawings and as-built sheets within one of the world's largest covered botanical-garden developments, combining themed gardens, climate-controlled environments, the Wadi Walk, observation towers, educational facilities, and visitor amenities.",
     roleSummary: "Delivered and reviewed landscape and hardscape shop drawings, construction details, as-built packages, site verification, and buildable revisions responding to consultant feedback and site conditions.",
     galleryNote: "Images show the wider project context. The contribution described on this page is limited to landscape technical-office packages.",
@@ -197,6 +199,7 @@ export const projects: Project[] = [
     confidential: true,
     confidentialNote: "Confidential project — selected professional scope only. Project imagery and restricted technical information are intentionally withheld.",
     summary: "Confidential leadership-building project in Riyadh; selected professional scope shown without project imagery or restricted technical information.",
+    caseStudyHeading: "Architectural redesign developed within controlled information requirements.",
     overview: "Supporting architectural redesign and construction documentation for a confidential government project. This public case study is limited to role, workflow, and non-sensitive deliverables.",
     roleSummary: "Developed architectural redesign, Revit-based design information, working drawings, shop drawings, technical details, quantity take-offs, and material-review packages within controlled information requirements.",
     responsibilities: [
@@ -222,6 +225,7 @@ export const projects: Project[] = [
     categories: ["Landscape", "Shop Drawings", "Technical Office"],
     featured: true,
     summary: "Technical-office packages for 11 parks totaling approximately 98,000 m² across three housing-project locations.",
+    caseStudyHeading: "Eleven park packages adapted across three housing locations.",
     overview: "Delivering landscape shop-drawing, technical-detail, and documentation packages for parks in West Airport, Qiran, and Al Uyaynah, adapting design solutions to project and site requirements.",
     roleSummary: "Prepared landscape shop drawings and technical details, reviewed supplier requirements and materials, and supported compliant consultant-submission packages.",
     metrics: [
@@ -253,6 +257,7 @@ export const projects: Project[] = [
     featured: true,
     image: "/images/safwa-shopdrawing/al-khuzama-gardens-zone-8.jpg",
     summary: "Landscape shop drawings and design refinement for the Al-Khuzama Gardens zones.",
+    caseStudyHeading: "Landscape design refined into six construction-ready park packages.",
     overview: "Preparing shop drawings, improving landscape design concepts, and developing 3D outputs for the Al-Khuzama Gardens zones in coordination with NHC and Zuhair Fayez Partnership.",
     roleSummary: "Developed landscape shop drawings and refined design details for six parks, supported by 3D models and visualizations for technical reviews and client presentations.",
     metrics: [
@@ -284,6 +289,7 @@ export const projects: Project[] = [
     categories: ["Landscape", "Shop Drawings", "Technical Office"],
     featured: false,
     summary: "Construction-ready streetscape and landscape documentation for an NHC development in Jeddah.",
+    caseStudyHeading: "Streetscape requirements translated into consistent construction packages.",
     overview: "Translating streetscape and landscape requirements into clear shop drawings, technical details, and implementation solutions while maintaining consistency across related packages.",
     roleSummary: "Prepared streetscape shop drawings and details, integrated related-discipline requirements, and supported material-submittal packages through consultant review.",
     responsibilities: [
@@ -310,6 +316,7 @@ export const projects: Project[] = [
     featured: true,
     image: "/images/safwa-shopdrawing/alula-housing-park.jpg",
     summary: "Landscape shop drawings and technical documentation for an approximately 20,000 m² development in Al Ula.",
+    caseStudyHeading: "Landscape delivery adapted to a heritage-sensitive setting.",
     overview: "Delivering landscape shop drawings, construction details, and technical documentation while adapting solutions to project requirements, site conditions, and the heritage-sensitive setting.",
     roleSummary: "Delivered technical landscape packages and produced 3D models and presentation visuals supporting design reviews and stakeholder discussions.",
     metrics: [
@@ -339,6 +346,7 @@ export const projects: Project[] = [
     featured: false,
     image: "/images/zad-design/private-resort-masterplan-taif.jpg",
     summary: "Architectural shop drawings, masterplans, villa design, permits, and visualization for private clients.",
+    caseStudyHeading: "Design work carried across drawing, permit, and presentation stages.",
     overview: "Preparing and reviewing architectural shop drawings and as-built sheets, including a private resort masterplan in Taif, a services complex, and private villa designs in Taif and 6th of October City.",
     roleSummary: "Delivered architectural shop, working, as-built, permit, quantity take-off, and 3D visualization packages for residential and commercial projects.",
     responsibilities: [
@@ -368,6 +376,7 @@ export const projects: Project[] = [
     featured: false,
     image: "/images/freelance/estate-pool-garden.jpg",
     summary: "Independent exterior, landscape, villa, estate, and mixed-use visualization for private clients.",
+    caseStudyHeading: "Architectural and landscape ideas developed into client-ready visuals.",
     overview: "Independent 3D modeling and visualization carried from initial concepts through final design presentation, spanning villa facades, estate landscapes, courtyards, pools, and mixed-use masterplans.",
     roleSummary: "Developed architectural and landscape models, day and night studies, and client-ready visuals from early concepts through final presentation.",
     responsibilities: [

@@ -4,13 +4,19 @@ import { DayNightShowcase } from "@/components/day-night-showcase";
 import { ProjectCard } from "@/components/project-card";
 import { portfolio, projects } from "@/data/portfolio";
 
-const featuredProjects = projects.filter((project) => project.featured).slice(0, 4);
+const featuredOrder = [
+  "king-abdullah-international-gardens",
+  "marsa-khuzam",
+  "security-aviation-leadership-building",
+  "alula-housing",
+];
+const featuredProjects = featuredOrder.map((slug) => projects.find((project) => project.slug === slug)).filter((project): project is (typeof projects)[number] => Boolean(project));
 
 export default function Home() {
   return (
     <main>
       <section className="hero">
-        <img className="hero-image" src="/images/gardens-project/night-masterplan-aerial.jpg" alt="Aerial night view of King Abdullah International Gardens" />
+        <img className="hero-image" src="/images/gardens-project/night-masterplan-aerial.jpg" alt="Aerial night view of King Abdullah International Gardens" loading="eager" fetchPriority="high" decoding="async" />
         <div className="hero-wash" />
         <div className="hero-grid" />
         <div className="hero-content shell">
@@ -40,9 +46,19 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section-space section-rule">
+        <div className="shell">
+          <div className="section-heading">
+            <div><p className="mono-label">01 / Selected work</p><h2>Projects shaped from drawing set to site.</h2></div>
+            <Link className="text-link" href="/projects">All projects <ArrowUpRight size={15} /></Link>
+          </div>
+          <div className="featured-grid">{featuredProjects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index + 1} featured />)}</div>
+        </div>
+      </section>
+
       <section className="intro-band section-rule">
         <div className="shell intro-grid">
-          <p className="section-index mono-label">01 / Profile</p>
+          <p className="section-index mono-label">02 / Profile</p>
           <h2>Concepts become valuable when they can be built.</h2>
           <div><p>{portfolio.summary}</p><Link className="text-link" href="/profile">Full profile <ArrowUpRight size={15} /></Link></div>
         </div>
@@ -51,7 +67,7 @@ export default function Home() {
       <section className="delivery-path section-space section-rule">
         <div className="shell">
           <div className="section-heading align-start">
-            <div><p className="mono-label">02 / One delivery path</p><h2>Architecture and landscape, carried through one technical workflow.</h2></div>
+            <div><p className="mono-label">03 / One delivery path</p><h2>Architecture and landscape, carried through one technical workflow.</h2></div>
             <p className="section-note">BIM supports the process. The professional focus stays on design decisions, clear documentation, and buildable architectural and landscape packages.</p>
           </div>
           <ol className="delivery-grid">
@@ -63,16 +79,6 @@ export default function Home() {
               </li>
             ))}
           </ol>
-        </div>
-      </section>
-
-      <section className="section-space section-rule">
-        <div className="shell">
-          <div className="section-heading">
-            <div><p className="mono-label">03 / Selected work</p><h2>Projects shaped from drawing set to site.</h2></div>
-            <Link className="text-link" href="/projects">All projects <ArrowUpRight size={15} /></Link>
-          </div>
-          <div className="featured-grid">{featuredProjects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index + 1} featured />)}</div>
         </div>
       </section>
 

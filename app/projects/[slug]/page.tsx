@@ -30,7 +30,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   return (
     <main>
       <section className="project-hero">
-        {project.image ? <img className="project-hero-image" src={project.image} alt={`${project.title} project hero`} /> : <div className="project-art"><strong>{project.code}</strong></div>}
+        {project.image ? <img className="project-hero-image" src={project.image} alt={`${project.title} project hero`} loading="eager" fetchPriority="high" decoding="async" /> : <div className="project-art"><strong>{project.code}</strong></div>}
         <div className="shell project-hero-content">
           <Link className="back-link" href="/projects"><ArrowLeft size={14} /> Project index</Link>
           <h1>{project.title}</h1>
@@ -60,7 +60,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             <div className="project-copy-grid">
               <div>
                 <p className="mono-label project-copy-label">Project context</p>
-                <h2>Technical decisions translated into buildable information.</h2>
+                <h2>{project.caseStudyHeading}</h2>
                 <p>{project.overview}</p>
               </div>
               <div>
@@ -91,7 +91,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {project.gallery.length > 0 && <section className="section-space section-rule"><div className="shell"><div className="section-heading"><div><p className="mono-label">Project gallery / {String(project.gallery.length).padStart(2, "0")}</p><h2>Selected project views.</h2>{project.galleryNote && <p className="gallery-note">{project.galleryNote}</p>}</div></div><div className="gallery">{project.gallery.map((image, index) => <figure key={image.src}><img src={image.src} alt={image.alt} loading={index > 1 ? "lazy" : "eager"} /><figcaption><span>{image.caption}</span><span>{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div></div></section>}
+      {project.gallery.length > 0 && <section className="section-space section-rule"><div className="shell"><div className="section-heading"><div><p className="mono-label">Public evidence / {String(project.gallery.length).padStart(2, "0")}</p><h2>Selected project views.</h2>{project.galleryNote && <p className="gallery-note">{project.galleryNote}</p>}</div></div><div className="gallery">{project.gallery.map((image, index) => <figure key={image.src}><img src={image.src} alt={image.alt} loading={index > 1 ? "lazy" : "eager"} decoding="async" /><figcaption><span>{image.caption}</span><span>{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div></div></section>}
 
       <section className="section-space section-rule"><div className="shell next-project"><p className="mono-label">Next project</p><h2>{nextProject.title}</h2><Link className="button button-ghost" href={`/projects/${nextProject.slug}`}>View project <ArrowUpRight size={16} /></Link></div></section>
     </main>
