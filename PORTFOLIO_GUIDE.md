@@ -1,6 +1,6 @@
 # Portfolio content and update guide
 
-This repository is the public source for Shaher Waheed Roshdy's architecture and landscape portfolio.
+This repository is the public source for Shaher Wahid Rushdi Elsayed's architecture and landscape portfolio.
 
 ## Source of truth
 

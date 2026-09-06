@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { credentials, portfolio } from "@/data/portfolio";
 
-export const metadata: Metadata = { title: "Credentials", description: "Professional registration and selected BIM credentials of Shaher Waheed Roshdy." };
+export const metadata: Metadata = { title: "Credentials", description: `Professional registration and selected BIM credentials of ${portfolio.name}.` };
 
 export default function CredentialsPage() {
   const registration = portfolio.registrationDetails;

@@ -27,7 +27,11 @@ export type Project = {
 };
 
 export const portfolio = {
-  name: "Shaher Waheed Roshdy",
+  name: "Shaher Wahid Rushdi Elsayed",
+  displayName: {
+    primary: "Shaher Wahid",
+    secondary: "Rushdi Elsayed",
+  },
   role: "Architect & Landscape Architect",
   headline: "Technical Office Architect | Architecture & Landscape",
   location: "Riyadh, Saudi Arabia",

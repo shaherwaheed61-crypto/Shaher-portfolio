@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { ProjectsFilter } from "@/components/projects-filter";
-import { projects } from "@/data/portfolio";
+import { portfolio, projects } from "@/data/portfolio";
 
-export const metadata: Metadata = { title: "Projects", description: "Selected architectural, landscape, shop-drawing, BIM, and visualization projects by Shaher Waheed Roshdy." };
+export const metadata: Metadata = { title: "Projects", description: `Selected architectural, landscape, shop-drawing, BIM, and visualization projects by ${portfolio.name}.` };
 
 export default function ProjectsPage() {
   return (

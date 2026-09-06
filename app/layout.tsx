@@ -9,8 +9,8 @@ const siteUrl = "https://shaher-waheed-portfolio.shaherwaheed61.chatgpt.site";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Shaher Waheed Roshdy | Architect & Landscape Architect",
-    template: "%s | Shaher Waheed Roshdy",
+    default: `${portfolio.name} | Architect & Landscape Architect`,
+    template: `%s | ${portfolio.name}`,
   },
   description:
     "Architect and Landscape Architect in Riyadh specializing in design development, shop drawings, and BIM-enabled construction documentation.",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Shaher Waheed Roshdy | Architect & Landscape Architect",
+    title: `${portfolio.name} | Architect & Landscape Architect`,
     description: "Technical-office architecture and landscape portfolio focused on design development, shop drawings, and construction-ready documentation.",
-    siteName: "Shaher Waheed Portfolio",
+    siteName: `${portfolio.displayName.primary} Portfolio`,
   },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };

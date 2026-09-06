@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArrowUpRight, Download, MessageCircle } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
-export const metadata: Metadata = { title: "Contact", description: "Contact Shaher Waheed Roshdy for architectural, landscape, technical-office, and BIM opportunities." };
+export const metadata: Metadata = { title: "Contact", description: `Contact ${portfolio.name} for architectural, landscape, technical-office, and BIM opportunities.` };
 
 export default function ContactPage() {
   return (

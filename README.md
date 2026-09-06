@@ -1,6 +1,6 @@
-# Shaher Waheed Portfolio
+# Shaher Wahid Rushdi Elsayed Portfolio
 
-Portfolio website for Shaher Waheed Roshdy — Architect & Landscape Architect.
+Portfolio website for Shaher Wahid Rushdi Elsayed — Architect & Landscape Architect.
 
 - Public site: <https://shaher-waheed-portfolio.shaherwaheed61.chatgpt.site>
 - Machine-readable portfolio data: <https://shaher-waheed-portfolio.shaherwaheed61.chatgpt.site/portfolio-data.json>

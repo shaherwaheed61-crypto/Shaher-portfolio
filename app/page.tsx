@@ -23,7 +23,7 @@ export default function Home() {
           <div className="hero-kicker"><span>{portfolio.headline}</span><span>{portfolio.location}</span></div>
           <div className="hero-copy">
             <p className="mono-label">Portfolio 2026</p>
-            <h1>Shaher Waheed <span>Roshdy</span></h1>
+            <h1>{portfolio.displayName.primary} <span>{portfolio.displayName.secondary}</span></h1>
             <p className="hero-intro">{portfolio.positioning}</p>
             <div className="hero-actions">
               <Link className="button button-solid" href="/projects">View selected work <ArrowDownRight size={16} /></Link>

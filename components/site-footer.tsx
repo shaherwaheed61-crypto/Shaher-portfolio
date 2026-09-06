@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="footer-main">
           <div>
             <p className="mono-label">Architect / Landscape Architect</p>
-            <p className="footer-name">Shaher Waheed Roshdy</p>
+            <p className="footer-name">{portfolio.name}</p>
             <p className="footer-role">Design development · Shop drawings · BIM-enabled documentation</p>
           </div>
           <nav className="footer-links" aria-label="Footer navigation">
@@ -22,7 +22,7 @@ export function SiteFooter() {
           </nav>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Shaher Waheed Roshdy</span>
+          <span>© 2026 {portfolio.name}</span>
           <span>Riyadh, Saudi Arabia</span>
         </div>
       </div>
