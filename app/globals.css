@@ -217,7 +217,7 @@ h1, h2, h3 { font-family: "Space Grotesk", Arial, sans-serif; letter-spacing: -0
 .gallery figure { grid-column:span 6; margin:0; }
 .gallery figure:nth-child(3n+1) { grid-column:span 7; }
 .gallery figure:nth-child(3n+2) { grid-column:span 5; }
-.gallery img { width:100%; aspect-ratio:4/3; object-fit:cover; border:1px solid var(--line); background:var(--panel); }
+.gallery img { width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid var(--line); background:var(--panel); }
 .gallery figcaption { display:flex; justify-content:space-between; gap:20px; padding-top:10px; color:var(--ink-soft); font-size:.78rem; }
 .gallery figcaption span:last-child { font-family:"JetBrains Mono",monospace; color:var(--ink-faint); }
 .gallery-note { max-width:720px; margin:22px 0 0; color:var(--ink-soft); }

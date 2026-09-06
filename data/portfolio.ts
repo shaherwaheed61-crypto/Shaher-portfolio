@@ -351,7 +351,7 @@ export const projects: Project[] = [
     image: "/images/zad-design/private-resort-masterplan-taif.jpg",
     summary: "Architectural shop drawings, masterplans, villa design, permits, and visualization for private clients.",
     caseStudyHeading: "Design work carried across drawing, permit, and presentation stages.",
-    overview: "Preparing and reviewing architectural shop drawings and as-built sheets, including a private resort masterplan in Taif, a services complex, and private villa designs in Taif and 6th of October City.",
+    overview: "Preparing and reviewing architectural shop drawings and as-built sheets, including a private resort masterplan in Taif, a services complex, a commercial forecourt, private villas, and residential entrance landscape studies.",
     roleSummary: "Delivered architectural shop, working, as-built, permit, quantity take-off, and 3D visualization packages for residential and commercial projects.",
     responsibilities: [
       "Prepared architectural shop drawings, as-built packages, and quantity take-offs.",
@@ -360,12 +360,18 @@ export const projects: Project[] = [
     ],
     deliverables: ["Architecture shop drawings", "As-built drawings", "Permit packages", "Quantity surveying", "3D visualization"],
     tools: ["AutoCAD", "Revit", "SketchUp", "Lumion"],
+    galleryNote: "Selected architectural, commercial, and landscape visuals produced during Shaher's work with Zad Engineering Consulting Office.",
     gallery: [
       { src: "/images/zad-design/private-resort-masterplan-taif.jpg", alt: "Private resort masterplan in Taif", caption: "Private resort masterplan — Taif" },
       { src: "/images/zad-design/u-zone-design-evolution.jpg", alt: "U-Zone design evolution", caption: "U-Zone design evolution" },
       { src: "/images/zad-design/services-complex-site-plan.jpg", alt: "Services complex site plan", caption: "Services complex site plan" },
       { src: "/images/zad-design/private-villa-taif-exterior.jpg", alt: "Private villa exterior in Taif", caption: "Private villa exterior — Taif" },
       { src: "/images/zad-design/villa-facade-6th-october.jpg", alt: "Villa facade in 6th of October City", caption: "Villa facade — 6th of October City" },
+      { src: "/images/zad-design/residential-facade-perspective.jpg", alt: "Residential facade perspective visualization", caption: "Residential facade — perspective view" },
+      { src: "/images/zad-design/residential-facade-front.jpg", alt: "Residential facade front visualization", caption: "Residential facade — front study" },
+      { src: "/images/zad-design/golden-petrol-station.jpg", alt: "Commercial petrol station forecourt visualization", caption: "Commercial forecourt design" },
+      { src: "/images/zad-design/villa-entrance-landscape-day.jpg", alt: "Villa entrance landscape visualization in daylight", caption: "Villa entrance landscape — daylight" },
+      { src: "/images/zad-design/villa-entrance-landscape-night.jpg", alt: "Villa entrance landscape lighting visualization at night", caption: "Villa entrance landscape — night lighting" },
     ],
   },
   {
