@@ -39,15 +39,17 @@ h1, h2, h3 { font-family: "Space Grotesk", Arial, sans-serif; letter-spacing: -0
 .header-inner { min-height: 76px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
 .brand { display: flex; align-items: center; gap: 11px; font-family: "Space Grotesk", sans-serif; font-weight: 600; letter-spacing: -.02em; }
 .brand-mark { width: 9px; height: 9px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 18px rgba(199,119,66,.75); }
-.desktop-nav { display: flex; align-items: center; gap: 4px; padding: 5px; border: 1px solid var(--line); border-radius: 999px; background: rgba(22,23,23,.72); }
-.desktop-nav a { padding: 8px 15px; border-radius: 999px; color: #c3c0b9; font-family: "JetBrains Mono", monospace; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; transition: color .2s, background .2s; }
-.desktop-nav a:hover, .desktop-nav a:focus-visible { color: var(--ink); background: rgba(255,255,255,.07); }
+.desktop-nav { display: flex; align-items: center; gap: 4px; padding: 5px; border: 1px solid rgba(241,238,231,.23); border-radius: 999px; background: rgba(17,18,18,.9); box-shadow:0 12px 34px rgba(0,0,0,.24); }
+.desktop-nav a { padding: 8px 15px; border-radius: 999px; color: #d9d5cc; font-family: "JetBrains Mono", monospace; font-size: .8rem; font-weight:500; letter-spacing: .09em; text-transform: uppercase; transition: color .2s, background .2s, box-shadow .2s; }
+.desktop-nav a:hover, .desktop-nav a:focus-visible { color: var(--accent-light); background: rgba(199,119,66,.12); }
+.desktop-nav a.active { color:var(--ink); background:rgba(241,238,231,.11); box-shadow:inset 0 0 0 1px rgba(241,238,231,.78), 0 0 20px rgba(241,238,231,.06); }
 .header-contact { justify-self: end; display: inline-flex; align-items: center; gap: 8px; color: var(--accent-light); font-family: "JetBrains Mono", monospace; font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; }
 .mobile-nav { display: none; justify-self: end; position: relative; }
 .mobile-nav summary { list-style: none; display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; cursor: pointer; }
 .mobile-nav summary::-webkit-details-marker { display: none; }
 .mobile-nav nav { position: absolute; right: 0; top: 52px; width: 220px; padding: 12px; border: 1px solid var(--line); background: #151616; box-shadow: 0 24px 60px rgba(0,0,0,.35); }
-.mobile-nav nav a { display: block; padding: 12px; border-bottom: 1px solid var(--line); }
+.mobile-nav nav a { display: block; padding: 12px; border-bottom: 1px solid var(--line); color:#d9d5cc; }
+.mobile-nav nav a.active { color:var(--accent-light); background:rgba(199,119,66,.1); }
 
 .hero { min-height: 100svh; position: relative; display: grid; overflow: hidden; }
 .hero-image, .hero-wash, .hero-grid { position: absolute; inset: 0; width: 100%; height: 100%; }
