@@ -48,10 +48,28 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="delivery-path section-space section-rule">
+        <div className="shell">
+          <div className="section-heading align-start">
+            <div><p className="mono-label">02 / One delivery path</p><h2>Architecture and landscape, carried through one technical workflow.</h2></div>
+            <p className="section-note">BIM supports the process. The professional focus stays on design decisions, clear documentation, and buildable architectural and landscape packages.</p>
+          </div>
+          <ol className="delivery-grid">
+            {portfolio.deliverySteps.map((step, index) => (
+              <li className="delivery-step" key={step.title}>
+                <span className="delivery-number mono-label">{String(index + 1).padStart(2, "0")}</span>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       <section className="section-space section-rule">
         <div className="shell">
           <div className="section-heading">
-            <div><p className="mono-label">02 / Selected work</p><h2>Projects shaped from drawing set to site.</h2></div>
+            <div><p className="mono-label">03 / Selected work</p><h2>Projects shaped from drawing set to site.</h2></div>
             <Link className="text-link" href="/projects">All projects <ArrowUpRight size={15} /></Link>
           </div>
           <div className="featured-grid">{featuredProjects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index + 1} featured />)}</div>
@@ -63,7 +81,7 @@ export default function Home() {
       <section className="section-space section-rule capabilities-section">
         <div className="shell">
           <div className="section-heading align-start">
-            <div><p className="mono-label">04 / Capabilities</p><h2>Technical clarity across architecture and landscape.</h2></div>
+            <div><p className="mono-label">05 / Capabilities</p><h2>Technical clarity across architecture and landscape.</h2></div>
             <p className="section-note">A focused practice spanning design development, documentation, visualization, and BIM-enabled delivery.</p>
           </div>
           <div className="capability-grid">
@@ -74,9 +92,12 @@ export default function Home() {
 
       <section className="closing-cta section-rule">
         <div className="shell closing-grid">
-          <p className="mono-label">Available in Riyadh / KSA</p>
-          <h2>Let&apos;s shape the next design into a clear, buildable package.</h2>
-          <Link className="button button-solid" href="/contact">Start a conversation <ArrowUpRight size={16} /></Link>
+          <p className="mono-label">Based in Riyadh / Open across KSA</p>
+          <h2>Open to architecture and landscape roles focused on technical-office delivery.</h2>
+          <div className="closing-actions">
+            <Link className="button button-solid" href="/contact">Contact Shaher <ArrowUpRight size={16} /></Link>
+            <a className="button closing-secondary" href={portfolio.cv} download>Review CV <Download size={16} /></a>
+          </div>
         </div>
       </section>
     </main>

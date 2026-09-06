@@ -10,7 +10,7 @@ export function DayNightShowcase() {
     <section className="day-night-section section-rule">
       <div className="shell day-night-grid">
         <div className="day-night-copy">
-          <p className="mono-label">03 / Design study</p>
+          <p className="mono-label">04 / Design study</p>
           <h2>One facade. Two atmospheres.</h2>
           <p>Day and night studies test material balance, lighting hierarchy, and the way architecture is experienced after sunset.</p>
           <div className="render-switch" aria-label="Choose facade view">

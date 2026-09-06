@@ -4,6 +4,14 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { getNextProject, getProject, projects } from "@/data/portfolio";
 
+const confidentialWorkflow = [
+  "Approved design inputs",
+  "Architectural Revit model",
+  "Working & shop drawings",
+  "Details, quantities & submittals",
+  "Review & issue resolution",
+];
+
 export function generateStaticParams() { return projects.map((project) => ({ slug: project.slug })); }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -43,9 +51,47 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
       {project.metrics && project.metrics.length > 0 && <section className="project-metrics section-rule" aria-label="Project scale"><div className="shell project-metrics-grid">{project.metrics.map((metric) => <div key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}</div></section>}
 
-      <section className="section-space section-rule"><div className="shell project-narrative"><p className="mono-label">Role / Contribution</p><div>{project.confidentialNote && <p className="confidential-note">{project.confidentialNote}</p>}{project.roleSummary && <div className="role-focus"><span>My role</span><strong>{project.role}</strong><p>{project.roleSummary}</p></div>}<div className="project-copy-grid"><div><h2>From design intent to construction-ready delivery.</h2><p>{project.overview}</p></div><ul className="bullet-list">{project.responsibilities.map((item) => <li key={item}>{item}</li>)}</ul></div><div className="project-deliverables"><h3>Deliverables</h3><div className="tag-row">{project.deliverables.map((item) => <span key={item}>{item}</span>)}</div><h3 style={{ marginTop: 34 }}>Tools</h3><div className="tag-row">{project.tools.map((item) => <span key={item}>{item}</span>)}</div></div></div></div></section>
+      <section className="section-space section-rule">
+        <div className="shell project-narrative">
+          <p className="mono-label">Case study / Evidence</p>
+          <div>
+            {project.confidentialNote && <p className="confidential-note">{project.confidentialNote}</p>}
+            {project.roleSummary && <div className="role-focus"><span>My role</span><strong>{project.role}</strong><p>{project.roleSummary}</p></div>}
+            <div className="project-copy-grid">
+              <div>
+                <p className="mono-label project-copy-label">Project context</p>
+                <h2>Technical decisions translated into buildable information.</h2>
+                <p>{project.overview}</p>
+              </div>
+              <div>
+                <p className="mono-label project-copy-label">Contribution highlights</p>
+                <ul className="bullet-list">{project.responsibilities.map((item) => <li key={item}>{item}</li>)}</ul>
+              </div>
+            </div>
 
-      {project.gallery.length > 0 && <section className="section-space section-rule"><div className="shell"><div className="section-heading"><div><p className="mono-label">Project gallery / {String(project.gallery.length).padStart(2, "0")}</p><h2>Selected project views.</h2></div></div><div className="gallery">{project.gallery.map((image, index) => <figure key={image.src}><img src={image.src} alt={image.alt} loading={index > 1 ? "lazy" : "eager"} /><figcaption><span>{image.caption}</span><span>{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div></div></section>}
+            {project.confidential && (
+              <section className="confidential-workflow" aria-labelledby="confidential-workflow-title">
+                <div className="confidential-workflow-heading">
+                  <div>
+                    <p className="mono-label">Public workflow</p>
+                    <h3 id="confidential-workflow-title">A safe view of the delivery process.</h3>
+                  </div>
+                  <p>No project drawings, quantities, locations, or restricted technical information are shown.</p>
+                </div>
+                <ol className="confidential-workflow-grid">
+                  {confidentialWorkflow.map((step, index) => (
+                    <li key={step}><span>{String(index + 1).padStart(2, "0")}</span><strong>{step}</strong></li>
+                  ))}
+                </ol>
+              </section>
+            )}
+
+            <div className="project-deliverables"><h3>Deliverables</h3><div className="tag-row">{project.deliverables.map((item) => <span key={item}>{item}</span>)}</div><h3 style={{ marginTop: 34 }}>Tools</h3><div className="tag-row">{project.tools.map((item) => <span key={item}>{item}</span>)}</div></div>
+          </div>
+        </div>
+      </section>
+
+      {project.gallery.length > 0 && <section className="section-space section-rule"><div className="shell"><div className="section-heading"><div><p className="mono-label">Project gallery / {String(project.gallery.length).padStart(2, "0")}</p><h2>Selected project views.</h2>{project.galleryNote && <p className="gallery-note">{project.galleryNote}</p>}</div></div><div className="gallery">{project.gallery.map((image, index) => <figure key={image.src}><img src={image.src} alt={image.alt} loading={index > 1 ? "lazy" : "eager"} /><figcaption><span>{image.caption}</span><span>{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div></div></section>}
 
       <section className="section-space section-rule"><div className="shell next-project"><p className="mono-label">Next project</p><h2>{nextProject.title}</h2><Link className="button button-ghost" href={`/projects/${nextProject.slug}`}>View project <ArrowUpRight size={16} /></Link></div></section>
     </main>

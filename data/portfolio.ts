@@ -11,6 +11,7 @@ export type Project = {
   officialUrl?: string;
   confidential?: boolean;
   confidentialNote?: string;
+  galleryNote?: string;
   roleSummary?: string;
   metrics?: { value: string; label: string }[];
   categories: string[];
@@ -44,9 +45,42 @@ export const portfolio = {
     "Technical Office Architect with more than five years of experience delivering architectural and landscape packages across buildings, parks, streetscape, and large-scale developments in Saudi Arabia and Egypt. Professionally accredited as an Architect by the Saudi Council of Engineers, with experience in design development, shop drawings, technical detailing, quantity take-offs, material submittals, and consultant approvals.",
   proofPoints: [
     { value: "5+", label: "Years of experience" },
-    { value: "5", label: "Current project portfolio" },
     { value: "2M m²", label: "KAIG overall scale" },
     { value: "11 parks", label: "Housing parks scope" },
+    { value: "98,000 m²", label: "Housing landscape scope" },
+  ],
+  deliverySteps: [
+    {
+      title: "Design development",
+      description: "Refining architectural and landscape intent around project requirements, site conditions, and approved inputs.",
+    },
+    {
+      title: "BIM-enabled documentation",
+      description: "Using models as a reliable basis for clearer drawings, technical decisions, and package consistency.",
+    },
+    {
+      title: "Shop drawings & details",
+      description: "Translating design information into coordinated, construction-ready plans, sections, and details.",
+    },
+    {
+      title: "Quantities & submittals",
+      description: "Preparing quantity take-offs, material reviews, technical reports, RFIs, and approval packages.",
+    },
+    {
+      title: "Construction support",
+      description: "Responding to review comments, verified site conditions, and technical queries through controlled revisions.",
+    },
+  ],
+  registrationDetails: {
+    authority: "Saudi Council of Engineers (SCE)",
+    accreditation: "Professional Accreditation: Architect",
+    specialization: "Urban Planning",
+    membership: "1010660",
+    validUntil: "13 February 2027",
+  },
+  languages: [
+    { language: "Arabic", proficiency: "Native" },
+    { language: "English", proficiency: "Professional working proficiency" },
   ],
   capabilities: [
     {
@@ -126,6 +160,7 @@ export const projects: Project[] = [
     summary: "Landscape technical-office delivery within a landmark botanical-garden development covering 2 million m² overall in Riyadh.",
     overview: "Preparing and reviewing landscape shop drawings and as-built sheets within one of the world's largest covered botanical-garden developments, combining themed gardens, climate-controlled environments, the Wadi Walk, observation towers, educational facilities, and visitor amenities.",
     roleSummary: "Delivered and reviewed landscape and hardscape shop drawings, construction details, as-built packages, site verification, and buildable revisions responding to consultant feedback and site conditions.",
+    galleryNote: "Images show the wider project context. The contribution described on this page is limited to landscape technical-office packages.",
     metrics: [
       { value: "2M m²", label: "Overall project area" },
       { value: "SAR 3B", label: "Approx. project value" },
