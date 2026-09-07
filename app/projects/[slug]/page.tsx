@@ -33,7 +33,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     else groups.push({ title, images: [image] });
     return groups;
   }, []);
-  const includesDrawingEvidence = galleryGroups.some((group) => group.title === "Selected shop drawing evidence");
+  const drawingEvidenceGroups = ["Landscape shop drawing plans", "Sections & construction details"];
+  const includesDrawingEvidence = galleryGroups.some((group) => drawingEvidenceGroups.includes(group.title));
 
   return (
     <main>
@@ -101,7 +102,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
       {project.gallery.length > 0 && <section className="section-space section-rule"><div className="shell"><div className="section-heading"><div><p className="mono-label">Public evidence / {String(project.gallery.length).padStart(2, "0")}</p><h2>{includesDrawingEvidence ? "Built context and technical evidence." : "Selected project views."}</h2>{project.galleryNote && <p className="gallery-note">{project.galleryNote}</p>}</div></div><div className="gallery-groups">{galleryGroups.map((group, groupIndex) => <section className="gallery-group" key={group.title} aria-labelledby={`gallery-group-${groupIndex}`}>
         {galleryGroups.length > 1 && <div className="gallery-group-heading"><span className="mono-label">{String(groupIndex + 1).padStart(2, "0")}</span><h3 id={`gallery-group-${groupIndex}`}>{group.title}</h3><span>{String(group.images.length).padStart(2, "0")} views</span></div>}
-        <div className={`gallery ${group.title === "Selected shop drawing evidence" ? "gallery--drawings" : ""}`}>{group.images.map((image, index) => <figure key={image.src}><a className="gallery-image-link" href={image.src} target="_blank" rel="noreferrer" aria-label={`Open ${image.caption} at full size`}><img src={image.src} alt={image.alt} loading={groupIndex === 0 && index < 2 ? "eager" : "lazy"} decoding="async" /><span className="gallery-open"><Maximize2 size={13} /> Open image</span></a><figcaption><span>{image.caption}</span><span>{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div>
+        <div className={`gallery ${drawingEvidenceGroups.includes(group.title) ? "gallery--drawings" : ""}`}>{group.images.map((image, index) => <figure key={image.src}><a className="gallery-image-link" href={image.src} target="_blank" rel="noreferrer" aria-label={`Open ${image.caption} at full size`}><img src={image.src} alt={image.alt} loading={groupIndex === 0 && index < 2 ? "eager" : "lazy"} decoding="async" /><span className="gallery-open"><Maximize2 size={13} /> Open image</span></a><figcaption><span>{image.caption}</span><span>{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div>
       </section>)}</div></div></section>}
 
       <section className="section-space section-rule"><div className="shell next-project"><p className="mono-label">Next project</p><h2>{nextProject.title}</h2><Link className="button button-ghost" href={`/projects/${nextProject.slug}`}>View project <ArrowUpRight size={16} /></Link></div></section>
