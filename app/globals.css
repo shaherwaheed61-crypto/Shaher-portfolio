@@ -223,6 +223,13 @@ h1, h2, h3 { font-family: "Space Grotesk", Arial, sans-serif; letter-spacing: -0
 .gallery figure:nth-child(3n+1) { grid-column:span 7; }
 .gallery figure:nth-child(3n+2) { grid-column:span 5; }
 .gallery img { width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid var(--line); background:var(--panel); }
+.gallery-image-link { position:relative; display:block; overflow:hidden; }
+.gallery-image-link img { display:block; transition:transform .35s ease, border-color .35s ease; }
+.gallery-image-link:hover img { transform:scale(1.015); border-color:var(--accent); }
+.gallery-image-link:focus-visible { outline:2px solid var(--accent-light); outline-offset:4px; }
+.gallery-open { position:absolute; right:12px; bottom:12px; display:inline-flex; align-items:center; gap:7px; padding:8px 10px; border:1px solid rgba(255,255,255,.25); background:rgba(7,8,8,.8); color:#f4f1ea; font-family:"JetBrains Mono",monospace; font-size:.64rem; letter-spacing:.06em; text-transform:uppercase; backdrop-filter:blur(8px); }
+.gallery--drawings figure:nth-child(n) { grid-column:span 6; }
+.gallery--drawings img { aspect-ratio:4/3; object-fit:contain; padding:8px; background:#f4f3ef; }
 .gallery figcaption { display:flex; justify-content:space-between; gap:20px; padding-top:10px; color:var(--ink-soft); font-size:.78rem; }
 .gallery figcaption span:last-child { font-family:"JetBrains Mono",monospace; color:var(--ink-faint); }
 .gallery-note { max-width:720px; margin:22px 0 0; color:var(--ink-soft); }
