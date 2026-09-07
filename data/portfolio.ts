@@ -27,10 +27,10 @@ export type Project = {
 };
 
 export const portfolio = {
-  name: "Shaher Wahid Rushdi Elsayed",
+  name: "Shaher Wahid Rushdi",
   displayName: {
     primary: "Shaher Wahid",
-    secondary: "Rushdi Elsayed",
+    secondary: "Rushdi",
   },
   role: "Architect & Landscape Architect",
   headline: "Technical Office Architect | Architecture & Landscape",
@@ -223,11 +223,13 @@ export const projects: Project[] = [
     role: "Architect — Technical Office",
     categories: ["Architecture", "Shop Drawings", "BIM"],
     featured: true,
+    image: "/images/security-aviation-leadership-building/approved-exterior-visualization.webp",
     confidential: true,
-    confidentialNote: "Confidential project — selected professional scope only. Project imagery and restricted technical information are intentionally withheld.",
-    summary: "Confidential leadership-building project in Riyadh; selected professional scope shown without project imagery or restricted technical information.",
+    confidentialNote: "Confidential project — this exterior 3D visualization is approved for public display. Drawings, model files, plans, and restricted technical information remain withheld.",
+    galleryNote: "One approved exterior visualization is shown publicly. No drawings, model files, plans, room data, or restricted technical information are included.",
+    summary: "Architectural redesign and BIM-enabled documentation for a leadership building in Riyadh, presented through one approved exterior visualization and a confidentiality-safe professional scope.",
     caseStudyHeading: "Architectural redesign developed within controlled information requirements.",
-    overview: "Supporting architectural redesign and construction documentation for a confidential government project. This public case study is limited to role, workflow, and non-sensitive deliverables.",
+    overview: "Supporting architectural redesign and construction documentation for a confidential government project. This public case study combines one approved exterior visualization with Shaher's role, workflow, and non-sensitive deliverables.",
     roleSummary: "Developed architectural redesign, Revit-based design information, working drawings, shop drawings, technical details, quantity take-offs, and material-review packages within controlled information requirements.",
     responsibilities: [
       "Produced BIM-based architectural shop drawings and model-driven documentation within controlled information requirements.",
@@ -237,7 +239,14 @@ export const projects: Project[] = [
     ],
     deliverables: ["Architectural shop drawings", "BIM model", "Material submittals", "RFIs", "Technical proposals", "Approval tracking"],
     tools: ["Revit", "AutoCAD", "Navisworks", "ACC"],
-    gallery: [],
+    gallery: [
+      {
+        src: "/images/security-aviation-leadership-building/approved-exterior-visualization.webp",
+        alt: "Approved exterior 3D visualization of the Security Aviation Leadership Building created by Shaher Wahid Rushdi",
+        caption: "Exterior architectural visualization — approved public presentation view",
+        group: "Approved exterior visualization",
+      },
+    ],
   },
   {
     slug: "housing-projects-parks",

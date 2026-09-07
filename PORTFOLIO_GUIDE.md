@@ -1,6 +1,6 @@
 # Portfolio content and update guide
 
-This repository is the public source for Shaher Wahid Rushdi Elsayed's architecture and landscape portfolio.
+This repository is the public source for Shaher Wahid Rushdi's architecture and landscape portfolio.
 
 ## Source of truth
 
@@ -22,11 +22,12 @@ Update the canonical data first. Pages and project routes read from that file au
 
 ## Confidential project rule
 
-`security-aviation-leadership-building` is a military command project.
+`security-aviation-leadership-building` is a military command project. Shaher has explicitly approved the public use of the project name and the single exterior 3D visualization already stored in its image folder.
 
-- Do not publish drawings, models, plans, elevations, site images, room data, security information, restricted stakeholders, or technical quantities.
-- Keep its card image-free and marked `Confidential / Selected scope`.
-- Public copy may describe Shaher's role, general workflow, and non-sensitive deliverable types only.
+- The approved exterior visualization may be used on the project card and case-study page.
+- Do not publish drawings, model files, plans, technical elevations, site photographs, room data, security information, restricted stakeholders, or technical quantities.
+- Do not add further imagery without Shaher's explicit approval.
+- Keep the project marked `Confidential / Selected scope`; public copy may describe Shaher's role, general workflow, and non-sensitive deliverable types only.
 
 ## Adding or editing a project
 

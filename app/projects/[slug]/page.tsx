@@ -85,7 +85,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                     <p className="mono-label">Public workflow</p>
                     <h3 id="confidential-workflow-title">A safe view of the delivery process.</h3>
                   </div>
-                  <p>No project drawings, quantities, locations, or restricted technical information are shown.</p>
+                  <p>{project.gallery.length > 0 ? "Only the approved exterior visualization is shown. No drawings, model files, room data, technical quantities, or restricted information are published." : "No project drawings, model files, room data, technical quantities, or restricted information are published."}</p>
                 </div>
                 <ol className="confidential-workflow-grid">
                   {confidentialWorkflow.map((step, index) => (
