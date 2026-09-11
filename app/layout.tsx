@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     title: `${portfolio.name} | Architect & Landscape Architect`,
     description: "Technical-office architecture and landscape portfolio focused on design development, shop drawings, and construction-ready documentation.",
-    siteName: `${portfolio.displayName.primary} Portfolio`,
+    siteName: `${portfolio.name} Portfolio`,
   },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
 };

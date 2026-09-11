@@ -24,7 +24,7 @@ Update the canonical data first. Pages and project routes read from that file au
 
 `security-aviation-leadership-building` is a military command project. Shaher has explicitly approved the public use of the project name and the single exterior 3D visualization already stored in its image folder.
 
-- The approved exterior visualization may be used on the project card and case-study page.
+- The approved exterior visualization may be used on the homepage cover, project card, and case-study page.
 - Do not publish drawings, model files, plans, technical elevations, site photographs, room data, security information, restricted stakeholders, or technical quantities.
 - Do not add further imagery without Shaher's explicit approval.
 - Keep the project marked `Confidential / Selected scope`; public copy may describe Shaher's role, general workflow, and non-sensitive deliverable types only.

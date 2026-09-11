@@ -16,9 +16,23 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
-        <img className="hero-image" src="/images/gardens-project/night-masterplan-aerial.jpg" alt="Aerial night view of King Abdullah International Gardens" loading="eager" fetchPriority="high" decoding="async" />
+        <div className="hero-visual" aria-hidden="true">
+          <div className="hero-scene hero-scene-architecture">
+            <img src="/images/security-aviation-leadership-building/approved-exterior-visualization.webp" alt="" loading="eager" fetchPriority="high" decoding="async" />
+          </div>
+          <div className="hero-scene hero-scene-landscape">
+            <img src="/images/zad-design/villa-entrance-landscape-night.jpg" alt="" loading="eager" decoding="async" />
+          </div>
+          <div className="hero-visual-seam" />
+        </div>
         <div className="hero-wash" />
         <div className="hero-grid" />
+        <div className="hero-particles" aria-hidden="true">
+          {Array.from({ length: 14 }, (_, index) => <span key={index} />)}
+        </div>
+        <div className="hero-disciplines" aria-hidden="true">
+          <span>Architecture</span><span>Landscape</span><span>Technical Office</span>
+        </div>
         <div className="hero-content shell">
           <div className="hero-kicker"><span>{portfolio.headline}</span><span>{portfolio.location}</span></div>
           <div className="hero-copy">
@@ -31,9 +45,9 @@ export default function Home() {
             </div>
           </div>
           <aside className="hero-facts" aria-label="Professional summary">
-            <div><span>Role</span><strong>Technical Office<br />Architect</strong></div>
             <div><span>Experience</span><strong>{portfolio.experience}</strong></div>
-            <div><span>Practice</span><strong>Architecture<br />&amp; Landscape</strong></div>
+            <div><span>Work</span><strong>{projects.length} selected<br />projects</strong></div>
+            <div><span>Delivery</span><strong>Technical Office<br />Execution</strong></div>
             <div><span>Registration</span><strong>{portfolio.registration}</strong></div>
           </aside>
           <p className="hero-coordinate mono-label">24.7136° N / 46.6753° E</p>

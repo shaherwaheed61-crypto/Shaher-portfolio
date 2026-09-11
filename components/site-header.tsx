@@ -21,7 +21,7 @@ export function SiteHeader() {
       <div className="shell header-inner">
         <Link className="brand" href="/" aria-label={`${portfolio.name} home`}>
           <span className="brand-mark" />
-          {portfolio.displayName.primary}
+          {portfolio.name}
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           <Link className={isActive("/") ? "active" : undefined} href="/" aria-current={isActive("/") ? "page" : undefined}>Home</Link>
