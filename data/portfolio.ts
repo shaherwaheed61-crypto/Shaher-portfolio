@@ -81,7 +81,12 @@ export const portfolio = {
     accreditation: "Professional Accreditation: Architect",
     specialization: "Urban Planning",
     membership: "1010660",
+    accreditedSince: "13 February 2024",
     validUntil: "13 February 2027",
+    certificate: {
+      image: "/images/certifications/sce-professional-accreditation.webp",
+      document: "/certificates/sce-professional-accreditation.pdf",
+    },
   },
   languages: [
     { language: "Arabic", proficiency: "Native" },

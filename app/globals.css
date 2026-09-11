@@ -302,6 +302,11 @@ h1, h2, h3 { font-family: "Space Grotesk", Arial, sans-serif; letter-spacing: -0
 .registration-card dl div { display:flex; justify-content:space-between; gap:28px; padding:16px 0; border-bottom:1px solid var(--line); }
 .registration-card dt { color:var(--ink-faint); font-family:"JetBrains Mono",monospace; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; }
 .registration-card dd { margin:0; text-align:right; color:var(--ink); font-weight:600; }
+.registration-certificate { grid-column:1 / -1; margin:0; min-width:0; }
+.registration-certificate > a { display:block; background:#fff; border:1px solid var(--line-strong); }
+.registration-certificate img { display:block; width:100%; height:auto; object-fit:contain; }
+.registration-certificate figcaption { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px 24px; margin-top:18px; color:var(--ink-soft); font-size:.9rem; }
+.registration-certificate figcaption .text-link { margin:0; }
 .credentials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
 .credential-card { border:1px solid var(--line); background:var(--panel); }
 .credential-card img { width:100%; aspect-ratio:4/3; object-fit:cover; border-bottom:1px solid var(--line); }

@@ -21,8 +21,18 @@ export default function CredentialsPage() {
             <dl>
               <div><dt>Specialization</dt><dd>{registration.specialization}</dd></div>
               <div><dt>Membership no.</dt><dd>{registration.membership}</dd></div>
+              <div><dt>Accredited since</dt><dd>{registration.accreditedSince}</dd></div>
               <div><dt>Valid until</dt><dd>{registration.validUntil}</dd></div>
             </dl>
+            <figure className="registration-certificate">
+              <a href={registration.certificate.document} target="_blank" rel="noopener noreferrer" aria-label="Open SCE professional accreditation certificate PDF in a new tab">
+                <img src={registration.certificate.image} alt="Saudi Council of Engineers professional accreditation certificate: Architect, Urban Planning, membership 1010660, valid until 13 February 2027" width={1800} height={1273} loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <span>Professional accreditation certificate</span>
+                <a className="text-link" href={registration.certificate.document} target="_blank" rel="noopener noreferrer">View certificate (PDF)<span className="sr-only"> — opens in a new tab</span></a>
+              </figcaption>
+            </figure>
           </article>
         </div>
       </section>
