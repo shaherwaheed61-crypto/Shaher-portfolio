@@ -1,0 +1,112 @@
+{
+  "revisedOn": "2026-10-21",
+  "excludedBehanceIds": [
+    "184386285",
+    "184116601",
+    "177060465",
+    "172228583",
+    "171786413",
+    "167998423",
+    "132909135",
+    "131690855",
+    "131611185",
+    "128816881",
+    "128119739",
+    "127534973",
+    "128001307",
+    "126859831",
+    "126309177",
+    "122979759",
+    "123708783",
+    "102556267",
+    "102322105"
+  ],
+  "extendedBehanceIds": [
+    "134534019"
+  ],
+  "kaigDrawingScenes": [
+    {
+      "title": "Wadi 1 · Plan & cross sections",
+      "images": [
+        "/images/gardens-project/shop-drawings/wadi-1-plan.webp",
+        "/images/gardens-project/shop-drawings/wadi-1-sections-a-b.webp"
+      ],
+      "duration": 2
+    },
+    {
+      "title": "Wadi 1 · Sections & level relationships",
+      "images": [
+        "/images/gardens-project/shop-drawings/wadi-1-sections-c-e.webp",
+        "/images/gardens-project/shop-drawings/wadi-1-sections-f-h.webp"
+      ],
+      "duration": 2
+    },
+    {
+      "title": "Wadi 2 · Plan & cross sections",
+      "images": [
+        "/images/gardens-project/shop-drawings/wadi-2-plan.webp",
+        "/images/gardens-project/shop-drawings/wadi-2-sections-a-b.webp"
+      ],
+      "duration": 2
+    },
+    {
+      "title": "Wadi 2 · Section continuity & details",
+      "images": [
+        "/images/gardens-project/shop-drawings/wadi-2-section-b-continuation.webp",
+        "/images/gardens-project/shop-drawings/wadi-2-section-c.webp"
+      ],
+      "duration": 2
+    },
+    {
+      "title": "Family Garden · Layout to construction",
+      "images": [
+        "/images/gardens-project/shop-drawings/family-garden-plan.webp",
+        "/images/gardens-project/shop-drawings/family-garden-sections-overview.webp",
+        "/images/gardens-project/shop-drawings/family-garden-construction-details.webp"
+      ],
+      "duration": 2
+    },
+    {
+      "title": "Discovery Garden · Plans, sections & details",
+      "images": [
+        "/images/gardens-project/shop-drawings/discovery-garden-plan.webp",
+        "/images/gardens-project/shop-drawings/discovery-garden-sections-details.webp"
+      ],
+      "duration": 2
+    },
+    {
+      "title": "Maze Garden · Plans & boundary details",
+      "images": [
+        "/images/gardens-project/shop-drawings/maze-garden-plan.webp",
+        "/images/gardens-project/shop-drawings/maze-garden-sections-details.webp"
+      ],
+      "duration": 2
+    },
+    {
+      "title": "Pliocene Garden · Levels & construction details",
+      "images": [
+        "/images/gardens-project/shop-drawings/pliocene-garden-plan.webp",
+        "/images/gardens-project/shop-drawings/pliocene-garden-landscape-sections.webp",
+        "/images/gardens-project/shop-drawings/pliocene-garden-construction-details.webp"
+      ],
+      "duration": 2
+    },
+    {
+      "title": "Landscape layout packages",
+      "images": [
+        "/images/gardens-project/shop-drawings/aviary-garden-plan.webp",
+        "/images/gardens-project/shop-drawings/butterfly-garden-plan.webp",
+        "/images/gardens-project/shop-drawings/carboniferous-garden-plan.webp"
+      ],
+      "duration": 2
+    },
+    {
+      "title": "Landscape shop drawing plans",
+      "images": [
+        "/images/gardens-project/shop-drawings/cretaceous-garden-plan.webp",
+        "/images/gardens-project/shop-drawings/devonian-garden-plan.webp"
+      ],
+      "duration": 2
+    }
+  ]
+}

@@ -1,0 +1,486 @@
+{
+  "sourceSite": "https://shaher-waheed-portfolio.shaherwaheed61.chatgpt.site",
+  "sourceCommit": "1aeba6f2875f3e07140b115bc19a1d2ff8d864c8",
+  "files": [
+    {
+      "path": "Shaher-Wahid-Rushdi-CV.pdf",
+      "size": 112568,
+      "sha256": "6661cb96160631831478c8f667c33c2c8290411340e46c8d32598489dab102ae"
+    },
+    {
+      "path": "Shaher-Wahid-Rushdi-Selected-Portfolio.pdf",
+      "size": 4553447,
+      "sha256": "200a21d51ff9eb1ad1e5d7fb00b21912ea0067a23d07dfee5debdee5641e956f"
+    },
+    {
+      "path": "certificates/sce-professional-accreditation.pdf",
+      "size": 436027,
+      "sha256": "7e15f915a2723080faa3dbcfdafc6256ac4503f11161c2e2b62b6d12d5d3c6fd"
+    },
+    {
+      "path": "favicon.svg",
+      "size": 219,
+      "sha256": "fa7e4becd381861b2c9c9ea06cf96856d288a1b2057f30341e043e578ae988e9"
+    },
+    {
+      "path": "fonts/jetbrains-mono.woff2",
+      "size": 31340,
+      "sha256": "2c32b9b3ee358c119e210f6f5195f9bd34894d78a785ff2e95d60e718e400af4"
+    },
+    {
+      "path": "fonts/manrope.woff2",
+      "size": 24576,
+      "sha256": "e310b55a7fd9677f5e3555e6c6c4d064fa1f1d24393f0ddbe217cea12a8c432f"
+    },
+    {
+      "path": "fonts/space-grotesk.woff2",
+      "size": 22320,
+      "sha256": "a0d054c4af557de20afd6ca59f47ab353bcaec49c63ff04b6c9d39d0f8910557"
+    },
+    {
+      "path": "images/about/portrait-v2.jpg",
+      "size": 56984,
+      "sha256": "f6b5c953e396e48a26d37306b16fb26585b46242bcfb759a25c97d347e906507"
+    },
+    {
+      "path": "images/blue-development/model-overview.jpg",
+      "size": 79408,
+      "sha256": "2c73ba64ec5515bd162a0aae3c17658628159c3c90e4861a46eac173d27c08b6"
+    },
+    {
+      "path": "images/blue-development/model-reverse.jpg",
+      "size": 68018,
+      "sha256": "64cb600b68742625aa8eb87c2ee6f0541ae8bc5cf3ffc76213334cf5629745a8"
+    },
+    {
+      "path": "images/blue-development/model-side.jpg",
+      "size": 71359,
+      "sha256": "c6cc90e11981ae7021fb8dace75ce89f2e077eaad6edcf5fe526bdd9498a8938"
+    },
+    {
+      "path": "images/brand/abstract-3d-hero.jpg",
+      "size": 159095,
+      "sha256": "5b6a588f1a64481174c880b5a6fa524cb70b051b4c423bde5f08edb220e8ac98"
+    },
+    {
+      "path": "images/certifications/bim-diploma-management.jpg",
+      "size": 149681,
+      "sha256": "e563075b3e833d6532b82d02f372c2935cf37dc20649471b87c505f752a87211"
+    },
+    {
+      "path": "images/certifications/certified-bim-coordinator.jpg",
+      "size": 164700,
+      "sha256": "f1652b34342b7f9350d98ae18a206282847a8d0f4815ce000466b7ec075c2536"
+    },
+    {
+      "path": "images/certifications/certified-bim-modeler.jpg",
+      "size": 167527,
+      "sha256": "a14572187d34e05ee934227424364290b45dbc800694712a3c0ac190141fe656"
+    },
+    {
+      "path": "images/certifications/certified-information-manager.jpg",
+      "size": 297609,
+      "sha256": "8ca725ff0cb29477a190c4d0637ab83b6332bb5b8a3c74cf5e510fd1bcd745e4"
+    },
+    {
+      "path": "images/certifications/iso-19650-readiness.jpg",
+      "size": 292827,
+      "sha256": "566cbf4c4b544b485123ea7e368ff0d786ac35c68aa06619e41abcb9ef91586d"
+    },
+    {
+      "path": "images/certifications/revit-coordinates-workshop.jpg",
+      "size": 121764,
+      "sha256": "1fada99a73ca9dc71730111fdfdc131317acd93d96c18e0852ba4c6d1f7fc87a"
+    },
+    {
+      "path": "images/certifications/sce-professional-accreditation.webp",
+      "size": 195720,
+      "sha256": "e269f17845fc3e1590f66f7d4bbaf85134947f701810a1a8b8c8430101540a88"
+    },
+    {
+      "path": "images/freelance/classic-villa-day.jpg",
+      "size": 962812,
+      "sha256": "c54b99a250db4a2444bd64737ebaf1416284a55dedf80f34edeed7d8e6058ff8"
+    },
+    {
+      "path": "images/freelance/classic-villa-night.jpg",
+      "size": 858744,
+      "sha256": "eb0c0b5217aaeb9d062b78d40f339d8c34ae9229b8aa229740e6834de702f84f"
+    },
+    {
+      "path": "images/freelance/design-evolution-diagram.jpg",
+      "size": 145203,
+      "sha256": "f03a3ba57fcfb0b64adbf6ada874b6271b923980fe67f903f13df48dc2b5490e"
+    },
+    {
+      "path": "images/freelance/estate-courtyard-firepit.jpg",
+      "size": 753025,
+      "sha256": "e2335374a116dd6749211e80e41dbc8156a6d4a57d78256505858833201b221d"
+    },
+    {
+      "path": "images/freelance/estate-pool-garden.jpg",
+      "size": 872470,
+      "sha256": "8867d0f17c03a6627109870d974f883b7a0229dd0766dccce987dbaa8a64f5e2"
+    },
+    {
+      "path": "images/freelance/modern-villa-exterior.jpg",
+      "size": 653833,
+      "sha256": "841f131ac7e65693d7130f64e3122b64fe364a2551cdcbce713b19095b8b8441"
+    },
+    {
+      "path": "images/freelance/modern-villa-render.png",
+      "size": 741228,
+      "sha256": "bbf364500d25b188a00431df6c468f688cc9515d84f61fd29c1fbeb79077ee71"
+    },
+    {
+      "path": "images/freelance/october-city-facade.jpg",
+      "size": 1037047,
+      "sha256": "0cf06302deedf3eaeb7cf7e5ce295b2b3db52787d0927fbe6b534a946e398cc3"
+    },
+    {
+      "path": "images/freelance/services-complex-parking-layout.jpg",
+      "size": 735041,
+      "sha256": "cf0dda68236dbf621678516a2b619ebd859527f84f04d2fc5f25a1cfda461a9f"
+    },
+    {
+      "path": "images/freelance/services-plaza-aerial.jpg",
+      "size": 592392,
+      "sha256": "5773fe3e1ae8a8881c7c7342da1b895d196867965bfb668bc3f3fee7e75d934b"
+    },
+    {
+      "path": "images/gardens-project/aerial-aviary-dome-gardens.jpg",
+      "size": 137875,
+      "sha256": "00f46b12a3cb462fba4135028449a7beb4c484255ecab5612aa8b6e34579ff15"
+    },
+    {
+      "path": "images/gardens-project/aerial-main-dome.jpg",
+      "size": 124590,
+      "sha256": "95184f8a7c203550ee17b144eef1bf8c98a3704b9f1c3547c72287cdf6936b23"
+    },
+    {
+      "path": "images/gardens-project/aerial-parking-planting-grid.jpg",
+      "size": 151660,
+      "sha256": "b6830a42d1c38bc9d76c03316d3c779f3be92cad7c5a132907ba7cf7e415ceaf"
+    },
+    {
+      "path": "images/gardens-project/aerial-water-feature-wadi-walk.jpg",
+      "size": 152862,
+      "sha256": "0a86e37fde9eeadf4d3cec21fe4d35eafb97dea4129245d30b12609a6456698d"
+    },
+    {
+      "path": "images/gardens-project/aviary-dome-site-photo.jpg",
+      "size": 76999,
+      "sha256": "48754a3545a8b4052506ee2e5bcd6af0e0e41ca64a1e042c2df90df427e01d0f"
+    },
+    {
+      "path": "images/gardens-project/aviary-garden.jpg",
+      "size": 628463,
+      "sha256": "cdd1992f7bbd6c99d1120ba7f11706e999cc304ab3c6914246a242d7eccd231d"
+    },
+    {
+      "path": "images/gardens-project/butterfly-garden.jpg",
+      "size": 539540,
+      "sha256": "337b76d4cdb77cd8f30a6a9302a0af7ac19030febfb9ca9108e460f0bea57b0f"
+    },
+    {
+      "path": "images/gardens-project/carboniferous-garden.jpg",
+      "size": 499344,
+      "sha256": "9e61cb6ceb680b0592249eb023517ff925f6a17b380706a2e87c670e9b65998e"
+    },
+    {
+      "path": "images/gardens-project/discovery-garden.jpg",
+      "size": 603059,
+      "sha256": "856460ed594e81d27e08e8aea5174a7bd60af6355c3cd8b4fee5de54cbc2ff82"
+    },
+    {
+      "path": "images/gardens-project/elevated-boardwalk-rock-formations.jpg",
+      "size": 266815,
+      "sha256": "0ba2d63aa608e64295c61fe14fa67e0e3737bd8e04fa6278cc790ab664f88f66"
+    },
+    {
+      "path": "images/gardens-project/faux-rock-tunnel-interior.jpg",
+      "size": 198651,
+      "sha256": "8a512a6f4eb412f58fb519051696cba7e95fb101dc49b1beef7a3d9ec8a1f1a3"
+    },
+    {
+      "path": "images/gardens-project/maze-garden.jpg",
+      "size": 626502,
+      "sha256": "14af920c52daa6e68812ca58f3efd1d5cf6f74004fe41bb901b6d34dfaa24a45"
+    },
+    {
+      "path": "images/gardens-project/night-masterplan-aerial.jpg",
+      "size": 211570,
+      "sha256": "77dd313923a5a4c3923902a6f834d94fd7608967be87fd555f867cc9d25ca338"
+    },
+    {
+      "path": "images/gardens-project/pilocene-garden.jpg",
+      "size": 728381,
+      "sha256": "3120ed09191902cda120b835de29f0d2ddec65dad801a37427a89bc3b33f9f98"
+    },
+    {
+      "path": "images/gardens-project/planting-inside-aviary-dome.jpg",
+      "size": 350367,
+      "sha256": "f85a4fa20e98fb48be1fe26417168d994d6711f677b374f054cfe48f260bbab8"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/aviary-garden-plan.webp",
+      "size": 552838,
+      "sha256": "8cbae58818ab30610ea751f40b8b0d2cbcee5873349658bd19efd13f9a3c314a"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/butterfly-garden-plan.webp",
+      "size": 480792,
+      "sha256": "0648311451dbb84bfc246cf47bfe938c641ded504e725b2162b41a2f6d8ddcc3"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/carboniferous-garden-plan.webp",
+      "size": 421530,
+      "sha256": "1030bf7874588b9ce50ede7127c8b5f296f9365ce1ddfcd36ff610dc7e4d24b5"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/cretaceous-garden-plan.webp",
+      "size": 559614,
+      "sha256": "ef6403a332cbc07a61e702787cf7c6185b2c389f03aff368a9ca710b6765d787"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/devonian-garden-plan.webp",
+      "size": 694898,
+      "sha256": "86eef36a41f1ec3ddb7499d8c297d4b472e900920babbbea95a07af2f88df61b"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/discovery-garden-plan.webp",
+      "size": 550856,
+      "sha256": "5dc57ca15d520be3dc0d6f3ddf95554459d254c7cf1ba4af0bf6227a8772d81d"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/discovery-garden-sections-details.webp",
+      "size": 492384,
+      "sha256": "b63226e3ca3be0cd728563faaeb3227a4894016c5940f5e7ee4737ba6260f9ce"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/family-garden-construction-details.webp",
+      "size": 492006,
+      "sha256": "71e3bdd207b6776ff75dfe4a448e8aef1c5da43f0b8130966ca724b5f4f1e7be"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/family-garden-plan.webp",
+      "size": 611804,
+      "sha256": "2b265df91f647bb39718b7ffb541c0411e3e42f2e43e3388ad63512e841415ff"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/family-garden-sections-overview.webp",
+      "size": 355824,
+      "sha256": "d87cb41708fd869b2247f0c721657d938c4a463689bdb305e56ebc2cf70eb295"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/maze-garden-plan.webp",
+      "size": 609520,
+      "sha256": "f80c7312ef1c94c96452710f79a6f1e1eaac6893179a3e7818a0a3e2e079c866"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/maze-garden-sections-details.webp",
+      "size": 479372,
+      "sha256": "cf35bdb5d919d2fa6799a02805f8031044e00e72a388b6dc7a1a80d7774f0bf5"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/pliocene-garden-construction-details.webp",
+      "size": 490066,
+      "sha256": "4fe1ec15f6fde2423acbc2d620154ec75de099aad9e2e063c6d90febc83aa529"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/pliocene-garden-landscape-sections.webp",
+      "size": 416352,
+      "sha256": "c5abc0b99a93ce396ace57c349ef456178b4d5ba0e63826a48100de529b43d4d"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/pliocene-garden-plan.webp",
+      "size": 726958,
+      "sha256": "a5f1e713d6897e08faf6b319ecc68ef7783694947f22fadf1fef8fa1fb7a3042"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/wadi-1-plan.webp",
+      "size": 704042,
+      "sha256": "5662eca6a8e2c778e3718fc9fc765508fe610b916246b1bd677c8d7d7879009b"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/wadi-1-sections-a-b.webp",
+      "size": 361810,
+      "sha256": "09885734be15229f3fdab4919450e3f38f35d719091673fed8b28d59c25053d6"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/wadi-1-sections-c-e.webp",
+      "size": 278032,
+      "sha256": "4947e92ed0438a79bc1627144af3c61a6caed1726812be1f60e15fe7148f2375"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/wadi-1-sections-f-h.webp",
+      "size": 230480,
+      "sha256": "e32b9bc22bd40fe3d6e6a2d00f0e36e500f0b526d54bdb6030b4cddfedb754b7"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/wadi-2-plan.webp",
+      "size": 583984,
+      "sha256": "50dece2a4525f1fee0f5f62a347f6871aa5547e5018c03c14c1053954075b1d3"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/wadi-2-section-b-continuation.webp",
+      "size": 182338,
+      "sha256": "fcc9c85602bcd496bd82ed934ec3138da7f9727adb0fc1c4fcf41ca95faedfc2"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/wadi-2-section-c.webp",
+      "size": 199662,
+      "sha256": "fdc9c5beb673f490a576fda52e6b2fc2968dc3c9df77950773491a916fa13fec"
+    },
+    {
+      "path": "images/gardens-project/shop-drawings/wadi-2-sections-a-b.webp",
+      "size": 246406,
+      "sha256": "2fd5204f51e59e1c51403451d840c4f6cc998faae0ed3a69ed4e6beed860dbd5"
+    },
+    {
+      "path": "images/gardens-project/wadi-1.jpg",
+      "size": 686031,
+      "sha256": "71f474cbee50715877186994bfb435d49fbaa3d47c736ae9689724a5a49cc8d2"
+    },
+    {
+      "path": "images/gardens-project/wadi-2.jpg",
+      "size": 593095,
+      "sha256": "9f36faa4a92cb50b92044833eb09824574e75de9fdbb51b6cc872dab410f0cae"
+    },
+    {
+      "path": "images/niqat-project/model-overview.jpg",
+      "size": 199367,
+      "sha256": "824dd15f81fcee569f40853bc724d9b265b099b9b72997dfa30b1e7cc99e85a3"
+    },
+    {
+      "path": "images/niqat-project/model-reverse.jpg",
+      "size": 216438,
+      "sha256": "8c6e3c4fdf7f38bf5f7bc918e0f4dfd8e57ea6d0e9e88f7c2795924d7af4dcc8"
+    },
+    {
+      "path": "images/niqat-project/model-side.jpg",
+      "size": 206584,
+      "sha256": "951824dbb7bbe211bb976fa3f38c83f076bca688c1c069dd90954848f720bca7"
+    },
+    {
+      "path": "images/safwa-shopdrawing/al-khuzama-gardens-zone-8.jpg",
+      "size": 436373,
+      "sha256": "347fa62dbe6e52688273fc5c15515c9d806725d907f6d93664610cb6f0b6524a"
+    },
+    {
+      "path": "images/safwa-shopdrawing/al-khuzama-gardens-zone-9.jpg",
+      "size": 436486,
+      "sha256": "d78bf3bc50beaec2762a81ee42d178516f5a2b00d0ca77b837afb05943dbd7e9"
+    },
+    {
+      "path": "images/safwa-shopdrawing/alula-housing-park.jpg",
+      "size": 384559,
+      "sha256": "6be4e2b4254b53e9e3ff58c74d6d4426a97d4a9f752e85e3d649de6facc7eedd"
+    },
+    {
+      "path": "images/security-aviation-leadership-building/approved-exterior-visualization.webp",
+      "size": 56400,
+      "sha256": "644cf390dba92bb77027c7d43f6a5317c2606845b438f6e98f38d8c4fc36c41e"
+    },
+    {
+      "path": "images/zad-design/golden-petrol-station-aerial.jpg",
+      "size": 320021,
+      "sha256": "f75835d52bafeb153e541105943b7cea25fdea6e5d7b058bacd43998bb04fc1a"
+    },
+    {
+      "path": "images/zad-design/golden-petrol-station.jpg",
+      "size": 295200,
+      "sha256": "0c2b7bb1b19c2575d47b021c42c1bb3758381a5c065d128aff77c017d058ce20"
+    },
+    {
+      "path": "images/zad-design/private-resort-masterplan-taif.jpg",
+      "size": 317856,
+      "sha256": "41e8b32fbb06d8dcf06eadb4caa214acf5c25493c524800cf3f0f298157fa75f"
+    },
+    {
+      "path": "images/zad-design/private-villa-taif-exterior.jpg",
+      "size": 203338,
+      "sha256": "fb4d5233df4efe242a6e1ff2073fa5985536fca4c27af9b1b2509556e2759d9b"
+    },
+    {
+      "path": "images/zad-design/residential-entrance-detail.jpg",
+      "size": 280285,
+      "sha256": "5ea43ea8a48c7e08f4475819600d60b2848cc5d365bbadafd8be00a47dd7b066"
+    },
+    {
+      "path": "images/zad-design/residential-facade-front.jpg",
+      "size": 299063,
+      "sha256": "71404404847124ad3ddb4c5720deea4bff732336e4e4e12308c06797b6e8891e"
+    },
+    {
+      "path": "images/zad-design/residential-facade-perspective.jpg",
+      "size": 280650,
+      "sha256": "bd38d7de38749295b931f1d4dd15cbbea9c2a9ef152c3700dcd79f8b66d41af5"
+    },
+    {
+      "path": "images/zad-design/services-complex-aerial.jpg",
+      "size": 377160,
+      "sha256": "921143d339792f6cbd5c46d804e54edccf666e793044e9baa5033f44eb2db16b"
+    },
+    {
+      "path": "images/zad-design/services-complex-site-plan.jpg",
+      "size": 524720,
+      "sha256": "e71f33d7ba5f10e7868877280a9e75c6d052bfc5747796bbac5404149a4f5109"
+    },
+    {
+      "path": "images/zad-design/u-zone-design-evolution.jpg",
+      "size": 115853,
+      "sha256": "40a0f324e325cbd48875b840401c9b859b4e645231f06a769c2ad32bf7239401"
+    },
+    {
+      "path": "images/zad-design/villa-entrance-landscape-day.jpg",
+      "size": 424302,
+      "sha256": "53708890e365035414016605d3820c31f7a8f4e1c54b78982278ad165a916eed"
+    },
+    {
+      "path": "images/zad-design/villa-entrance-landscape-night.jpg",
+      "size": 399091,
+      "sha256": "c745ceacb51755ae98c26efd856a76028a6a36aca5823581654ce79f1b3e42e8"
+    },
+    {
+      "path": "images/zad-design/villa-entrance-water-feature-night.jpg",
+      "size": 457318,
+      "sha256": "ebcabfbc09455f51fe8e90e63ad08cb05ef8754c2253c7f11403fb29185d6125"
+    },
+    {
+      "path": "images/zad-design/villa-facade-6th-october.jpg",
+      "size": 313204,
+      "sha256": "63073cc04703840e8d45ac818e39004f52c1a0f1cd1380c1b1ae8c4bb960b4d7"
+    },
+    {
+      "path": "media/shaher-portfolio-film-chapters.vtt",
+      "size": 676,
+      "sha256": "420d96bc6a188aa50960660022bb5174efdef00e631e85ba6b9e5c0720851973"
+    },
+    {
+      "path": "media/shaher-portfolio-film-poster.jpg",
+      "size": 214314,
+      "sha256": "668c9fb1f6a63dfdf4d6339eb56392270990224b5a116e9589c4d108e13e4ac8"
+    },
+    {
+      "path": "media/shaher-portfolio-film.mp4",
+      "size": 9443902,
+      "sha256": "640f53ef2201ee37ad57c0a1dd71c61c6886ad897da1aac8d043567e745b8815"
+    },
+    {
+      "path": "media/shaher-portfolio-film.vtt",
+      "size": 8929,
+      "sha256": "59f49d13151fa72ffc3b3f6aad876525a773fb1cb878e10ff3c1c8e38f2ca302"
+    },
+    {
+      "path": "models/niqat-project.glb",
+      "size": 6772368,
+      "sha256": "4c1404a1a301c55739b052d6fb1b20154f60cb102e5919ef53c4d77b89c97500"
+    },
+    {
+      "path": "models/niqat-team-architecture.glb",
+      "size": 2944812,
+      "sha256": "1ea4a046952d803d502dea6f678d5dfded79e03f2d6eddb6705c1ea5002d6a54"
+    }
+  ]
+}

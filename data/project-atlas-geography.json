@@ -1,0 +1,17 @@
+{
+  "source": "Natural Earth 1:110m Admin 0 Countries",
+  "sourceUrl": "https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/",
+  "geometrySourceUrl": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+  "license": "Public domain",
+  "viewBox": "0 0 900 650",
+  "projection": "Mercator, fitted to a 640 by 538 country extent",
+  "egypt": {
+    "path": "M754.2 594.0 L555.9 594.0 L361.8 594.0 L160.8 594.0 L160.8 392.6 L160.8 192.1 L145.8 145.8 L158.7 110.0 L150.9 85.1 L169.0 57.0 L235.6 56.0 L283.7 71.5 L333.3 88.8 L356.5 97.9 L395.0 79.4 L415.6 62.6 L459.7 57.8 L495.3 65.2 L508.9 94.2 L520.5 75.1 L560.6 88.9 L599.5 92.2 L624.2 77.5 L624.2 77.5 L652.1 162.1 L657.0 177.0 L643.0 200.1 L632.2 243.2 L618.6 272.7 L606.9 282.6 L590.3 264.3 L567.7 239.0 L532.0 156.9 L526.9 162.1 L547.6 222.6 L578.3 279.7 L616.1 367.0 L634.6 397.3 L650.6 428.5 L695.5 489.3 L685.6 498.9 L687.2 534.3 L745.4 582.9 L754.2 594.0 Z",
+    "cairo": {
+      "left": "52.515%",
+      "top": "22.424%",
+      "latitude": 30.0444,
+      "longitude": 31.2357
+    }
+  }
+}

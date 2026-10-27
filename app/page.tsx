@@ -1,111 +1,89 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowDownRight, ArrowUpRight, Download } from "lucide-react";
-import { DayNightShowcase } from "@/components/day-night-showcase";
-import { ProjectCard } from "@/components/project-card";
-import { portfolio, projects } from "@/data/portfolio";
+import { ArrowUpRight, Download } from "lucide-react";
+import { credentials, portfolio } from "@/data/portfolio";
 
-const featuredOrder = [
-  "king-abdullah-international-gardens",
-  "marsa-khuzam",
-  "security-aviation-leadership-building",
-  "alula-housing",
-];
-const featuredProjects = featuredOrder.map((slug) => projects.find((project) => project.slug === slug)).filter((project): project is (typeof projects)[number] => Boolean(project));
+export const metadata: Metadata = {
+  title: "About Me",
+  description: `Meet ${portfolio.name}: architect and landscape architect based in Riyadh. Explore professional experience, education, registration, and certificates.`,
+};
 
 export default function Home() {
+  const registration = portfolio.registrationDetails;
+
   return (
     <main>
-      <section className="hero">
-        <div className="hero-visual" aria-hidden="true">
-          <div className="hero-scene hero-scene-architecture">
-            <img src="/images/security-aviation-leadership-building/approved-exterior-visualization.webp" alt="" loading="eager" fetchPriority="high" decoding="async" />
-          </div>
-          <div className="hero-scene hero-scene-landscape">
-            <img src="/images/zad-design/villa-entrance-landscape-night.jpg" alt="" loading="eager" decoding="async" />
-          </div>
-          <div className="hero-visual-seam" />
-        </div>
-        <div className="hero-wash" />
-        <div className="hero-grid" />
-        <div className="hero-particles" aria-hidden="true">
-          {Array.from({ length: 14 }, (_, index) => <span key={index} />)}
-        </div>
-        <div className="hero-disciplines" aria-hidden="true">
-          <span>Architecture</span><span>Landscape</span><span>Technical Office</span>
-        </div>
-        <div className="hero-content shell">
-          <div className="hero-kicker"><span>{portfolio.headline}</span><span>{portfolio.location}</span></div>
-          <div className="hero-copy">
-            <p className="mono-label">Portfolio 2026</p>
-            <h1>{portfolio.displayName.primary} <span>{portfolio.displayName.secondary}</span></h1>
-            <p className="hero-intro">{portfolio.positioning}</p>
-            <div className="hero-actions">
-              <Link className="button button-solid" href="/projects">View selected work <ArrowDownRight size={16} /></Link>
-              <a className="button button-ghost" href={portfolio.cv} download>Download CV <Download size={16} /></a>
+      <section className="page-hero profile-page-hero about-me-page-hero" id="about">
+        <div className="shell profile-hero">
+          <div>
+            <p className="mono-label">About Me / Riyadh, Saudi Arabia</p>
+            <h1 className="page-title">Shaher Wahid <span>Rushdi.</span></h1>
+            <p className="about-me-role">Architect &amp; Landscape Architect <span>·</span> Technical Office <span>·</span> BIM</p>
+            <p className="profile-summary profile-lead">{portfolio.personalIntro}</p>
+            <p className="profile-summary">{portfolio.personalApproach}</p>
+            <div className="registration-line"><span>Professional registration</span><strong>{portfolio.registration}</strong></div>
+            <div className="profile-actions">
+              <a className="button button-solid" href="#credentials">View credentials <ArrowUpRight size={15} /></a>
+              <a className="button button-ghost" href={portfolio.cv} download>Download CV <Download size={15} /></a>
             </div>
           </div>
-          <aside className="hero-facts" aria-label="Professional summary">
-            <div><span>Experience</span><strong>{portfolio.experience}</strong></div>
-            <div><span>Work</span><strong>{projects.length} selected<br />projects</strong></div>
-            <div><span>Delivery</span><strong>Technical Office<br />Execution</strong></div>
-            <div><span>Registration</span><strong>{portfolio.registration}</strong></div>
-          </aside>
-          <p className="hero-coordinate mono-label">24.7136° N / 46.6753° E</p>
+          <figure className="profile-portrait"><div className="portrait-frame"><img src="/images/about/portrait-v2.jpg" alt="Portrait of Shaher Wahid Rushdi" loading="eager" decoding="async" /></div><figcaption>Shaher Wahid Rushdi <span>01 / About Me</span></figcaption></figure>
         </div>
       </section>
 
-      <section className="proof-strip section-rule" aria-label="Career highlights">
-        <div className="shell proof-grid">
-          {portfolio.proofPoints.map((point) => <div className="proof-point" key={point.label}><strong>{point.value}</strong><span>{point.label}</span></div>)}
+      <section className="profile-value section-rule">
+        <div className="shell profile-value-grid">
+          <div><p className="mono-label">A little about me</p><h2>Design ambition.<br /><em>Buildable clarity.</em></h2></div>
+          <div className="profile-value-copy">
+            <p>{portfolio.summary}</p>
+            <div className="about-me-facts"><span><strong>{portfolio.experience}</strong> Experience</span><span><strong>SCE</strong> Accredited</span><span><strong>Riyadh</strong> Based in Saudi Arabia</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space section-rule" id="credentials">
+        <div className="shell">
+          <div className="section-heading align-start"><div><p className="mono-label">01 / Credentials</p><h2>Professional registration.</h2></div><p className="section-note">My Saudi Council of Engineers accreditation and supporting documents.</p></div>
+          <article className="registration-card">
+            <div><p className="mono-label">Professional registration</p><h2>{registration.authority}</h2><p>{registration.accreditation}</p></div>
+            <dl>
+              <div><dt>Specialization</dt><dd>{registration.specialization}</dd></div>
+              <div><dt>Membership no.</dt><dd>{registration.membership}</dd></div>
+              <div><dt>Accredited since</dt><dd>{registration.accreditedSince}</dd></div>
+              <div><dt>Valid until</dt><dd>{registration.validUntil}</dd></div>
+            </dl>
+            <figure className="registration-certificate">
+              <a href={registration.certificate.document} target="_blank" rel="noopener noreferrer" aria-label="Open SCE professional accreditation certificate PDF in a new tab">
+                <img src={registration.certificate.image} alt="Saudi Council of Engineers professional accreditation certificate" width={1800} height={1273} loading="lazy" decoding="async" />
+              </a>
+              <figcaption><span>Professional accreditation certificate</span><a className="text-link" href={registration.certificate.document} target="_blank" rel="noopener noreferrer">View certificate (PDF)<span className="sr-only"> — opens in a new tab</span></a></figcaption>
+            </figure>
+          </article>
         </div>
       </section>
 
       <section className="section-space section-rule">
         <div className="shell">
-          <div className="section-heading">
-            <div><p className="mono-label">01 / Selected work</p><h2>Projects shaped from drawing set to site.</h2></div>
-            <Link className="text-link" href="/projects">All projects <ArrowUpRight size={15} /></Link>
-          </div>
-          <div className="featured-grid">{featuredProjects.map((project, index) => <ProjectCard key={project.slug} project={project} index={index + 1} featured />)}</div>
+          <div className="section-heading"><div><p className="mono-label">02 / Selected training</p><h2>BIM and information-management credentials.</h2></div></div>
+          <div className="credentials-grid">{credentials.map((credential) => <article className="credential-card" key={credential.title}><img src={credential.image} alt={`${credential.title} certificate`} loading="lazy" /><div><p className="mono-label">{credential.issuer}</p><h2>{credential.title}</h2>{credential.id && <p>Credential ID: {credential.id}</p>}</div></article>)}</div>
         </div>
       </section>
 
-      <section className="intro-band section-rule">
-        <div className="shell intro-grid">
-          <p className="section-index mono-label">02 / Profile</p>
-          <h2>Concepts become valuable when they can be built.</h2>
-          <div><p>{portfolio.summary}</p><Link className="text-link" href="/profile">Full profile <ArrowUpRight size={15} /></Link></div>
-        </div>
-      </section>
-
-      <section className="delivery-path section-space section-rule">
+      <section className="section-space section-rule">
         <div className="shell">
-          <div className="section-heading align-start">
-            <div><p className="mono-label">03 / One delivery path</p><h2>Architecture and landscape, carried through one technical workflow.</h2></div>
-            <p className="section-note">BIM supports the process. The professional focus stays on design decisions, clear documentation, and buildable architectural and landscape packages.</p>
-          </div>
-          <ol className="delivery-grid">
-            {portfolio.deliverySteps.map((step, index) => (
-              <li className="delivery-step" key={step.title}>
-                <span className="delivery-number mono-label">{String(index + 1).padStart(2, "0")}</span>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </li>
-            ))}
-          </ol>
+          <div className="section-heading"><div><p className="mono-label">03 / Career</p><h2>My professional journey.</h2></div></div>
+          <div className="timeline about-career-timeline">{portfolio.experienceItems.map((item) => <article className="timeline-item" key={`${item.period}-${item.company}`}><span className="timeline-period">{item.period}</span><div><h3>{item.role}</h3><p>{item.company}</p></div><span className="career-location">{item.location}</span></article>)}</div>
         </div>
       </section>
 
-      <DayNightShowcase />
-
-      <section className="section-space section-rule capabilities-section">
+      <section className="section-space section-rule">
         <div className="shell">
-          <div className="section-heading align-start">
-            <div><p className="mono-label">05 / Capabilities</p><h2>Technical clarity across architecture and landscape.</h2></div>
-            <p className="section-note">A focused practice spanning design development, documentation, visualization, and BIM-enabled delivery.</p>
-          </div>
-          <div className="capability-grid">
-            {portfolio.capabilities.map((capability, index) => <article className="capability-card" key={capability.title}><span className="capability-number mono-label">0{index + 1}</span><h3>{capability.title}</h3><p>{capability.description}</p><div className="tag-row">{capability.tools.map((tool) => <span key={tool}>{tool}</span>)}</div></article>)}
+          <div className="section-heading"><div><p className="mono-label">04 / Education &amp; skills</p><h2>The foundations behind my practice.</h2></div></div>
+          <div className="skills-layout">
+            <article className="skill-panel"><p className="mono-label">Education</p><h3>Bachelor of Urban and Regional Planning</h3><p>Cairo University · 2016 — 2021</p></article>
+            <article className="skill-panel"><p className="mono-label">Software</p><h3>Design &amp; documentation</h3><ul><li>Revit · AutoCAD · Civil 3D</li><li>Navisworks · ACC</li><li>SketchUp · Lumion</li></ul></article>
+            <article className="skill-panel"><p className="mono-label">Professional skills</p><h3>Technical-office practice</h3><ul><li>Design development</li><li>Shop drawings &amp; as-built packages</li><li>BOQs · RFIs · submittals</li></ul></article>
+            <article className="skill-panel"><p className="mono-label">Languages</p><h3>Communication</h3><ul>{portfolio.languages.map((item) => <li key={item.language}><strong>{item.language}</strong><span>{item.proficiency}</span></li>)}</ul></article>
           </div>
         </div>
       </section>
@@ -113,11 +91,8 @@ export default function Home() {
       <section className="closing-cta section-rule">
         <div className="shell closing-grid">
           <p className="mono-label">Based in Riyadh / Open across KSA</p>
-          <h2>Open to architecture and landscape roles focused on technical-office delivery.</h2>
-          <div className="closing-actions">
-            <Link className="button button-solid" href="/contact">Contact Shaher <ArrowUpRight size={16} /></Link>
-            <a className="button closing-secondary" href={portfolio.cv} download>Review CV <Download size={16} /></a>
-          </div>
+          <h2>Let&apos;s connect about architecture, landscape, and technical delivery.</h2>
+          <div className="closing-actions"><Link className="button button-solid" href="/contact">Contact Shaher <ArrowUpRight size={16} /></Link><a className="button closing-secondary" href={portfolio.cv} download>Review CV <Download size={16} /></a></div>
         </div>
       </section>
     </main>

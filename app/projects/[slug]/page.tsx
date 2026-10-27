@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowUpRight, Maximize2 } from "lucide-react";
-import { getNextProject, getProject, projects } from "@/data/portfolio";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ProjectMediaGallery } from "@/components/project-media-gallery";
+import { getNextProject, getProject, getProjectCollection, getProjectMediaCollections, getTechnicalProofStudies, projects } from "@/data/portfolio";
 
 const confidentialWorkflow = [
-  "Approved design inputs",
-  "Architectural Revit model",
-  "Working & shop drawings",
-  "Details, quantities & submittals",
+  "Architectural redesign",
+  "LOD 300 architectural IFC package",
+  "Architectural shop drawings",
+  "BIM coordination & technical review",
   "Review & issue resolution",
 ];
 
@@ -26,15 +27,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const project = getProject(slug);
   if (!project) notFound();
   const nextProject = getNextProject(slug);
-  const galleryGroups = project.gallery.reduce<{ title: string; images: typeof project.gallery }[]>((groups, image) => {
-    const title = image.group ?? "Selected views";
-    const existing = groups.find((group) => group.title === title);
-    if (existing) existing.images.push(image);
-    else groups.push({ title, images: [image] });
-    return groups;
-  }, []);
-  const drawingEvidenceGroups = ["Landscape shop drawing plans", "Sections & construction details"];
-  const includesDrawingEvidence = galleryGroups.some((group) => drawingEvidenceGroups.includes(group.title));
+  const collection = getProjectCollection(slug);
+  const technicalProofStudies = getTechnicalProofStudies(project);
+  const mediaCollections = getProjectMediaCollections(project);
 
   return (
     <main>
@@ -46,21 +41,64 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <div className="project-hero-bottom">
             <p className="project-hero-summary">{project.summary}</p>
             <aside className="project-fact-card" aria-label="Project facts">
-              <div><span>Employer</span><strong>{project.company}</strong></div>
-              {project.client && <div><span>Client</span><strong>{project.client}</strong></div>}
+              {collection && <div><span>Collection</span><strong>{collection.title}</strong></div>}
+              {project.client && <div><span>Owner</span><strong>{project.client}</strong></div>}
               {project.consultant && <div><span>Consultant</span><strong>{project.consultant}</strong></div>}
+              <div><span>{project.companyLabel ?? "Contractor"}</span><strong>{project.company}</strong></div>
               {project.officialUrl && <div><span>Source</span><a href={project.officialUrl} target="_blank" rel="noreferrer">Official project page <ArrowUpRight size={13} /></a></div>}
               <div><span>Role</span><strong>{project.role}</strong></div>
               <div><span>Location</span><strong>{project.location}</strong></div>
+              {project.mapUrl && <div><span>Project location</span><a href={project.mapUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} on Google Maps`}>View on Google Maps <ArrowUpRight size={13} /></a></div>}
               <div><span>Period</span><strong>{project.period}</strong></div>
+              {project.duration && <div><span>Duration</span><strong>{project.duration}</strong></div>}
             </aside>
           </div>
         </div>
       </section>
 
+      <nav className="project-content-index section-rule" aria-label={`${project.title} page sections`}>
+        <div className="shell project-content-index-inner">
+          <span className="mono-label">Explore this project</span>
+          <a href="#project-details">Project details <ArrowUpRight size={14} /></a>
+          {project.technicalStrengths?.length && <a href="#technical-strengths">My contribution <ArrowUpRight size={14} /></a>}
+          {mediaCollections.map((collection) => <a key={collection.id} href={`#${collection.id}`}>{collection.title} ({collection.images.length}) <ArrowUpRight size={14} /></a>)}
+          {project.gallery.length === 0 && <span className="project-content-index-note">{project.confidential ? "Restricted project material is not published" : "Public images and drawings are not available yet"}</span>}
+        </div>
+      </nav>
+
       {project.metrics && project.metrics.length > 0 && <section className="project-metrics section-rule" aria-label="Project scale"><div className="shell project-metrics-grid">{project.metrics.map((metric) => <div key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}</div></section>}
 
-      <section className="section-space section-rule">
+      {mediaCollections.length > 0 && (
+        <section className="section-space section-rule" id="project-gallery" aria-labelledby="project-gallery-title">
+          <div className="shell">
+            <div className="section-heading align-start">
+              <div><p className="mono-label">Inside the project</p><h2 id="project-gallery-title">Explore the project gallery.</h2></div>
+              <p className="section-note">Choose a category to view the available project material. Open any image to inspect it at full size.</p>
+            </div>
+            <ProjectMediaGallery projectTitle={project.title} projectSlug={project.slug} projectRole={project.role} collections={mediaCollections} studies={technicalProofStudies} modelSrc={project.modelSrc} projectLocation={project.location} />
+            {project.galleryNote && <p className="gallery-note">{project.galleryNote}</p>}
+          </div>
+        </section>
+      )}
+
+      {project.technicalStrengths && project.technicalStrengths.length > 0 && (
+        <section className="section-space section-rule technical-strengths-section" id="technical-strengths" aria-labelledby="technical-strengths-title">
+          <div className="shell">
+            <div className="section-heading align-start">
+              <div><p className="mono-label">My contribution / Across the project</p><h2 id="technical-strengths-title">Engineering thinking.<br /><em>Buildable landscape.</em></h2></div>
+              <p className="section-note">Five strengths behind my landscape technical-office contribution at King Abdullah International Gardens.</p>
+            </div>
+            <ol className="technical-strengths-grid">{project.technicalStrengths.map((strength, index) => (
+              <li className="technical-strength-card" key={strength.title}>
+                <span className="technical-strength-number">{String(index + 1).padStart(2, "0")}</span>
+                <div><h3>{strength.title}</h3><p>{strength.description}</p></div>
+              </li>
+            ))}</ol>
+          </div>
+        </section>
+      )}
+
+      <section className="section-space section-rule" id="project-details">
         <div className="shell project-narrative">
           <p className="mono-label">Case study / Evidence</p>
           <div>
@@ -83,9 +121,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                 <div className="confidential-workflow-heading">
                   <div>
                     <p className="mono-label">Public workflow</p>
-                    <h3 id="confidential-workflow-title">A safe view of the delivery process.</h3>
+                    <h3 id="confidential-workflow-title">From redesign to coordinated documentation.</h3>
                   </div>
-                  <p>{project.gallery.length > 0 ? "Only the approved exterior visualization is shown. No drawings, model files, room data, technical quantities, or restricted information are published." : "No project drawings, model files, room data, technical quantities, or restricted information are published."}</p>
+                  <p>Architectural redesign, LOD 300 IFC documentation, shop drawings, and BIM coordination.</p>
                 </div>
                 <ol className="confidential-workflow-grid">
                   {confidentialWorkflow.map((step, index) => (
@@ -100,10 +138,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {project.gallery.length > 0 && <section className="section-space section-rule"><div className="shell"><div className="section-heading"><div><p className="mono-label">Public evidence / {String(project.gallery.length).padStart(2, "0")}</p><h2>{includesDrawingEvidence ? "Built context and technical evidence." : "Selected project views."}</h2>{project.galleryNote && <p className="gallery-note">{project.galleryNote}</p>}</div></div><div className="gallery-groups">{galleryGroups.map((group, groupIndex) => <section className="gallery-group" key={group.title} aria-labelledby={`gallery-group-${groupIndex}`}>
-        {galleryGroups.length > 1 && <div className="gallery-group-heading"><span className="mono-label">{String(groupIndex + 1).padStart(2, "0")}</span><h3 id={`gallery-group-${groupIndex}`}>{group.title}</h3><span>{String(group.images.length).padStart(2, "0")} views</span></div>}
-        <div className={`gallery ${drawingEvidenceGroups.includes(group.title) ? "gallery--drawings" : ""}`}>{group.images.map((image, index) => <figure key={image.src}><a className="gallery-image-link" href={image.src} target="_blank" rel="noreferrer" aria-label={`Open ${image.caption} at full size`}><img src={image.src} alt={image.alt} loading={groupIndex === 0 && index < 2 ? "eager" : "lazy"} decoding="async" /><span className="gallery-open"><Maximize2 size={13} /> Open image</span></a><figcaption><span>{image.caption}</span><span>{String(index + 1).padStart(2, "0")}</span></figcaption></figure>)}</div>
-      </section>)}</div></div></section>}
+
 
       <section className="section-space section-rule"><div className="shell next-project"><p className="mono-label">Next project</p><h2>{nextProject.title}</h2><Link className="button button-ghost" href={`/projects/${nextProject.slug}`}>View project <ArrowUpRight size={16} /></Link></div></section>
     </main>

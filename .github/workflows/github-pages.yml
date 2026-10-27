@@ -1,0 +1,57 @@
+name: Publish free portfolio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Recover and verify the latest approved media
+        run: node scripts/sync-github-pages-assets.mjs
+      - name: Save verified media for independent future builds
+        run: |
+          git add public
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Sync verified public portfolio media [skip ci]'
+            git push
+          fi
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Build the complete static portfolio
+        run: node scripts/build-github-pages.mjs
+      - name: Check pages, media and repository paths
+        run: node --test tests/github-pages.test.mjs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/deploy-pages@v4
+        id: deployment

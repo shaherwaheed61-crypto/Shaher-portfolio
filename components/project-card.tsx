@@ -1,32 +1,26 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/portfolio";
 
-export function ProjectCard({ project, index, featured = false }: { project: Project; index: number; featured?: boolean }) {
+const imageLabels = { site: "Site photography", drawing: "Drawing preview", visualization: "Design visualization", model: "3D model preview" };
+
+export function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
-    <Link className={`project-card ${featured ? "" : "compact"}`} href={`/projects/${project.slug}`}>
-      {project.image ? (
-        <img className="project-card-image" src={project.image} alt={`${project.title} project preview`} loading={index > 2 ? "lazy" : "eager"} fetchPriority={index === 1 ? "high" : "auto"} decoding="async" />
-      ) : (
-        <div className={`project-card-art ${project.confidential ? "confidential-card-art" : ""}`}>
-          <span>{project.code}</span>
-          {project.confidential && (
-            <ol className="confidential-card-flow" aria-hidden="true">
-              <li><small>01</small><strong>Approved inputs</strong></li>
-              <li><small>02</small><strong>Revit documentation</strong></li>
-              <li><small>03</small><strong>Technical packages</strong></li>
-            </ol>
-          )}
-        </div>
-      )}
-      <div className="project-card-shade" />
-      <div className="project-card-top">
-        <span className="project-card-index">{String(index).padStart(2, "0")}</span>
-        <span className="project-card-category">{project.confidential ? "Confidential / Selected scope" : project.categories.slice(0, 2).join(" / ")}</span>
+    <Link className="project-cover-card" id={project.interactiveModel ? `${project.slug}-interactive-model` : undefined} href={`/projects/${project.slug}`} aria-label={`Explore ${project.title}`}>
+      <div className={`project-cover-media ${project.imageKind === "drawing" ? "project-cover-media--drawing" : ""} ${project.imageKind === "model" ? "project-cover-media--model" : ""}`}>
+        {project.image ? (
+          <img src={project.image} alt={`${project.title} — ${project.imageKind ? imageLabels[project.imageKind] : "project cover"}`} loading={index > 2 ? "lazy" : "eager"} decoding="async" />
+        ) : (
+          <div className="project-cover-placeholder" aria-hidden="true"><span>{project.code}</span><div>{project.deliverables.slice(0, 3).map((item) => <small key={item}>{item}</small>)}</div></div>
+        )}
+        <span className="project-cover-kind">{project.imageKind ? imageLabels[project.imageKind] : project.confidential ? "Confidential scope" : "Project overview"}</span>
+        <span className="project-cover-open" aria-hidden="true"><ArrowUpRight size={22} /></span>
       </div>
-      <div className="project-card-content">
-        <p>{project.company}</p>
+      <div className="project-cover-copy">
+        <div className="project-cover-meta"><span>{String(index).padStart(2, "0")} / {project.categories.slice(0, 2).join(" · ")}</span><span>{project.location}</span></div>
         <h3>{project.title}</h3>
-        <span>{project.location}</span>
+        <p>{project.role}</p>
+        <span className="project-cover-link">Explore project <ArrowUpRight size={15} aria-hidden="true" /></span>
       </div>
     </Link>
   );

@@ -1,0 +1,206 @@
+{
+  "duration": 180,
+  "playbackSpeed": 2,
+  "publishedDuration": 90,
+  "introSeconds": 3,
+  "outroSeconds": 3,
+  "selectedWorkSeconds": 32,
+  "projectChapters": [
+    {
+      "slug": "king-abdullah-international-gardens",
+      "scopeSeconds": 9,
+      "evidence": "kaig",
+      "evidenceSeconds": 36,
+      "workstreams": [
+        {
+          "label": "Shop drawings",
+          "detail": "Hardscape plans & buildable details"
+        },
+        {
+          "label": "Levels & grading",
+          "detail": "Coordinated plans and sections"
+        },
+        {
+          "label": "Coordination",
+          "detail": "Architectural, structural & MEP interfaces"
+        },
+        {
+          "label": "Technical submissions",
+          "detail": "RFIs, SCRs & design justifications"
+        }
+      ]
+    },
+    {
+      "slug": "housing-projects-parks",
+      "scopeSeconds": 7,
+      "evidence": "workflow",
+      "evidenceSeconds": 2,
+      "workstreams": [
+        {
+          "label": "Landscape packages",
+          "detail": "11 parks across 3 project locations"
+        },
+        {
+          "label": "Technical details",
+          "detail": "Adapted to project and site requirements"
+        },
+        {
+          "label": "Material reviews",
+          "detail": "Supplier requirements & specifications"
+        },
+        {
+          "label": "Consultant submissions",
+          "detail": "Consistent technical packages"
+        }
+      ]
+    },
+    {
+      "slug": "marsa-khuzam",
+      "scopeSeconds": 8,
+      "evidence": "marsa",
+      "evidenceSeconds": 7,
+      "workstreams": [
+        {
+          "label": "Shop drawings",
+          "detail": "Garden-zone plans & technical details"
+        },
+        {
+          "label": "Design refinement",
+          "detail": "Clarity, constructability & presentation"
+        },
+        {
+          "label": "3D visualization",
+          "detail": "Design decisions & client reviews"
+        }
+      ]
+    },
+    {
+      "slug": "alula-housing",
+      "scopeSeconds": 8,
+      "evidence": "alula",
+      "evidenceSeconds": 4,
+      "workstreams": [
+        {
+          "label": "Shop drawings",
+          "detail": "Coordinated technical information"
+        },
+        {
+          "label": "Design refinement",
+          "detail": "Heritage-sensitive project context"
+        },
+        {
+          "label": "3D visualization",
+          "detail": "Models & presentation visuals"
+        }
+      ]
+    },
+    {
+      "slug": "sedayem-jeddah-streetscape",
+      "scopeSeconds": 7,
+      "evidence": "workflow",
+      "evidenceSeconds": 2,
+      "workstreams": [
+        {
+          "label": "Streetscape drawings",
+          "detail": "Construction-ready landscape packages"
+        },
+        {
+          "label": "Technical details",
+          "detail": "Site implementation solutions"
+        },
+        {
+          "label": "Coordination",
+          "detail": "Related-discipline requirements"
+        },
+        {
+          "label": "Material submittals",
+          "detail": "Consultant review packages"
+        }
+      ]
+    },
+    {
+      "slug": "jeddah-park",
+      "scopeSeconds": 7,
+      "evidence": "workflow",
+      "evidenceSeconds": 2,
+      "workstreams": [
+        {
+          "label": "Shop drawings",
+          "detail": "Landscape plans & technical details"
+        },
+        {
+          "label": "Coordination",
+          "detail": "Related-discipline requirements"
+        },
+        {
+          "label": "Material submittals",
+          "detail": "Packages for consultant review"
+        }
+      ]
+    },
+    {
+      "slug": "security-aviation-leadership-building",
+      "scopeSeconds": 9,
+      "evidence": "workflow",
+      "evidenceSeconds": 6,
+      "workstreams": [
+        {
+          "label": "Architectural redesign",
+          "detail": "Developed the architectural scheme"
+        },
+        {
+          "label": "IFC / LOD 300",
+          "detail": "Architectural design package"
+        },
+        {
+          "label": "Shop drawings",
+          "detail": "Architectural details & documentation"
+        },
+        {
+          "label": "BIM coordination",
+          "detail": "Model-based cross-discipline interfaces"
+        }
+      ]
+    },
+    {
+      "slug": "blue-development",
+      "scopeSeconds": 8,
+      "evidence": "model",
+      "evidenceSeconds": 7,
+      "workstreams": [
+        {
+          "label": "Architect",
+          "detail": "Architectural work with the Niqat team"
+        },
+        {
+          "label": "Collaboration",
+          "detail": "Contributed as part of the project team"
+        },
+        {
+          "label": "Project preview",
+          "detail": "Architectural geometry from the IFC model"
+        }
+      ]
+    },
+    {
+      "slug": "zad-engineering",
+      "scopeSeconds": 8,
+      "evidence": "workflow",
+      "evidenceSeconds": 5,
+      "workstreams": [
+        {
+          "label": "Documentation",
+          "detail": "Shop, working & as-built drawings"
+        },
+        {
+          "label": "Permits & quantities",
+          "detail": "Permit packages & quantity take-offs"
+        },
+        {
+          "label": "Visualization",
+          "detail": "Residential, commercial & landscape models"
+        }
+      ]
+    }
+  ]
+}

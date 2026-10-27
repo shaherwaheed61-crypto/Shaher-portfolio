@@ -12,9 +12,9 @@ export function SiteFooter() {
             <p className="footer-role">Design development · Shop drawings · BIM-enabled documentation</p>
           </div>
           <nav className="footer-links" aria-label="Footer navigation">
+            <Link href="/">About Me</Link>
+            <Link href="/quick-review">Portfolio Film</Link>
             <Link href="/projects">Projects</Link>
-            <Link href="/profile">Profile</Link>
-            <Link href="/credentials">Credentials</Link>
             <Link href="/contact">Contact</Link>
             <a href={portfolio.cv} download>Download CV</a>
             <a href={portfolio.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>

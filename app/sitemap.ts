@@ -4,7 +4,7 @@ import { projects } from "@/data/portfolio";
 const siteUrl = "https://shaher-waheed-portfolio.shaherwaheed61.chatgpt.site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ["", "/projects", "/profile", "/credentials", "/contact"];
+  const pages = ["", "/quick-review", "/projects", "/digital-practice", "/contact"];
 
   return [
     ...pages.map((path) => ({ url: `${siteUrl}${path}`, changeFrequency: "monthly" as const, priority: path === "" ? 1 : 0.8 })),

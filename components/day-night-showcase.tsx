@@ -10,7 +10,7 @@ export function DayNightShowcase() {
     <section className="day-night-section section-rule">
       <div className="shell day-night-grid">
         <div className="day-night-copy">
-          <p className="mono-label">04 / Design study</p>
+          <p className="mono-label">Lighting study</p>
           <h2>One facade. Two atmospheres.</h2>
           <p>Day and night studies test material balance, lighting hierarchy, and the way architecture is experienced after sunset.</p>
           <div className="render-switch" aria-label="Choose facade view">
@@ -19,8 +19,8 @@ export function DayNightShowcase() {
           </div>
         </div>
         <div className="render-frame">
-          <img key={mode} src={isDay ? "/images/freelance/classic-villa-day.jpg" : "/images/freelance/classic-villa-night.jpg"} alt={`Classic villa facade — ${mode} render`} />
-          <div className="render-caption"><span className="mono-label">Classic residence</span><span className="mono-label">{mode} / 01</span></div>
+          <img key={mode} src={isDay ? "/images/zad-design/villa-entrance-landscape-day.jpg" : "/images/zad-design/villa-entrance-landscape-night.jpg"} alt={`Villa entrance landscape — ${mode} render`} />
+          <div className="render-caption"><span className="mono-label">Villa entrance landscape</span><span className="mono-label">{mode} / 01</span></div>
         </div>
       </div>
     </section>
