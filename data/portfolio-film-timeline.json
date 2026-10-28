@@ -1,9 +1,9 @@
 {
   "duration": 90,
-  "video": "/media/shaher-portfolio-film.mp4?v=9",
-  "poster": "/media/shaher-portfolio-film-poster.jpg?v=9",
-  "captions": "/media/shaher-portfolio-film.vtt?v=9",
-  "chapterTrack": "/media/shaher-portfolio-film-chapters.vtt?v=9",
+  "video": "/media/shaher-portfolio-film.mp4?v=10",
+  "poster": "/media/shaher-portfolio-film-poster.jpg?v=10",
+  "captions": "/media/shaher-portfolio-film.vtt?v=10",
+  "chapterTrack": "/media/shaher-portfolio-film-chapters.vtt?v=10",
   "chapters": [
     {
       "id": "intro",
@@ -52,7 +52,7 @@
       "role": "Technical Office Landscape Architect",
       "slug": "marsa-khuzam",
       "start": 30.833333333333332,
-      "end": 37.5,
+      "end": 35.94444444444444,
       "collectionId": "nhc",
       "collectionTitle": "National Housing Company (NHC)",
       "collectionContext": "Marsa Khuzam · Sedayem Jeddah streetscape · Jeddah Park"
@@ -62,8 +62,8 @@
       "title": "Sedayem Jeddah — Streetscape",
       "role": "Technical Office Landscape Architect",
       "slug": "sedayem-jeddah-streetscape",
-      "start": 37.5,
-      "end": 41.5,
+      "start": 35.94444444444444,
+      "end": 39.94444444444444,
       "collectionId": "nhc",
       "collectionTitle": "National Housing Company (NHC)",
       "collectionContext": "Marsa Khuzam · Sedayem Jeddah streetscape · Jeddah Park"
@@ -73,8 +73,8 @@
       "title": "Jeddah Park",
       "role": "Technical Office Landscape Architect",
       "slug": "jeddah-park",
-      "start": 41.5,
-      "end": 45.5,
+      "start": 39.94444444444444,
+      "end": 43.94444444444444,
       "collectionId": "nhc",
       "collectionTitle": "National Housing Company (NHC)",
       "collectionContext": "Marsa Khuzam · Sedayem Jeddah streetscape · Jeddah Park"
@@ -84,8 +84,8 @@
       "title": "Security Aviation Leadership Building",
       "role": "Architect / BIM Coordinator",
       "slug": "security-aviation-leadership-building",
-      "start": 45.5,
-      "end": 52.166666666666664,
+      "start": 43.94444444444444,
+      "end": 50.611111111111114,
       "collectionId": "aviation",
       "collectionTitle": "Security Aviation Leadership Building",
       "collectionContext": "Architectural redesign · IFC / LOD 300 · Shop drawings · BIM coordination"
@@ -95,8 +95,8 @@
       "title": "Blue Development",
       "role": "Architect",
       "slug": "blue-development",
-      "start": 52.166666666666664,
-      "end": 58.833333333333336,
+      "start": 50.611111111111114,
+      "end": 57.27777777777778,
       "collectionId": "selected",
       "collectionTitle": "Selected Architectural Work",
       "collectionContext": "Blue Development · Niqat Project · Zad Engineering"
@@ -106,8 +106,8 @@
       "title": "Zad Engineering — Selected Design Work",
       "role": "Technical Office Architect",
       "slug": "zad-engineering",
-      "start": 58.833333333333336,
-      "end": 64.61111111111111,
+      "start": 57.27777777777778,
+      "end": 63.05555555555556,
       "collectionId": "selected",
       "collectionTitle": "Selected Architectural Work",
       "collectionContext": "Blue Development · Niqat Project · Zad Engineering"
@@ -117,8 +117,8 @@
       "title": "Selected architectural work",
       "role": "Design & visualization · Behance",
       "slug": null,
-      "start": 64.61111111111111,
-      "end": 78.83333333333333,
+      "start": 63.05555555555556,
+      "end": 77.27777777777777,
       "collectionId": "selected",
       "collectionTitle": "Selected Architectural Work",
       "collectionContext": "Blue Development with Niqat · Zad Engineering · Behance"
@@ -128,7 +128,7 @@
       "title": "Certificates & professional accreditation",
       "role": "SCE · Niqat Global · Plannerly · KAITECH",
       "slug": null,
-      "start": 78.83333333333333,
+      "start": 77.27777777777777,
       "end": 88.5
     },
     {

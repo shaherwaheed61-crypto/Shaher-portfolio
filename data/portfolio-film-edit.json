@@ -1,13 +1,21 @@
 {
-  "revision": "consultants-and-seven-certificates-v1",
+  "revision": "nhc-deduplicated-marsa-v2",
   "duration": 90,
   "fps": 54,
   "frames": 4860,
   "baselineSha256": "640f53ef2201ee37ad57c0a1dd71c61c6886ad897da1aac8d043567e745b8815",
   "certificateImageCount": 7,
   "certificatePages": 3,
-  "sourceSceneCount": 52,
-  "publishedSceneCount": 55,
+  "sourceSceneCount": 51,
+  "publishedSceneCount": 54,
+  "removedDuplicateScenes": [
+    {
+      "sourceStart": 34.25,
+      "sourceEnd": 36.0,
+      "chapter": "mkz",
+      "reason": "User-confirmed duplicate Zone 9 drawing; same geometry as Zone 8."
+    }
+  ],
   "projectOrder": [
     "king-abdullah-international-gardens",
     "housing-projects-parks",
@@ -247,7 +255,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "mkz",
-      "caption": "Marsa Khuzam. National Housing Company (NHC). Owner: NHC. Consultant: Zuhair Fayez Partnership. Contractor: Safwa Riyadh General Contracting Co.. My role: Technical Office Landscape Architect. Shop drawings: Garden-zone plans & technical details; Design refinement: Clarity, constructability & presentation; 3D visualization: Design decisions & client reviews.",
+      "caption": "Marsa Khuzam. National Housing Company (NHC). Owner: National Housing Company (NHC). Consultant: Zuhair Fayez Partnership. Contractor: Safwa Riyadh General Contracting Co.. My role: Technical Office Landscape Architect. Shop drawings: Garden-zone plans & technical details; Design refinement: Clarity, constructability & presentation; 3D visualization: Design decisions & client reviews.",
       "start": 30.833333333333332,
       "end": 34.388888888888886,
       "card": "card-marsa-khuzam.png"
@@ -265,18 +273,6 @@
       "end": 35.94444444444444
     },
     {
-      "sourceStart": 34.25,
-      "sourceEnd": 36.0,
-      "sourceFrames": 84,
-      "frames": 84,
-      "speedNumerator": 8,
-      "speedDenominator": 9,
-      "chapter": "mkz",
-      "caption": "Marsa Khuzam. Al-Khuzama Gardens — Zone 9.",
-      "start": 35.94444444444444,
-      "end": 37.5
-    },
-    {
       "sourceStart": 42.0,
       "sourceEnd": 45.5,
       "sourceFrames": 168,
@@ -285,8 +281,8 @@
       "speedDenominator": 9,
       "chapter": "sdm",
       "caption": "Sedayem Jeddah — Streetscape. National Housing Company (NHC). Owner: National Housing Company (NHC). Consultant: Khatib & Alami. Contractor: Safwa Riyadh General Contracting Co.. My role: Technical Office Landscape Architect. Streetscape drawings: Construction-ready landscape packages; Technical details: Site implementation solutions; Coordination: Related-discipline requirements; Material submittals: Consultant review packages.",
-      "start": 37.5,
-      "end": 40.611111111111114,
+      "start": 35.94444444444444,
+      "end": 39.05555555555556,
       "card": "card-sedayem-jeddah-streetscape.png"
     },
     {
@@ -298,8 +294,8 @@
       "speedDenominator": 9,
       "chapter": "sdm",
       "caption": "Sedayem Jeddah — Streetscape. Technical outputs: Streetscape shop drawings, Technical details, Implementation solutions, Material submittals.",
-      "start": 40.611111111111114,
-      "end": 41.5
+      "start": 39.05555555555556,
+      "end": 39.94444444444444
     },
     {
       "sourceStart": 46.5,
@@ -310,8 +306,8 @@
       "speedDenominator": 9,
       "chapter": "jdp",
       "caption": "Jeddah Park. National Housing Company (NHC). Owner: National Housing Company (NHC). Consultant: Khatib & Alami. Contractor: Safwa Riyadh General Contracting Co.. My role: Technical Office Landscape Architect. Shop drawings: Landscape plans & technical details; Coordination: Related-discipline requirements; Material submittals: Packages for consultant review.",
-      "start": 41.5,
-      "end": 44.611111111111114,
+      "start": 39.94444444444444,
+      "end": 43.05555555555556,
       "card": "card-jeddah-park.png"
     },
     {
@@ -323,8 +319,8 @@
       "speedDenominator": 9,
       "chapter": "jdp",
       "caption": "Jeddah Park. Technical outputs: Landscape shop drawings, Technical details, Material submittals.",
-      "start": 44.611111111111114,
-      "end": 45.5
+      "start": 43.05555555555556,
+      "end": 43.94444444444444
     },
     {
       "sourceStart": 51.0,
@@ -335,8 +331,8 @@
       "speedDenominator": 9,
       "chapter": "salb",
       "caption": "Security Aviation Leadership Building. Security Aviation Leadership Building.   Contractor: Safwa Riyadh General Contracting Co.. My role: Architect / BIM Coordinator. Architectural redesign: Developed the architectural scheme; IFC / LOD 300: Architectural design package; Shop drawings: Architectural details & documentation; BIM coordination: Model-based cross-discipline interfaces.",
-      "start": 45.5,
-      "end": 49.5,
+      "start": 43.94444444444444,
+      "end": 47.94444444444444,
       "card": "card-security-aviation-leadership-building.png"
     },
     {
@@ -348,8 +344,8 @@
       "speedDenominator": 9,
       "chapter": "salb",
       "caption": "Security Aviation Leadership Building. Technical outputs: Architectural redesign, Architectural IFC package · LOD 300, Architectural shop drawings, BIM coordination, Material submittals, RFIs, Approval tracking.",
-      "start": 49.5,
-      "end": 52.166666666666664
+      "start": 47.94444444444444,
+      "end": 50.611111111111114
     },
     {
       "sourceStart": 58.5,
@@ -360,8 +356,8 @@
       "speedDenominator": 9,
       "chapter": "blue",
       "caption": "Blue Development. Selected Architectural Work.   Project team: Niqat. My role: Architect. Architect: Architectural work with the Niqat team; Collaboration: Contributed as part of the project team; Project preview: Architectural geometry from the IFC model.",
-      "start": 52.166666666666664,
-      "end": 55.72222222222222,
+      "start": 50.611111111111114,
+      "end": 54.166666666666664,
       "card": "card-blue-development.png"
     },
     {
@@ -373,8 +369,8 @@
       "speedDenominator": 9,
       "chapter": "blue",
       "caption": "Blue Development. Architect with the Niqat team. Architectural geometry from the supplied IFC model.",
-      "start": 55.72222222222222,
-      "end": 58.833333333333336
+      "start": 54.166666666666664,
+      "end": 57.27777777777778
     },
     {
       "sourceStart": 66.0,
@@ -385,8 +381,8 @@
       "speedDenominator": 9,
       "chapter": "zad",
       "caption": "Zad Engineering — Selected Design Work. Selected Architectural Work. Owner: Private clients.  Design office: Zad Engineering Consulting Office. My role: Technical Office Architect. Documentation: Shop, working & as-built drawings; Permits & quantities: Permit packages & quantity take-offs; Visualization: Residential, commercial & landscape models.",
-      "start": 58.833333333333336,
-      "end": 62.388888888888886,
+      "start": 57.27777777777778,
+      "end": 60.833333333333336,
       "card": "card-zad-engineering.png"
     },
     {
@@ -398,8 +394,8 @@
       "speedDenominator": 9,
       "chapter": "zad",
       "caption": "Zad Engineering — Selected Design Work. Technical outputs: Architecture shop drawings, As-built drawings, Permit packages, Quantity surveying, 3D visualization.",
-      "start": 62.388888888888886,
-      "end": 64.61111111111111
+      "start": 60.833333333333336,
+      "end": 63.05555555555556
     },
     {
       "sourceStart": 72.5,
@@ -410,8 +406,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Selected architectural work from Shaher’s Behance portfolio. Residential, landscape, commercial and facade visualization.",
-      "start": 64.61111111111111,
-      "end": 65.94444444444444
+      "start": 63.05555555555556,
+      "end": 64.38888888888889
     },
     {
       "sourceStart": 74.0,
@@ -422,8 +418,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Exterior Design. Design and visualization. Behance portfolio.",
-      "start": 65.94444444444444,
-      "end": 66.61111111111111
+      "start": 64.38888888888889,
+      "end": 65.05555555555556
     },
     {
       "sourceStart": 74.75,
@@ -434,8 +430,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "villa design. Design and visualization. Behance portfolio.",
-      "start": 66.61111111111111,
-      "end": 67.27777777777777
+      "start": 65.05555555555556,
+      "end": 65.72222222222223
     },
     {
       "sourceStart": 75.5,
@@ -446,8 +442,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "farm design. Design and visualization. Behance portfolio.",
-      "start": 67.27777777777777,
-      "end": 67.94444444444444
+      "start": 65.72222222222223,
+      "end": 66.38888888888889
     },
     {
       "sourceStart": 76.25,
@@ -458,8 +454,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Poolside lighting study. Design and visualization. Behance portfolio.",
-      "start": 67.94444444444444,
-      "end": 68.61111111111111
+      "start": 66.38888888888889,
+      "end": 67.05555555555556
     },
     {
       "sourceStart": 77.0,
@@ -470,8 +466,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Villa Entrance ( option 2 ). Design and visualization. Behance portfolio.",
-      "start": 68.61111111111111,
-      "end": 69.27777777777777
+      "start": 67.05555555555556,
+      "end": 67.72222222222223
     },
     {
       "sourceStart": 77.75,
@@ -482,8 +478,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Villa Entrance ( Option 1 ). Design and visualization. Behance portfolio.",
-      "start": 69.27777777777777,
-      "end": 69.94444444444444
+      "start": 67.72222222222223,
+      "end": 68.38888888888889
     },
     {
       "sourceStart": 78.5,
@@ -494,8 +490,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Residential Facade Design. Design and visualization. Behance portfolio.",
-      "start": 69.94444444444444,
-      "end": 70.61111111111111
+      "start": 68.38888888888889,
+      "end": 69.05555555555556
     },
     {
       "sourceStart": 79.25,
@@ -506,8 +502,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Exterior design · Night & sunset. Design and visualization. Behance portfolio.",
-      "start": 70.61111111111111,
-      "end": 71.27777777777777
+      "start": 69.05555555555556,
+      "end": 69.72222222222223
     },
     {
       "sourceStart": 80.0,
@@ -518,8 +514,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Gas petrol Design. Design and visualization. Behance portfolio.",
-      "start": 71.27777777777777,
-      "end": 71.94444444444444
+      "start": 69.72222222222223,
+      "end": 70.38888888888889
     },
     {
       "sourceStart": 80.75,
@@ -530,8 +526,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Exterior Villa Design. Design and visualization. Behance portfolio.",
-      "start": 71.94444444444444,
-      "end": 72.61111111111111
+      "start": 70.38888888888889,
+      "end": 71.05555555555556
     },
     {
       "sourceStart": 81.5,
@@ -542,8 +538,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "exterior villa. Design and visualization. Behance portfolio.",
-      "start": 72.61111111111111,
-      "end": 73.27777777777777
+      "start": 71.05555555555556,
+      "end": 71.72222222222223
     },
     {
       "sourceStart": 82.25,
@@ -554,8 +550,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Villa wall & landscape design. Design and visualization. Behance portfolio.",
-      "start": 73.27777777777777,
-      "end": 73.94444444444444
+      "start": 71.72222222222223,
+      "end": 72.38888888888889
     },
     {
       "sourceStart": 83.0,
@@ -566,8 +562,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Mosque facade design. Design and visualization. Behance portfolio.",
-      "start": 73.94444444444444,
-      "end": 74.61111111111111
+      "start": 72.38888888888889,
+      "end": 73.05555555555556
     },
     {
       "sourceStart": 83.75,
@@ -578,8 +574,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Outdoor majlis design. Design and visualization. Behance portfolio.",
-      "start": 74.61111111111111,
-      "end": 75.27777777777777
+      "start": 73.05555555555556,
+      "end": 73.72222222222223
     },
     {
       "sourceStart": 84.5,
@@ -590,8 +586,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "New Villa in Saudi Arabia. Design and visualization. Behance portfolio.",
-      "start": 75.27777777777777,
-      "end": 75.94444444444444
+      "start": 73.72222222222223,
+      "end": 74.38888888888889
     },
     {
       "sourceStart": 85.25,
@@ -602,8 +598,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Villa in KSA. Design and visualization. Behance portfolio.",
-      "start": 75.94444444444444,
-      "end": 76.61111111111111
+      "start": 74.38888888888889,
+      "end": 75.05555555555556
     },
     {
       "sourceStart": 86.0,
@@ -614,8 +610,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "U ZONE project. Design and visualization. Behance portfolio.",
-      "start": 76.61111111111111,
-      "end": 77.5
+      "start": 75.05555555555556,
+      "end": 75.94444444444444
     },
     {
       "sourceStart": 87.0,
@@ -626,8 +622,8 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Classic Exterior villa. Design and visualization. Behance portfolio.",
-      "start": 77.5,
-      "end": 78.16666666666667
+      "start": 75.94444444444444,
+      "end": 76.61111111111111
     },
     {
       "sourceStart": 87.75,
@@ -638,30 +634,30 @@
       "speedDenominator": 9,
       "chapter": "selected-work",
       "caption": "Classic Exterior Design House. Design and visualization. Behance portfolio.",
-      "start": 78.16666666666667,
-      "end": 78.83333333333333
+      "start": 76.61111111111111,
+      "end": 77.27777777777777
     },
     {
-      "frames": 174,
+      "frames": 202,
       "chapter": "credentials",
       "caption": "Saudi Council of Engineers professional accreditation: Architect; Specialization: Urban Planning.",
-      "start": 78.83333333333333,
-      "end": 82.05555555555556,
+      "start": 77.27777777777777,
+      "end": 81.01851851851852,
       "card": "credentials-sce.png"
     },
     {
-      "frames": 174,
+      "frames": 202,
       "chapter": "credentials",
       "caption": "Certificates: BIM Diploma — BIM Management — Niqat Global / Autodesk Authorized Training Center; Certified BIM Coordinator — Niqat Global; Certified BIM Modeler (Architectural) — Niqat Global.",
-      "start": 82.05555555555556,
-      "end": 85.27777777777777,
+      "start": 81.01851851851852,
+      "end": 84.75925925925925,
       "card": "credentials-training-1.png"
     },
     {
-      "frames": 174,
+      "frames": 202,
       "chapter": "credentials",
       "caption": "Certificates: Information Manager — Level 1 Basics — Plannerly; ISO 19650 Certification Readiness — Plannerly; Revit Coordinates Workshop — KAITECH Engineering & Technology.",
-      "start": 85.27777777777777,
+      "start": 84.75925925925925,
       "end": 88.5,
       "card": "credentials-training-2.png"
     },

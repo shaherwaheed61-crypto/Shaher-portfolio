@@ -78,7 +78,7 @@
       "slug": "marsa-khuzam",
       "scopeSeconds": 3.5555555555555554,
       "evidence": "marsa",
-      "evidenceSeconds": 3.111111111111111,
+      "evidenceSeconds": 1.5555555555555556,
       "workstreams": [
         {
           "label": "Shop drawings",
@@ -203,7 +203,7 @@
       ]
     }
   ],
-  "credentialsSeconds": 9.666666666666666,
+  "credentialsSeconds": 11.222222222222221,
   "source": "Published approved baseline at a9e62d7e6c33fc766c44de4fa92a60265cee9abd",
-  "revision": "Agency groups, consultants and seven certificate images"
+  "revision": "NHC grouping and user-confirmed duplicate Marsa drawing removed"
 }
