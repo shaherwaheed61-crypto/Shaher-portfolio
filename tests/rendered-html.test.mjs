@@ -61,12 +61,14 @@ test("keeps country maps and shows each project once with its own model and medi
   assert.equal(modelAnchors.length, 2);
   assert.equal(new Set(modelAnchors).size, 2);
   const housingGroup = index.match(/<section class="project-collection-group" aria-labelledby="collection-housing">[\s\S]*?<\/section>/)?.[0] ?? "";
-  for (const slug of ["housing-projects-parks", "marsa-khuzam", "alula-housing"]) assert.match(housingGroup, new RegExp(`href="/projects/${slug}"`));
+  assert.match(housingGroup, /Ministry of Municipalities and Housing/);
+  for (const slug of ["housing-projects-parks", "alula-housing"]) assert.match(housingGroup, new RegExp(`href="/projects/${slug}"`));
+  assert.doesNotMatch(housingGroup, /href="\/projects\/marsa-khuzam"/);
   assert.doesNotMatch(housingGroup, /href="\/projects\/sedayem-jeddah-streetscape"/);
   const nhcGroup = index.match(/<section class="project-collection-group" aria-labelledby="collection-nhc">[\s\S]*?<\/section>/)?.[0] ?? "";
   assert.match(nhcGroup, /href="\/projects\/sedayem-jeddah-streetscape"/);
   assert.match(nhcGroup, /href="\/projects\/jeddah-park"/);
-  assert.doesNotMatch(nhcGroup, /href="\/projects\/marsa-khuzam"/);
+  assert.match(nhcGroup, /href="\/projects\/marsa-khuzam"/);
   assert.doesNotMatch(index, /<video|niqat-viewer-canvas|proof-study-tabs/);
   assert.match(index, /href="\/projects\/blue-development"/);
 

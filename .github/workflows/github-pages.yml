@@ -19,25 +19,43 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - name: Recover and verify the latest approved media
         run: node scripts/sync-github-pages-assets.mjs
-      - name: Save verified media for independent future builds
+      - name: Prepare film renderer
         run: |
-          git add public
-          if ! git diff --cached --quiet; then
-            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Sync verified public portfolio media [skip ci]'
-            git push
-          fi
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          python -m pip install Pillow==11.3.0
+      - name: Export approved consultant cards and certificates
+        run: python scripts/update-portfolio-film.py --encode --if-needed
+      - name: Verify film duration, evidence and chapter timing
+        run: node --test tests/film-integrity.test.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: film-review
+          path: |
+            work/film-revision/card-*.png
+            work/film-revision/credentials-*.png
+            work/film-revision/edit-manifest.json
       - name: Install locked dependencies
         run: npm ci
       - name: Build the complete static portfolio
         run: node scripts/build-github-pages.mjs
       - name: Check pages, media and repository paths
         run: node --test tests/github-pages.test.mjs
+      - name: Save verified media for independent future builds
+        run: |
+          git add public/media data/github-pages-assets.json data/portfolio-film-*.json
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish consultant cards and seven certificates in portfolio film [skip ci]'
+            git push
+          fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

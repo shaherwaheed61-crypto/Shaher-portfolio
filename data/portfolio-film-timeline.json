@@ -1,9 +1,9 @@
 {
   "duration": 90,
-  "video": "/media/shaher-portfolio-film.mp4?v=8",
-  "poster": "/media/shaher-portfolio-film-poster.jpg",
-  "captions": "/media/shaher-portfolio-film.vtt?v=8",
-  "chapterTrack": "/media/shaher-portfolio-film-chapters.vtt?v=8",
+  "video": "/media/shaher-portfolio-film.mp4?v=9",
+  "poster": "/media/shaher-portfolio-film-poster.jpg?v=9",
+  "captions": "/media/shaher-portfolio-film.vtt?v=9",
+  "chapterTrack": "/media/shaher-portfolio-film-chapters.vtt?v=9",
   "chapters": [
     {
       "id": "intro",
@@ -19,117 +19,125 @@
       "role": "Technical Office Landscape Architect",
       "slug": "king-abdullah-international-gardens",
       "start": 1.5,
-      "end": 24.0,
+      "end": 21.5,
       "collectionId": "kaig",
       "collectionTitle": "King Abdullah International Gardens",
-      "collectionContext": "Owner: Riyadh Municipality \u00b7 Contractor: Zaid Al-Hussein and Brothers"
+      "collectionContext": "Owner: Riyadh Municipality · Consultant: Dar Al-Handasah · Contractor: Zaid Al-Hussein and Brothers"
     },
     {
       "id": "hpp",
       "title": "11 Housing Parks",
       "role": "Technical Office Landscape Architect",
       "slug": "housing-projects-parks",
-      "start": 24.0,
-      "end": 28.5,
+      "start": 21.5,
+      "end": 25.5,
       "collectionId": "housing",
-      "collectionTitle": "Housing Projects Parks",
-      "collectionContext": "Marsa Khuzam \u00b7 AlUla \u00b7 11 housing parks"
+      "collectionTitle": "Ministry of Municipalities and Housing",
+      "collectionContext": "11 Housing Parks · AlUla landscape project"
+    },
+    {
+      "id": "alu",
+      "title": "Al Ula Project — Landscape",
+      "role": "Technical Office Landscape Architect",
+      "slug": "alula-housing",
+      "start": 25.5,
+      "end": 30.833333333333332,
+      "collectionId": "housing",
+      "collectionTitle": "Ministry of Municipalities and Housing",
+      "collectionContext": "11 Housing Parks · AlUla landscape project"
     },
     {
       "id": "mkz",
       "title": "Marsa Khuzam",
       "role": "Technical Office Landscape Architect",
       "slug": "marsa-khuzam",
-      "start": 28.5,
-      "end": 36.0,
-      "collectionId": "housing",
-      "collectionTitle": "Housing Projects Parks",
-      "collectionContext": "Marsa Khuzam \u00b7 AlUla \u00b7 11 housing parks"
-    },
-    {
-      "id": "alu",
-      "title": "Al Ula Project \u2014 Landscape",
-      "role": "Technical Office Landscape Architect",
-      "slug": "alula-housing",
-      "start": 36.0,
-      "end": 42.0,
-      "collectionId": "housing",
-      "collectionTitle": "Housing Projects Parks",
-      "collectionContext": "Marsa Khuzam \u00b7 AlUla \u00b7 11 housing parks"
+      "start": 30.833333333333332,
+      "end": 37.5,
+      "collectionId": "nhc",
+      "collectionTitle": "National Housing Company (NHC)",
+      "collectionContext": "Marsa Khuzam · Sedayem Jeddah streetscape · Jeddah Park"
     },
     {
       "id": "sdm",
-      "title": "Sedayem Jeddah \u2014 Streetscape",
+      "title": "Sedayem Jeddah — Streetscape",
       "role": "Technical Office Landscape Architect",
       "slug": "sedayem-jeddah-streetscape",
-      "start": 42.0,
-      "end": 46.5,
+      "start": 37.5,
+      "end": 41.5,
       "collectionId": "nhc",
-      "collectionTitle": "NHC \u2014 Jeddah Projects",
-      "collectionContext": "Sedayem Jeddah streetscape \u00b7 Jeddah Park"
+      "collectionTitle": "National Housing Company (NHC)",
+      "collectionContext": "Marsa Khuzam · Sedayem Jeddah streetscape · Jeddah Park"
     },
     {
       "id": "jdp",
       "title": "Jeddah Park",
       "role": "Technical Office Landscape Architect",
       "slug": "jeddah-park",
-      "start": 46.5,
-      "end": 51.0,
+      "start": 41.5,
+      "end": 45.5,
       "collectionId": "nhc",
-      "collectionTitle": "NHC \u2014 Jeddah Projects",
-      "collectionContext": "Sedayem Jeddah streetscape \u00b7 Jeddah Park"
+      "collectionTitle": "National Housing Company (NHC)",
+      "collectionContext": "Marsa Khuzam · Sedayem Jeddah streetscape · Jeddah Park"
     },
     {
       "id": "salb",
       "title": "Security Aviation Leadership Building",
       "role": "Architect / BIM Coordinator",
       "slug": "security-aviation-leadership-building",
-      "start": 51.0,
-      "end": 58.5,
+      "start": 45.5,
+      "end": 52.166666666666664,
       "collectionId": "aviation",
       "collectionTitle": "Security Aviation Leadership Building",
-      "collectionContext": "Architectural redesign \u00b7 IFC / LOD 300 \u00b7 Shop drawings \u00b7 BIM coordination"
+      "collectionContext": "Architectural redesign · IFC / LOD 300 · Shop drawings · BIM coordination"
     },
     {
       "id": "blue",
       "title": "Blue Development",
       "role": "Architect",
       "slug": "blue-development",
-      "start": 58.5,
-      "end": 66.0,
+      "start": 52.166666666666664,
+      "end": 58.833333333333336,
       "collectionId": "selected",
       "collectionTitle": "Selected Architectural Work",
-      "collectionContext": "Blue Development with Niqat \u00b7 Zad Engineering"
+      "collectionContext": "Blue Development · Niqat Project · Zad Engineering"
     },
     {
       "id": "zad",
-      "title": "Zad Engineering \u2014 Selected Design Work",
+      "title": "Zad Engineering — Selected Design Work",
       "role": "Technical Office Architect",
       "slug": "zad-engineering",
-      "start": 66.0,
-      "end": 72.5,
+      "start": 58.833333333333336,
+      "end": 64.61111111111111,
       "collectionId": "selected",
       "collectionTitle": "Selected Architectural Work",
-      "collectionContext": "Blue Development with Niqat \u00b7 Zad Engineering"
+      "collectionContext": "Blue Development · Niqat Project · Zad Engineering"
     },
     {
       "id": "selected-work",
       "title": "Selected architectural work",
-      "role": "Design & visualization \u00b7 Behance",
+      "role": "Design & visualization · Behance",
       "slug": null,
-      "start": 72.5,
-      "end": 88.5,
+      "start": 64.61111111111111,
+      "end": 78.83333333333333,
       "collectionId": "selected",
       "collectionTitle": "Selected Architectural Work",
-      "collectionContext": "Blue Development with Niqat \u00b7 Zad Engineering \u00b7 Behance"
+      "collectionContext": "Blue Development with Niqat · Zad Engineering · Behance"
+    },
+    {
+      "id": "credentials",
+      "title": "Certificates & professional accreditation",
+      "role": "SCE · Niqat Global · Plannerly · KAITECH",
+      "slug": null,
+      "start": 78.83333333333333,
+      "end": 88.5
     },
     {
       "id": "contact",
-      "title": "Credentials & contact",
+      "title": "Contact Shaher",
       "role": "SCE Accredited Architect",
       "slug": null,
       "start": 88.5,
-      "end": 90.0
+      "end": 90
     }
   ]
 }

@@ -1,16 +1,16 @@
 {
-  "duration": 180,
-  "playbackSpeed": 2,
+  "duration": 90,
+  "playbackSpeed": 1,
   "publishedDuration": 90,
-  "introSeconds": 3,
-  "outroSeconds": 3,
-  "selectedWorkSeconds": 32,
+  "introSeconds": 1.5,
+  "outroSeconds": 1.5,
+  "selectedWorkSeconds": 14.222222222222221,
   "projectChapters": [
     {
       "slug": "king-abdullah-international-gardens",
-      "scopeSeconds": 9,
+      "scopeSeconds": 4.0,
       "evidence": "kaig",
-      "evidenceSeconds": 36,
+      "evidenceSeconds": 16.0,
       "workstreams": [
         {
           "label": "Shop drawings",
@@ -32,9 +32,9 @@
     },
     {
       "slug": "housing-projects-parks",
-      "scopeSeconds": 7,
+      "scopeSeconds": 3.111111111111111,
       "evidence": "workflow",
-      "evidenceSeconds": 2,
+      "evidenceSeconds": 0.8888888888888888,
       "workstreams": [
         {
           "label": "Landscape packages",
@@ -55,30 +55,10 @@
       ]
     },
     {
-      "slug": "marsa-khuzam",
-      "scopeSeconds": 8,
-      "evidence": "marsa",
-      "evidenceSeconds": 7,
-      "workstreams": [
-        {
-          "label": "Shop drawings",
-          "detail": "Garden-zone plans & technical details"
-        },
-        {
-          "label": "Design refinement",
-          "detail": "Clarity, constructability & presentation"
-        },
-        {
-          "label": "3D visualization",
-          "detail": "Design decisions & client reviews"
-        }
-      ]
-    },
-    {
       "slug": "alula-housing",
-      "scopeSeconds": 8,
+      "scopeSeconds": 3.5555555555555554,
       "evidence": "alula",
-      "evidenceSeconds": 4,
+      "evidenceSeconds": 1.7777777777777777,
       "workstreams": [
         {
           "label": "Shop drawings",
@@ -95,10 +75,30 @@
       ]
     },
     {
+      "slug": "marsa-khuzam",
+      "scopeSeconds": 3.5555555555555554,
+      "evidence": "marsa",
+      "evidenceSeconds": 3.111111111111111,
+      "workstreams": [
+        {
+          "label": "Shop drawings",
+          "detail": "Garden-zone plans & technical details"
+        },
+        {
+          "label": "Design refinement",
+          "detail": "Clarity, constructability & presentation"
+        },
+        {
+          "label": "3D visualization",
+          "detail": "Design decisions & client reviews"
+        }
+      ]
+    },
+    {
       "slug": "sedayem-jeddah-streetscape",
-      "scopeSeconds": 7,
+      "scopeSeconds": 3.111111111111111,
       "evidence": "workflow",
-      "evidenceSeconds": 2,
+      "evidenceSeconds": 0.8888888888888888,
       "workstreams": [
         {
           "label": "Streetscape drawings",
@@ -120,9 +120,9 @@
     },
     {
       "slug": "jeddah-park",
-      "scopeSeconds": 7,
+      "scopeSeconds": 3.111111111111111,
       "evidence": "workflow",
-      "evidenceSeconds": 2,
+      "evidenceSeconds": 0.8888888888888888,
       "workstreams": [
         {
           "label": "Shop drawings",
@@ -140,9 +140,9 @@
     },
     {
       "slug": "security-aviation-leadership-building",
-      "scopeSeconds": 9,
+      "scopeSeconds": 4.0,
       "evidence": "workflow",
-      "evidenceSeconds": 6,
+      "evidenceSeconds": 2.6666666666666665,
       "workstreams": [
         {
           "label": "Architectural redesign",
@@ -164,9 +164,9 @@
     },
     {
       "slug": "blue-development",
-      "scopeSeconds": 8,
+      "scopeSeconds": 3.5555555555555554,
       "evidence": "model",
-      "evidenceSeconds": 7,
+      "evidenceSeconds": 3.111111111111111,
       "workstreams": [
         {
           "label": "Architect",
@@ -184,9 +184,9 @@
     },
     {
       "slug": "zad-engineering",
-      "scopeSeconds": 8,
+      "scopeSeconds": 3.5555555555555554,
       "evidence": "workflow",
-      "evidenceSeconds": 5,
+      "evidenceSeconds": 2.2222222222222223,
       "workstreams": [
         {
           "label": "Documentation",
@@ -202,5 +202,8 @@
         }
       ]
     }
-  ]
+  ],
+  "credentialsSeconds": 9.666666666666666,
+  "source": "assets/review-sources/portfolio-film-baseline",
+  "revision": "Agency groups, consultants and seven certificate images"
 }

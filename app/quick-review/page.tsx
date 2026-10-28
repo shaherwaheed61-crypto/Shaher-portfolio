@@ -6,7 +6,7 @@ import { PortfolioFilmPlayer } from "@/components/portfolio-film-player";
 import Link from "next/link";
 import { ArrowUpRight, Download, Timer } from "lucide-react";
 import { CapabilityEvidence } from "@/components/capability-evidence";
-import { getProject, portfolio } from "@/data/portfolio";
+import { credentials, getProject, portfolio } from "@/data/portfolio";
 
 const selectedBehance = behanceSources.filter((project) => !filmSelection.excludedBehanceIds.includes(project.id));
 const drawingSheetCount = filmSelection.kaigDrawingScenes.reduce((count, scene) => count + scene.images.length, 0);
@@ -60,7 +60,7 @@ export default function QuickReviewPage() {
         <div className="shell">
           <div className="review-film-heading">
             <div><p className="mono-label quick-review-status"><Timer size={14} /> 01:30 / Project stories</p><h1>Projects. Roles. <em>Evidence.</em></h1></div>
-            <p>Explore the work by project group. Each introduction connects my role to the deliverables, followed by drawings, architectural models, and selected design work.</p>
+            <p>Explore the work by client agency. Each introduction identifies the project team and my contribution, followed by drawings, architectural models, selected design work, and my certificates.</p>
           </div>
           <PortfolioFilmPlayer film={filmTimeline} />
           <div className="quick-review-actions">
@@ -71,7 +71,7 @@ export default function QuickReviewPage() {
             {filmTimeline.chapters.map((chapter) => {
               const project = chapter.slug ? getProject(chapter.slug) : undefined;
               const time = `${Math.floor(chapter.start / 60).toString().padStart(2, "0")}:${Math.floor(chapter.start % 60).toString().padStart(2, "0")}`;
-              return <li key={chapter.id}><strong>{time}</strong> {chapter.title}. {project ? project.roleSummary : chapter.id === "intro" ? `${portfolio.role}. ${portfolio.experience} of experience, based in Riyadh.` : chapter.id === "selected-work" ? `${selectedBehance.length} selected Behance projects: residential, landscape, commercial and facade visualization.` : `${portfolio.registration}. ${portfolio.email} · ${portfolio.phone}.`}{chapter.id === "kaig" && ` Includes ${drawingSheetCount} landscape shop drawing excerpts: plans, levels, sections and construction details.`}</li>;
+              return <li key={chapter.id}><strong>{time}</strong> {chapter.title}. {project ? `${project.client ? `Owner: ${project.client}. ` : ""}${project.consultant ? `Consultant: ${project.consultant}. ` : ""}${project.roleSummary}` : chapter.id === "intro" ? `${portfolio.role}. ${portfolio.experience} of experience, based in Riyadh.` : chapter.id === "selected-work" ? `${selectedBehance.length} selected Behance projects: residential, landscape, commercial and facade visualization.` : chapter.id === "credentials" ? `${portfolio.registration}. ${credentials.map((credential) => `${credential.title} — ${credential.issuer}`).join("; ")}. Actual certificate images appear in the film.` : `${portfolio.registration}. ${portfolio.email} · ${portfolio.phone}.`}{chapter.id === "kaig" && ` Includes ${drawingSheetCount} landscape shop drawing excerpts: plans, levels, sections and construction details.`}</li>;
             })}
           </ol></details>
         </div>

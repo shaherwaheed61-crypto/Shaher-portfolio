@@ -2,11 +2,11 @@ export type AtlasRegion = "riyadh" | "jeddah" | "alula" | "cairo";
 export type ProjectMediaKind = "site" | "drawing" | "visualization" | "model";
 export type ProjectImage = { src: string; alt: string; caption: string; group?: string; kind?: ProjectMediaKind };
 
-// Presentation groups are independent of each project's legal owner/consultant.
+// Client-agency groups; keep each case study's own consultant and contractor.
 export const projectCollections = [
-  { id: "kaig", title: "King Abdullah International Gardens", context: "Owner: Riyadh Municipality · Contractor: Zaid Al-Hussein and Brothers", projectSlugs: ["king-abdullah-international-gardens"] },
-  { id: "housing", title: "Housing Projects Parks", context: "Marsa Khuzam · AlUla · 11 housing parks", projectSlugs: ["housing-projects-parks", "marsa-khuzam", "alula-housing"] },
-  { id: "nhc", title: "NHC — Jeddah Projects", context: "Sedayem Jeddah streetscape · Jeddah Park", projectSlugs: ["sedayem-jeddah-streetscape", "jeddah-park"] },
+  { id: "kaig", title: "King Abdullah International Gardens", context: "Owner: Riyadh Municipality · Consultant: Dar Al-Handasah · Contractor: Zaid Al-Hussein and Brothers", projectSlugs: ["king-abdullah-international-gardens"] },
+  { id: "housing", title: "Ministry of Municipalities and Housing", context: "11 Housing Parks · AlUla landscape project", projectSlugs: ["housing-projects-parks", "alula-housing"] },
+  { id: "nhc", title: "National Housing Company (NHC)", context: "Marsa Khuzam · Sedayem Jeddah streetscape · Jeddah Park", projectSlugs: ["marsa-khuzam", "sedayem-jeddah-streetscape", "jeddah-park"] },
   { id: "aviation", title: "Security Aviation Leadership Building", context: "Architectural redesign · IFC / LOD 300 · Shop drawings · BIM coordination", projectSlugs: ["security-aviation-leadership-building"] },
   { id: "selected", title: "Selected Architectural Work", context: "Blue Development · Niqat Project · Zad Engineering", projectSlugs: ["blue-development", "niqat-project", "zad-engineering"] },
 ];
@@ -400,7 +400,7 @@ export const projects: Project[] = [
   },
   {
     slug: "housing-projects-parks",
-    code: "HPP",
+    code: "MMH",
     title: "11 Housing Parks",
     company: "Safwa Riyadh General Contracting Co.",
     client: "Ministry of Municipalities and Housing",
@@ -657,9 +657,12 @@ export const projects: Project[] = [
 ];
 
 export const credentials = [
-  { title: "Level 1 Information Manager — Basics", issuer: "Plannerly", image: "/images/certifications/iso-19650-readiness.jpg" },
-  { title: "Level 3 Information Manager", issuer: "Plannerly", image: "/images/certifications/certified-information-manager.jpg" },
-  { title: "BIM Management, Modeling, Coordination & Documentation", issuer: "Niqat Global", image: "/images/certifications/bim-diploma-management.jpg", id: "EM303567098129285534575" },
+  { title: "Level 1 Information Manager — Basics", issuer: "Plannerly", image: "/images/certifications/certified-information-manager.jpg" },
+  { title: "Company Level ISO 19650 Certification Readiness", issuer: "Plannerly", image: "/images/certifications/iso-19650-readiness.jpg" },
+  { title: "BIM Diploma — BIM Management", issuer: "Niqat Global / Autodesk Authorized Training Center", image: "/images/certifications/bim-diploma-management.jpg", id: "EM303567098129285534575" },
+  { title: "Certified BIM Coordinator", issuer: "Niqat Global", image: "/images/certifications/certified-bim-coordinator.jpg" },
+  { title: "Certified BIM Modeler (Architectural)", issuer: "Niqat Global", image: "/images/certifications/certified-bim-modeler.jpg" },
+  { title: "Revit Coordinates Workshop", issuer: "KAITECH Engineering & Technology", image: "/images/certifications/revit-coordinates-workshop.jpg" },
 ];
 
 export type TechnicalProofStage = {
