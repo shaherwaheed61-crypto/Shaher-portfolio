@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT / "work/film-revision"
 BASE = WORK / "baseline"
 BASELINE_COMMIT = "a9e62d7e6c33fc766c44de4fa92a60265cee9abd"
-REVISION = "consultants-and-seven-certificates-v1"
+REVISION = "nhc-deduplicated-marsa-v2"
 W, H, FPS, SOURCE_FPS = 1920, 1080, 54, 48
 BG, PANEL, INK, MUTED, ACCENT = "#0d1214", "#142226", "#f0f1ed", "#aeb9bb", "#e4a66f"
 COLORS = ["#e4a66f", "#89b7ae", "#a2b6d2", "#d1bd82"]
@@ -267,6 +267,7 @@ def main():
     certificates=certificate_cards(data)
     scenes=[];output_chapters=[];cursor=0
     cues=read_cues();assert len(cues)==52,len(cues)
+    removed_duplicates=[]
     for cid in order:
         old=chapters[cid];new=dict(old);new["start"]=cursor/FPS
         slug=old["slug"]
@@ -275,6 +276,10 @@ def main():
             new.update(collectionId=group["id"],collectionTitle=group["title"],collectionContext=group["context"])
         for a,b,caption in cues:
             if a < old["start"]-1e-5 or b > old["end"]+1e-5:continue
+            if cid=="mkz" and abs(a-34.25)<1e-5 and abs(b-36)<1e-5:
+                removed_duplicates.append({"sourceStart":a,"sourceEnd":b,"chapter":cid,
+                    "reason":"User-confirmed duplicate Zone 9 drawing; same geometry as Zone 8."})
+                continue
             count=round((b-a)*SOURCE_FPS)
             scene={"sourceStart":a,"sourceEnd":b,"sourceFrames":count,"frames":count,
               "speedNumerator":8,"speedDenominator":9,"chapter":cid,"caption":caption}
@@ -292,8 +297,8 @@ def main():
         new["end"]=cursor/FPS;output_chapters.append(new)
     credential_start=cursor/FPS
     for path,caption in certificates:
-        scenes.append({"image":str(path),"frames":174,"chapter":"credentials","caption":caption,
-          "start":cursor/FPS,"end":(cursor+174)/FPS});cursor+=174
+        scenes.append({"image":str(path),"frames":202,"chapter":"credentials","caption":caption,
+          "start":cursor/FPS,"end":(cursor+202)/FPS});cursor+=202
     output_chapters.append({"id":"credentials","title":"Certificates & professional accreditation",
       "role":"SCE · Niqat Global · Plannerly · KAITECH","slug":None,"start":credential_start,"end":cursor/FPS})
     scenes.append({"sourceStart":88.5,"sourceEnd":90,"sourceFrames":72,"frames":81,
@@ -301,14 +306,16 @@ def main():
     output_chapters.append({**chapters["contact"],"title":"Contact Shaher","start":cursor/FPS,"end":90})
     cursor+=81;assert cursor==90*FPS,cursor
     ranges=sorted((s["sourceStart"],s["sourceEnd"]) for s in scenes if "sourceStart" in s)
-    assert len(ranges)==52 and ranges[0][0]==0 and ranges[-1][1]==90
-    assert all(abs(a[1]-b[0])<1e-6 for a,b in zip(ranges,ranges[1:])),ranges
+    assert len(ranges)==51 and ranges[0][0]==0 and ranges[-1][1]==90
+    assert [(a[1],b[0]) for a,b in zip(ranges,ranges[1:]) if abs(a[1]-b[0])>1e-6]==[(34.25,36)],ranges
+    assert len(removed_duplicates)==1
     manifest={"revision":REVISION,"duration":90,"fps":FPS,"frames":cursor,"baselineSha256":hashlib.sha256((BASE/"shaher-portfolio-film.mp4").read_bytes()).hexdigest(),
-      "certificateImageCount":7,"certificatePages":3,"sourceSceneCount":52,"publishedSceneCount":len(scenes),
+      "certificateImageCount":7,"certificatePages":3,"sourceSceneCount":51,"publishedSceneCount":len(scenes),
+      "removedDuplicateScenes":removed_duplicates,
       "projectOrder":[chapters[cid]["slug"] for cid in project_order],
       "scenes":[{k:v for k,v in s.items() if k!="image"}|({"card":Path(s["image"]).name} if "image" in s else {}) for s in scenes]}
     (WORK/"edit-manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
-    print("Cards prepared; 52 approved scenes retained; 7 certificates on 3 closing pages.",flush=True)
+    print("Cards prepared; 51 source scenes retained; duplicate Marsa drawing removed; 7 certificates on 3 closing pages.",flush=True)
     if not args.encode:return
     with ThreadPoolExecutor(max_workers=1) as pool:
         files=list(pool.map(encode_clip,enumerate(scenes)))
@@ -327,16 +334,16 @@ def main():
     assert not any(s["codec_type"]=="audio" for s in info["streams"])
     media=ROOT/"public/media";media.joinpath(final.name).write_bytes(final.read_bytes())
     Image.open(cards["king-abdullah-international-gardens"]).convert("RGB").save(media/"shaher-portfolio-film-poster.jpg",quality=94)
-    timeline={**baseline,"video":"/media/shaher-portfolio-film.mp4?v=9","poster":"/media/shaher-portfolio-film-poster.jpg?v=9","captions":"/media/shaher-portfolio-film.vtt?v=9",
-      "chapterTrack":"/media/shaher-portfolio-film-chapters.vtt?v=9","chapters":output_chapters}
+    timeline={**baseline,"video":"/media/shaher-portfolio-film.mp4?v=10","poster":"/media/shaher-portfolio-film-poster.jpg?v=10","captions":"/media/shaher-portfolio-film.vtt?v=10",
+      "chapterTrack":"/media/shaher-portfolio-film-chapters.vtt?v=10","chapters":output_chapters}
     (ROOT/"data/portfolio-film-timeline.json").write_text(json.dumps(timeline,indent=2,ensure_ascii=False)+"\n")
     media.joinpath("shaher-portfolio-film.vtt").write_text("WEBVTT\n\n"+"\n\n".join(f"{stamp(s['start'])} --> {stamp(s['end'])}\n{s['caption']}" for s in scenes)+"\n")
     media.joinpath("shaher-portfolio-film-chapters.vtt").write_text("WEBVTT\n\n"+"\n\n".join(f"{stamp(c['start'])} --> {stamp(c['end'])}\n{c['title']}" for c in output_chapters)+"\n")
     (ROOT/"data/portfolio-film-edit.json").write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+"\n")
     new_storyboard={**storyboard,"duration":90,"publishedDuration":90,"playbackSpeed":1,
-      "introSeconds":1.5,"outroSeconds":1.5,"selectedWorkSeconds":16*8/9,"credentialsSeconds":522/FPS,
-      "source":f"Published approved baseline at {BASELINE_COMMIT}","revision":"Agency groups, consultants and seven certificate images",
-      "projectChapters":[{**scope[slug],"scopeSeconds":scope[slug]["scopeSeconds"]*4/9,"evidenceSeconds":scope[slug]["evidenceSeconds"]*4/9} for slug in manifest["projectOrder"]]}
+      "introSeconds":1.5,"outroSeconds":1.5,"selectedWorkSeconds":16*8/9,"credentialsSeconds":606/FPS,
+      "source":f"Published approved baseline at {BASELINE_COMMIT}","revision":"NHC grouping and user-confirmed duplicate Marsa drawing removed",
+      "projectChapters":[{**scope[slug],"scopeSeconds":scope[slug]["scopeSeconds"]*4/9,"evidenceSeconds":scope[slug]["evidenceSeconds"]*4/9-(84/FPS if slug=="marsa-khuzam" else 0)} for slug in manifest["projectOrder"]]}
     (ROOT/"data/portfolio-film-storyboard.json").write_text(json.dumps(new_storyboard,indent=2,ensure_ascii=False)+"\n")
     media_manifest=json.loads((ROOT/"data/github-pages-assets.json").read_text())
     for asset in media_manifest["files"]:
