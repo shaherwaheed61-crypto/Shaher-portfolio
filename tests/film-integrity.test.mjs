@@ -69,6 +69,6 @@ test("removes only the confirmed duplicate drawing and keeps NHC scopes and seve
   assert.deepEqual(timeline.chapters.filter((chapter) => chapter.collectionId === "housing").map((chapter) => chapter.slug), ["housing-projects-parks", "alula-housing"]);
   assert.deepEqual(timeline.chapters.filter((chapter) => chapter.collectionId === "nhc").map((chapter) => chapter.slug), ["marsa-khuzam", "sedayem-jeddah-streetscape", "jeddah-park"]);
   assert.deepEqual(timeline.chapters.filter((chapter) => chapter.collectionId === "selected" && chapter.slug).map((chapter) => chapter.slug), ["blue-development", "niqat-project", "zad-engineering"]);
-  assert.ok(timeline.chapters.some((chapter) => chapter.id === "credentials" && chapter.start < 80 && chapter.end === 88.5));
+  assert.ok(timeline.chapters.some((chapter) => chapter.id === "credentials" && chapter.start < 80 && chapter.end === timeline.chapters.at(-1).start));
 });
 
