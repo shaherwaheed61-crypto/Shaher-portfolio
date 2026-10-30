@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT / "work/film-revision"
 BASE = WORK / "baseline"
 BASELINE_COMMIT = "a9e62d7e6c33fc766c44de4fa92a60265cee9abd"
-REVISION = "consultants-and-design-scope-v3"
+REVISION = "consultant-owner-typography-v4"
 W, H, FPS, SOURCE_FPS = 1920, 1080, 54, 48
 BG, PANEL, INK, MUTED, ACCENT = "#0d1214", "#142226", "#f0f1ed", "#aeb9bb", "#e4a66f"
 COLORS = ["#e4a66f", "#89b7ae", "#a2b6d2", "#d1bd82"]
@@ -121,12 +121,12 @@ def project_card(project, chapter, collection, index):
         text(d, (76, 511), project["client"], 25, MUTED, width=565)
     consultant = project.get("consultant")
     if consultant:
-        text(d, (76, 585), "CONSULTANT", 24, ACCENT, mono=True)
+        text(d, (76, 585), "CONSULTANT", 19, ACCENT, mono=True)
         if " / Parsons" in consultant:
-            text(d, (76, 625), consultant.replace(" / Parsons", ""), 32, INK, width=565, bold=True, leading=1.12)
-            text(d, (76, 684), "Parsons (Owner's Consultant)", 27, INK, bold=True)
+            text(d, (76, 616), consultant.replace(" / Parsons", ""), 25, MUTED, width=565)
+            text(d, (76, 681), "Parsons (Owner's Consultant)", 25, MUTED)
         else:
-            text(d, (76, 625), consultant, 34, INK, width=565, bold=True, leading=1.12)
+            text(d, (76, 616), consultant, 25, MUTED, width=565)
     label = project.get("companyLabel", "Contractor")
     if project["slug"] == "blue-development": label = "Project team"
     text(d, (76, 768), label.upper(), 19, ACCENT, mono=True)
@@ -355,15 +355,15 @@ def main():
     assert not any(s["codec_type"]=="audio" for s in info["streams"])
     media=ROOT/"public/media";media.joinpath(final.name).write_bytes(final.read_bytes())
     Image.open(cards["king-abdullah-international-gardens"]).convert("RGB").save(media/"shaher-portfolio-film-poster.jpg",quality=94)
-    timeline={**baseline,"video":"/media/shaher-portfolio-film.mp4?v=11","poster":"/media/shaher-portfolio-film-poster.jpg?v=11","captions":"/media/shaher-portfolio-film.vtt?v=11",
-      "chapterTrack":"/media/shaher-portfolio-film-chapters.vtt?v=11","chapters":output_chapters}
+    timeline={**baseline,"video":"/media/shaher-portfolio-film.mp4?v=12","poster":"/media/shaher-portfolio-film-poster.jpg?v=12","captions":"/media/shaher-portfolio-film.vtt?v=12",
+      "chapterTrack":"/media/shaher-portfolio-film-chapters.vtt?v=12","chapters":output_chapters}
     (ROOT/"data/portfolio-film-timeline.json").write_text(json.dumps(timeline,indent=2,ensure_ascii=False)+"\n")
     media.joinpath("shaher-portfolio-film.vtt").write_text("WEBVTT\n\n"+"\n\n".join(f"{stamp(s['start'])} --> {stamp(s['end'])}\n{s['caption']}" for s in scenes)+"\n")
     media.joinpath("shaher-portfolio-film-chapters.vtt").write_text("WEBVTT\n\n"+"\n\n".join(f"{stamp(c['start'])} --> {stamp(c['end'])}\n{c['title']}" for c in output_chapters)+"\n")
     (ROOT/"data/portfolio-film-edit.json").write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+"\n")
     new_storyboard={**storyboard,"duration":90,"publishedDuration":90,"playbackSpeed":1,
       "introSeconds":1.5,"outroSeconds":1.5,"selectedWorkSeconds":16*8/9,"credentialsSeconds":606/FPS,
-      "source":f"Published approved baseline at {BASELINE_COMMIT}","revision":"Project consultant labels and selected design work scope clarified",
+      "source":f"Published approved baseline at {BASELINE_COMMIT}","revision":"Consultant typography aligned with owner on project cards",
       "projectChapters":[{**scope[slug],"scopeSeconds":scope[slug]["scopeSeconds"]*4/9,"evidenceSeconds":scope[slug]["evidenceSeconds"]*4/9-(84/FPS if slug=="marsa-khuzam" else 0)} for slug in manifest["projectOrder"]]}
     (ROOT/"data/portfolio-film-storyboard.json").write_text(json.dumps(new_storyboard,indent=2,ensure_ascii=False)+"\n")
     media_manifest=json.loads((ROOT/"data/github-pages-assets.json").read_text())
