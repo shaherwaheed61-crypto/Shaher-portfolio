@@ -459,13 +459,13 @@
     },
     {
       "path": "media/shaher-portfolio-film-poster.jpg",
-      "size": 288808,
-      "sha256": "3225316c7a7ad99dc76fa9b3d0ede5f3d5046d4b49891e55b76f6664babaab4f"
+      "size": 284491,
+      "sha256": "2e5cea213fda5f92e25d514c4633ee539a90c9a87db4c13f92ada5c5b1c0c16e"
     },
     {
       "path": "media/shaher-portfolio-film.mp4",
-      "size": 11826700,
-      "sha256": "8499d0c3cca7bd550907cd23c57c398d00164544cfaecf0e1b451770442b5b35"
+      "size": 11814258,
+      "sha256": "f51a7d2deec04c50e09681c9d6d5a35ba01283fab96aa854012681ffc6cce232"
     },
     {
       "path": "media/shaher-portfolio-film.vtt",
