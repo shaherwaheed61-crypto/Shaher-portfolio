@@ -2,15 +2,15 @@
   "duration": 90,
   "playbackSpeed": 1,
   "publishedDuration": 90,
-  "introSeconds": 1.5,
-  "outroSeconds": 1.5,
-  "selectedWorkSeconds": 14.222222222222221,
+  "introSeconds": 1.5087719298245614,
+  "outroSeconds": 1.4912280701754386,
+  "selectedWorkSeconds": 13.473684210526315,
   "projectChapters": [
     {
       "slug": "king-abdullah-international-gardens",
-      "scopeSeconds": 4.0,
+      "scopeSeconds": 3.789473684210526,
       "evidence": "kaig",
-      "evidenceSeconds": 16.0,
+      "evidenceSeconds": 15.157894736842104,
       "workstreams": [
         {
           "label": "Shop drawings",
@@ -32,9 +32,9 @@
     },
     {
       "slug": "housing-projects-parks",
-      "scopeSeconds": 3.111111111111111,
+      "scopeSeconds": 2.9473684210526314,
       "evidence": "workflow",
-      "evidenceSeconds": 0.8888888888888888,
+      "evidenceSeconds": 0.8421052631578947,
       "workstreams": [
         {
           "label": "Landscape packages",
@@ -56,9 +56,9 @@
     },
     {
       "slug": "alula-housing",
-      "scopeSeconds": 3.5555555555555554,
+      "scopeSeconds": 3.3684210526315788,
       "evidence": "alula",
-      "evidenceSeconds": 1.7777777777777777,
+      "evidenceSeconds": 1.6842105263157894,
       "workstreams": [
         {
           "label": "Shop drawings",
@@ -76,9 +76,9 @@
     },
     {
       "slug": "marsa-khuzam",
-      "scopeSeconds": 3.5555555555555554,
+      "scopeSeconds": 3.3684210526315788,
       "evidence": "marsa",
-      "evidenceSeconds": 1.5555555555555556,
+      "evidenceSeconds": 1.4736842105263157,
       "workstreams": [
         {
           "label": "Shop drawings",
@@ -96,9 +96,9 @@
     },
     {
       "slug": "sedayem-jeddah-streetscape",
-      "scopeSeconds": 3.111111111111111,
+      "scopeSeconds": 2.9473684210526314,
       "evidence": "workflow",
-      "evidenceSeconds": 0.8888888888888888,
+      "evidenceSeconds": 0.8421052631578947,
       "workstreams": [
         {
           "label": "Streetscape drawings",
@@ -120,9 +120,9 @@
     },
     {
       "slug": "jeddah-park",
-      "scopeSeconds": 3.111111111111111,
+      "scopeSeconds": 2.9473684210526314,
       "evidence": "workflow",
-      "evidenceSeconds": 0.8888888888888888,
+      "evidenceSeconds": 0.8421052631578947,
       "workstreams": [
         {
           "label": "Shop drawings",
@@ -140,9 +140,9 @@
     },
     {
       "slug": "security-aviation-leadership-building",
-      "scopeSeconds": 4.0,
+      "scopeSeconds": 3.789473684210526,
       "evidence": "workflow",
-      "evidenceSeconds": 2.6666666666666665,
+      "evidenceSeconds": 2.526315789473684,
       "workstreams": [
         {
           "label": "Architectural redesign",
@@ -164,9 +164,9 @@
     },
     {
       "slug": "blue-development",
-      "scopeSeconds": 3.5555555555555554,
+      "scopeSeconds": 3.3684210526315788,
       "evidence": "model",
-      "evidenceSeconds": 3.111111111111111,
+      "evidenceSeconds": 2.9473684210526314,
       "workstreams": [
         {
           "label": "Architect",
@@ -183,10 +183,30 @@
       ]
     },
     {
+      "slug": "niqat-project",
+      "scopeSeconds": 1.5087719298245614,
+      "evidence": "IFC-derived model views",
+      "evidenceSeconds": 3.0,
+      "workstreams": [
+        {
+          "label": "Architectural collaboration",
+          "detail": "Work with the Niqat team"
+        },
+        {
+          "label": "IFC-derived model",
+          "detail": "Approved geometry and appearance"
+        },
+        {
+          "label": "Three perspectives",
+          "detail": "Overview, side and reverse views"
+        }
+      ]
+    },
+    {
       "slug": "zad-engineering",
-      "scopeSeconds": 3.5555555555555554,
+      "scopeSeconds": 3.3684210526315788,
       "evidence": "workflow",
-      "evidenceSeconds": 2.2222222222222223,
+      "evidenceSeconds": 2.1052631578947367,
       "workstreams": [
         {
           "label": "Documentation",
@@ -203,7 +223,7 @@
       ]
     }
   ],
-  "credentialsSeconds": 11.222222222222221,
+  "credentialsSeconds": 10.701754385964913,
   "source": "Published approved baseline at a9e62d7e6c33fc766c44de4fa92a60265cee9abd",
-  "revision": "Consultant typography aligned with owner on project cards"
+  "revision": "Complete Marsa sheet, Niqat IFC-derived views and Security consultant"
 }
