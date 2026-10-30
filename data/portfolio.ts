@@ -7,7 +7,7 @@ export const projectCollections = [
   { id: "kaig", title: "King Abdullah International Gardens", context: "Owner: Riyadh Municipality · Consultant: Dar Al-Handasah · Contractor: Zaid Al-Hussein and Brothers", projectSlugs: ["king-abdullah-international-gardens"] },
   { id: "housing", title: "Ministry of Municipalities and Housing", context: "11 Housing Parks · AlUla landscape project", projectSlugs: ["housing-projects-parks", "alula-housing"] },
   { id: "nhc", title: "National Housing Company (NHC)", context: "Marsa Khuzam · Sedayem Jeddah streetscape · Jeddah Park", projectSlugs: ["marsa-khuzam", "sedayem-jeddah-streetscape", "jeddah-park"] },
-  { id: "aviation", title: "Security Aviation Leadership Building", context: "Architectural redesign · IFC / LOD 300 · Shop drawings · BIM coordination", projectSlugs: ["security-aviation-leadership-building"] },
+  { id: "aviation", title: "Security Aviation Leadership Building", context: "Consultant: Al Saif Engineering Consultants · Architectural redesign · IFC / LOD 300 · Shop drawings · BIM coordination", projectSlugs: ["security-aviation-leadership-building"] },
   { id: "selected", title: "Selected Architectural Work", context: "Blue Development · Niqat Project · Zad Engineering", projectSlugs: ["blue-development", "niqat-project", "zad-engineering"] },
 ];
 
@@ -369,6 +369,7 @@ export const projects: Project[] = [
     code: "SALB",
     title: "Security Aviation Leadership Building",
     company: "Safwa Riyadh General Contracting Co.",
+    consultant: "Al Saif Engineering Consultants",
     atlasRegion: "riyadh",
     location: "Riyadh, Saudi Arabia",
     period: "2026 — Present",
@@ -746,3 +747,4 @@ export function getNextProject(slug: string) {
   const index = projects.findIndex((project) => project.slug === slug);
   return projects[(index + 1) % projects.length];
 }
+

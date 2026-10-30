@@ -13,7 +13,7 @@ const drawingSheetCount = filmSelection.kaigDrawingScenes.reduce((count, scene) 
 
 export const metadata: Metadata = {
   title: "Portfolio Film",
-  description: `Watch ${portfolio.name}'s 90-second portfolio film: nine project stories, role diagrams, landscape shop drawings, architectural work and BIM.`,
+  description: `Watch ${portfolio.name}'s 90-second portfolio film: ten project stories, role diagrams, landscape shop drawings, architectural work and BIM.`,
 };
 
 const evidence = [
@@ -141,3 +141,4 @@ export default function QuickReviewPage() {
     </main>
   );
 }
+

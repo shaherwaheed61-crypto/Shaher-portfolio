@@ -25,6 +25,7 @@ test("publishes a complete Full HD silent 90-second film and contiguous chapter/
   assert.equal(Number(video.duration), 90);
   assert.equal(video.width, 1920);
   assert.equal(video.height, 1080);
+  assert.equal(video.avg_frame_rate, "57/1");
   assert.equal(info.streams.some((stream) => stream.codec_type === "audio"), false);
   const timeline = await json("data/portfolio-film-timeline.json");
   assert.equal(timeline.chapters[0].start, 0);
@@ -35,14 +36,14 @@ test("publishes a complete Full HD silent 90-second film and contiguous chapter/
   });
   const captions = await readFile(new URL("public/media/shaher-portfolio-film.vtt", root), "utf8");
   const intervals = [...captions.matchAll(/(\d\d:\d\d:\d\d\.\d+) --> (\d\d:\d\d:\d\d\.\d+)/g)].map(([, start, end]) => [seconds(start), seconds(end)]);
-  assert.equal(intervals.length, 54);
+  assert.equal(intervals.length, 58);
   assert.equal(intervals[0][0], 0);
   assert.equal(intervals.at(-1)[1], 90);
   intervals.forEach(([start, end], i) => {
     assert.ok(end > start);
     if (i) assert.equal(start, intervals[i - 1][1]);
   });
-  for (const name of ["Dar Al-Handasah", "Aldarh Engineering", "Parsons", "Zuhair Fayez", "Khatib & Alami", "Saudi Council of Engineers", "Certified BIM Coordinator", "Revit Coordinates Workshop"]) assert.ok(captions.includes(name), name);
+  for (const name of ["Dar Al-Handasah", "Aldarh Engineering", "Parsons", "Zuhair Fayez", "Khatib & Alami", "Al Saif Engineering Consultants", "Niqat Project", "IFC-derived", "Complete landscape shop drawing sheet", "Saudi Council of Engineers", "Certified BIM Coordinator", "Revit Coordinates Workshop"]) assert.ok(captions.includes(name), name);
   assert.match(captions, /My scope: design/);
 });
 
@@ -56,11 +57,18 @@ test("removes only the confirmed duplicate drawing and keeps NHC scopes and seve
   assert.deepEqual(gaps, [[34.25, 36]]);
   assert.equal(edit.removedDuplicateScenes.length, 1);
   assert.equal(edit.scenes.find(scene => scene.chapter === "selected-work").card, "selected-work-design-scope.png");
-  assert.deepEqual(ranges.filter(s => s.chapter === "mkz" && !s.card).map(s => [s.sourceStart, s.sourceEnd]), [[32.5, 34.25]]);
+  const marsaSheet = ranges.find(s => s.chapter === "mkz" && s.sourceStart === 32.5);
+  assert.equal(marsaSheet.card, "marsa-zones-8-9-full-sheet.png");
+  assert.equal(marsaSheet.asset, "/images/safwa-shopdrawing/al-khuzama-gardens-zone-8.jpg");
+  assert.deepEqual(edit.scenes.filter(s => s.chapter === "niq").map(s => s.card), ["card-niqat-project.png", "niqat-model-overview.png", "niqat-model-side.png", "niqat-model-reverse.png"]);
+  assert.equal(edit.scenes.filter(s => s.chapter === "niq" && s.asset?.startsWith("/images/niqat-project/")).length, 3);
+  assert.ok(ranges.filter(s => s.chapter !== "intro" && s.chapter !== "contact").every(s => s.frames === s.sourceFrames));
   assert.equal(edit.certificateImageCount, 7);
   assert.equal(edit.scenes.filter((scene) => scene.chapter === "credentials").length, 3);
   const timeline = await json("data/portfolio-film-timeline.json");
   assert.deepEqual(timeline.chapters.filter((chapter) => chapter.collectionId === "housing").map((chapter) => chapter.slug), ["housing-projects-parks", "alula-housing"]);
   assert.deepEqual(timeline.chapters.filter((chapter) => chapter.collectionId === "nhc").map((chapter) => chapter.slug), ["marsa-khuzam", "sedayem-jeddah-streetscape", "jeddah-park"]);
+  assert.deepEqual(timeline.chapters.filter((chapter) => chapter.collectionId === "selected").map((chapter) => chapter.slug), ["blue-development", "niqat-project", "zad-engineering"]);
   assert.ok(timeline.chapters.some((chapter) => chapter.id === "credentials" && chapter.start < 80 && chapter.end === 88.5));
 });
+

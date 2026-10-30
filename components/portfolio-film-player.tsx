@@ -52,7 +52,7 @@ export function PortfolioFilmPlayer({ film }: { film: Film }) {
         Your browser does not support embedded video. <a href={film.video}>Download the film.</a>
       </video>
     </div>
-    <p className="review-film-description" id="review-film-description">{stamp(film.duration)} · Full HD · Silent · Nine project stories · English on-screen text</p>
+    <p className="review-film-description" id="review-film-description">{stamp(film.duration)} · Full HD · Silent · Ten project stories · English on-screen text</p>
     <div className="film-chapter-heading"><p className="mono-label">Jump to a chapter</p><span>Project → My role → Work evidence</span></div>
     <nav className="film-collections" aria-label="Portfolio film chapters">
       {groups.map((group) => <section className="film-collection" key={group.id} aria-label={group.title}>
@@ -67,3 +67,4 @@ export function PortfolioFilmPlayer({ film }: { film: Film }) {
     </nav>
   </>;
 }
+
