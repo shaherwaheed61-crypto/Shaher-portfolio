@@ -60,7 +60,7 @@ export default function QuickReviewPage() {
         <div className="shell">
           <div className="review-film-heading">
             <div><p className="mono-label quick-review-status"><Timer size={14} /> 01:30 / Project stories</p><h1>Projects. Roles. <em>Evidence.</em></h1></div>
-            <p>Explore the work by client agency. Each introduction identifies the project team and my contribution, followed by drawings, architectural models, selected design work, and my certificates.</p>
+            <p>Explore the work by client agency. Project introductions identify the owner, consultant where documented, and my contribution, followed by drawings, architectural models, selected design work, and my certificates.</p>
           </div>
           <PortfolioFilmPlayer film={filmTimeline} />
           <div className="quick-review-actions">

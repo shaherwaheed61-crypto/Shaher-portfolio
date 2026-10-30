@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT / "work/film-revision"
 BASE = WORK / "baseline"
 BASELINE_COMMIT = "a9e62d7e6c33fc766c44de4fa92a60265cee9abd"
-REVISION = "nhc-deduplicated-marsa-v2"
+REVISION = "consultants-and-design-scope-v3"
 W, H, FPS, SOURCE_FPS = 1920, 1080, 54, 48
 BG, PANEL, INK, MUTED, ACCENT = "#0d1214", "#142226", "#f0f1ed", "#aeb9bb", "#e4a66f"
 COLORS = ["#e4a66f", "#89b7ae", "#a2b6d2", "#d1bd82"]
@@ -121,9 +121,12 @@ def project_card(project, chapter, collection, index):
         text(d, (76, 511), project["client"], 25, MUTED, width=565)
     consultant = project.get("consultant")
     if consultant:
-        text(d, (76, 598), "CONSULTANT", 19, ACCENT, mono=True)
-        consultant = consultant.replace(" / Parsons", " · Parsons (Owner's Consultant)")
-        text(d, (76, 630), consultant, 25, INK, width=565)
+        text(d, (76, 585), "CONSULTANT", 24, ACCENT, mono=True)
+        if " / Parsons" in consultant:
+            text(d, (76, 625), consultant.replace(" / Parsons", ""), 32, INK, width=565, bold=True, leading=1.12)
+            text(d, (76, 684), "Parsons (Owner's Consultant)", 27, INK, bold=True)
+        else:
+            text(d, (76, 625), consultant, 34, INK, width=565, bold=True, leading=1.12)
     label = project.get("companyLabel", "Contractor")
     if project["slug"] == "blue-development": label = "Project team"
     text(d, (76, 768), label.upper(), 19, ACCENT, mono=True)
@@ -168,6 +171,18 @@ def project_card(project, chapter, collection, index):
         d.ellipse((near_x-6,near_y-6,near_x+6,near_y+6),fill=color)
     destination=WORK/f"card-{project['slug']}.png"
     save_image(im,destination)
+    return destination
+
+def selected_work_card():
+    im, d = canvas("SELECTED DESIGN WORK · MY SCOPE")
+    text(d, (82, 175), "Selected architectural work.", 76, bold=True)
+    d.rounded_rectangle((78, 357, 1842, 717), radius=28, fill=PANEL, outline="#53626a", width=2)
+    text(d, (124, 409), "MY SCOPE", 35, ACCENT, mono=True)
+    text(d, (118, 491), "DESIGN", 102, INK, bold=True)
+    text(d, (86, 802), "Residential · Landscape · Commercial · Facades", 43, ACCENT)
+    text(d, (88, 910), "Selected design work from Shaher's Behance portfolio.", 32, MUTED)
+    destination = WORK / "selected-work-design-scope.png"
+    save_image(im, destination)
     return destination
 
 def certificate_cards(data):
@@ -264,6 +279,7 @@ def main():
     project_order=[cid for cid in order if chapters[cid]["slug"]]
     cards={chapters[cid]["slug"]:project_card(projects[chapters[cid]["slug"]],scope[chapters[cid]["slug"]],groups[chapters[cid]["slug"]],i+1)
       for i,cid in enumerate(project_order)}
+    design_scope_card = selected_work_card()
     certificates=certificate_cards(data)
     scenes=[];output_chapters=[];cursor=0
     cues=read_cues();assert len(cues)==52,len(cues)
@@ -293,6 +309,11 @@ def main():
                   (project.get("companyLabel") or ("Project team" if slug=="blue-development" else "Contractor"))+": "+project["company"]+".",
                   "My role: "+project["role"]+".",
                   "; ".join(w["label"]+": "+w["detail"] for w in scope[slug]["workstreams"])+"."])
+            if cid=="selected-work" and abs(a-old["start"])<1e-5:
+                scene["image"]=str(design_scope_card)
+                scene["caption"]="Selected architectural work. My scope: design. Residential, landscape, commercial and facade projects."
+            elif cid=="selected-work":
+                scene["caption"]=caption.replace("Design and visualization. Behance portfolio.", "My scope: design. Selected Behance work.")
             scene["start"]=cursor/FPS;cursor+=scene["frames"];scene["end"]=cursor/FPS;scenes.append(scene)
         new["end"]=cursor/FPS;output_chapters.append(new)
     credential_start=cursor/FPS
@@ -334,15 +355,15 @@ def main():
     assert not any(s["codec_type"]=="audio" for s in info["streams"])
     media=ROOT/"public/media";media.joinpath(final.name).write_bytes(final.read_bytes())
     Image.open(cards["king-abdullah-international-gardens"]).convert("RGB").save(media/"shaher-portfolio-film-poster.jpg",quality=94)
-    timeline={**baseline,"video":"/media/shaher-portfolio-film.mp4?v=10","poster":"/media/shaher-portfolio-film-poster.jpg?v=10","captions":"/media/shaher-portfolio-film.vtt?v=10",
-      "chapterTrack":"/media/shaher-portfolio-film-chapters.vtt?v=10","chapters":output_chapters}
+    timeline={**baseline,"video":"/media/shaher-portfolio-film.mp4?v=11","poster":"/media/shaher-portfolio-film-poster.jpg?v=11","captions":"/media/shaher-portfolio-film.vtt?v=11",
+      "chapterTrack":"/media/shaher-portfolio-film-chapters.vtt?v=11","chapters":output_chapters}
     (ROOT/"data/portfolio-film-timeline.json").write_text(json.dumps(timeline,indent=2,ensure_ascii=False)+"\n")
     media.joinpath("shaher-portfolio-film.vtt").write_text("WEBVTT\n\n"+"\n\n".join(f"{stamp(s['start'])} --> {stamp(s['end'])}\n{s['caption']}" for s in scenes)+"\n")
     media.joinpath("shaher-portfolio-film-chapters.vtt").write_text("WEBVTT\n\n"+"\n\n".join(f"{stamp(c['start'])} --> {stamp(c['end'])}\n{c['title']}" for c in output_chapters)+"\n")
     (ROOT/"data/portfolio-film-edit.json").write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+"\n")
     new_storyboard={**storyboard,"duration":90,"publishedDuration":90,"playbackSpeed":1,
       "introSeconds":1.5,"outroSeconds":1.5,"selectedWorkSeconds":16*8/9,"credentialsSeconds":606/FPS,
-      "source":f"Published approved baseline at {BASELINE_COMMIT}","revision":"NHC grouping and user-confirmed duplicate Marsa drawing removed",
+      "source":f"Published approved baseline at {BASELINE_COMMIT}","revision":"Project consultant labels and selected design work scope clarified",
       "projectChapters":[{**scope[slug],"scopeSeconds":scope[slug]["scopeSeconds"]*4/9,"evidenceSeconds":scope[slug]["evidenceSeconds"]*4/9-(84/FPS if slug=="marsa-khuzam" else 0)} for slug in manifest["projectOrder"]]}
     (ROOT/"data/portfolio-film-storyboard.json").write_text(json.dumps(new_storyboard,indent=2,ensure_ascii=False)+"\n")
     media_manifest=json.loads((ROOT/"data/github-pages-assets.json").read_text())

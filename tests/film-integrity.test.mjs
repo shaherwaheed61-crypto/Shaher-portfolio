@@ -43,6 +43,7 @@ test("publishes a complete Full HD silent 90-second film and contiguous chapter/
     if (i) assert.equal(start, intervals[i - 1][1]);
   });
   for (const name of ["Dar Al-Handasah", "Aldarh Engineering", "Parsons", "Zuhair Fayez", "Khatib & Alami", "Saudi Council of Engineers", "Certified BIM Coordinator", "Revit Coordinates Workshop"]) assert.ok(captions.includes(name), name);
+  assert.match(captions, /My scope: design/);
 });
 
 test("removes only the confirmed duplicate drawing and keeps NHC scopes and seven certificates", async () => {
@@ -54,6 +55,7 @@ test("removes only the confirmed duplicate drawing and keeps NHC scopes and seve
   const gaps = ranges.slice(1).flatMap((range, i) => range.sourceStart === ranges[i].sourceEnd ? [] : [[ranges[i].sourceEnd, range.sourceStart]]);
   assert.deepEqual(gaps, [[34.25, 36]]);
   assert.equal(edit.removedDuplicateScenes.length, 1);
+  assert.equal(edit.scenes.find(scene => scene.chapter === "selected-work").card, "selected-work-design-scope.png");
   assert.deepEqual(ranges.filter(s => s.chapter === "mkz" && !s.card).map(s => [s.sourceStart, s.sourceEnd]), [[32.5, 34.25]]);
   assert.equal(edit.certificateImageCount, 7);
   assert.equal(edit.scenes.filter((scene) => scene.chapter === "credentials").length, 3);
