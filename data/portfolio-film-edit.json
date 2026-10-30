@@ -1,5 +1,5 @@
 {
-  "revision": "nhc-deduplicated-marsa-v2",
+  "revision": "consultants-and-design-scope-v3",
   "duration": 90,
   "fps": 54,
   "frames": 4860,
@@ -405,9 +405,10 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Selected architectural work from Shaher’s Behance portfolio. Residential, landscape, commercial and facade visualization.",
+      "caption": "Selected architectural work. My scope: design. Residential, landscape, commercial and facade projects.",
       "start": 63.05555555555556,
-      "end": 64.38888888888889
+      "end": 64.38888888888889,
+      "card": "selected-work-design-scope.png"
     },
     {
       "sourceStart": 74.0,
@@ -417,7 +418,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Exterior Design. Design and visualization. Behance portfolio.",
+      "caption": "Exterior Design. My scope: design. Selected Behance work.",
       "start": 64.38888888888889,
       "end": 65.05555555555556
     },
@@ -429,7 +430,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "villa design. Design and visualization. Behance portfolio.",
+      "caption": "villa design. My scope: design. Selected Behance work.",
       "start": 65.05555555555556,
       "end": 65.72222222222223
     },
@@ -441,7 +442,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "farm design. Design and visualization. Behance portfolio.",
+      "caption": "farm design. My scope: design. Selected Behance work.",
       "start": 65.72222222222223,
       "end": 66.38888888888889
     },
@@ -453,7 +454,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Poolside lighting study. Design and visualization. Behance portfolio.",
+      "caption": "Poolside lighting study. My scope: design. Selected Behance work.",
       "start": 66.38888888888889,
       "end": 67.05555555555556
     },
@@ -465,7 +466,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Villa Entrance ( option 2 ). Design and visualization. Behance portfolio.",
+      "caption": "Villa Entrance ( option 2 ). My scope: design. Selected Behance work.",
       "start": 67.05555555555556,
       "end": 67.72222222222223
     },
@@ -477,7 +478,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Villa Entrance ( Option 1 ). Design and visualization. Behance portfolio.",
+      "caption": "Villa Entrance ( Option 1 ). My scope: design. Selected Behance work.",
       "start": 67.72222222222223,
       "end": 68.38888888888889
     },
@@ -489,7 +490,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Residential Facade Design. Design and visualization. Behance portfolio.",
+      "caption": "Residential Facade Design. My scope: design. Selected Behance work.",
       "start": 68.38888888888889,
       "end": 69.05555555555556
     },
@@ -501,7 +502,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Exterior design · Night & sunset. Design and visualization. Behance portfolio.",
+      "caption": "Exterior design · Night & sunset. My scope: design. Selected Behance work.",
       "start": 69.05555555555556,
       "end": 69.72222222222223
     },
@@ -513,7 +514,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Gas petrol Design. Design and visualization. Behance portfolio.",
+      "caption": "Gas petrol Design. My scope: design. Selected Behance work.",
       "start": 69.72222222222223,
       "end": 70.38888888888889
     },
@@ -525,7 +526,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Exterior Villa Design. Design and visualization. Behance portfolio.",
+      "caption": "Exterior Villa Design. My scope: design. Selected Behance work.",
       "start": 70.38888888888889,
       "end": 71.05555555555556
     },
@@ -537,7 +538,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "exterior villa. Design and visualization. Behance portfolio.",
+      "caption": "exterior villa. My scope: design. Selected Behance work.",
       "start": 71.05555555555556,
       "end": 71.72222222222223
     },
@@ -549,7 +550,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Villa wall & landscape design. Design and visualization. Behance portfolio.",
+      "caption": "Villa wall & landscape design. My scope: design. Selected Behance work.",
       "start": 71.72222222222223,
       "end": 72.38888888888889
     },
@@ -561,7 +562,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Mosque facade design. Design and visualization. Behance portfolio.",
+      "caption": "Mosque facade design. My scope: design. Selected Behance work.",
       "start": 72.38888888888889,
       "end": 73.05555555555556
     },
@@ -573,7 +574,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Outdoor majlis design. Design and visualization. Behance portfolio.",
+      "caption": "Outdoor majlis design. My scope: design. Selected Behance work.",
       "start": 73.05555555555556,
       "end": 73.72222222222223
     },
@@ -585,7 +586,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "New Villa in Saudi Arabia. Design and visualization. Behance portfolio.",
+      "caption": "New Villa in Saudi Arabia. My scope: design. Selected Behance work.",
       "start": 73.72222222222223,
       "end": 74.38888888888889
     },
@@ -597,7 +598,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Villa in KSA. Design and visualization. Behance portfolio.",
+      "caption": "Villa in KSA. My scope: design. Selected Behance work.",
       "start": 74.38888888888889,
       "end": 75.05555555555556
     },
@@ -609,7 +610,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "U ZONE project. Design and visualization. Behance portfolio.",
+      "caption": "U ZONE project. My scope: design. Selected Behance work.",
       "start": 75.05555555555556,
       "end": 75.94444444444444
     },
@@ -621,7 +622,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Classic Exterior villa. Design and visualization. Behance portfolio.",
+      "caption": "Classic Exterior villa. My scope: design. Selected Behance work.",
       "start": 75.94444444444444,
       "end": 76.61111111111111
     },
@@ -633,7 +634,7 @@
       "speedNumerator": 8,
       "speedDenominator": 9,
       "chapter": "selected-work",
-      "caption": "Classic Exterior Design House. Design and visualization. Behance portfolio.",
+      "caption": "Classic Exterior Design House. My scope: design. Selected Behance work.",
       "start": 76.61111111111111,
       "end": 77.27777777777777
     },

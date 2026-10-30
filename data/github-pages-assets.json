@@ -459,18 +459,18 @@
     },
     {
       "path": "media/shaher-portfolio-film-poster.jpg",
-      "size": 284703,
-      "sha256": "2969e0e5a5fe9e452d9890e8bbea1604f375d97992f9f71d129c3b67ab6f5425"
+      "size": 288808,
+      "sha256": "3225316c7a7ad99dc76fa9b3d0ede5f3d5046d4b49891e55b76f6664babaab4f"
     },
     {
       "path": "media/shaher-portfolio-film.mp4",
-      "size": 11805706,
-      "sha256": "6dc9cff2021959f5b9146e8f095041f499087414fd37c118286541078008b2c3"
+      "size": 11826700,
+      "sha256": "8499d0c3cca7bd550907cd23c57c398d00164544cfaecf0e1b451770442b5b35"
     },
     {
       "path": "media/shaher-portfolio-film.vtt",
-      "size": 9559,
-      "sha256": "70e38bb4cc8d1fd1836ac3f1b76eabf0ca45d2e57d71fc875816d3cc6fdc7711"
+      "size": 9462,
+      "sha256": "d1517c4d462caa6d7d0b7cf78662cd8895ffad7280dfae6f91b90315233594ab"
     },
     {
       "path": "models/niqat-project.glb",
